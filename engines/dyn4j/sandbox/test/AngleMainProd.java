@@ -16,7 +16,7 @@ public class AngleMainProd {
         mediaPlayer.app.screen = new Screen().add(sandbox.res.Angle.value());
       }
     };
-    simulator.setManifestFile(new File("E:/featurea/engines/dyn4j/project.xml"));
+    simulator.setProject(new File("E:/featurea/engines/dyn4j/project.xml"));
     simulator.setSize(400, 400);
     simulator.setTitle("AngleMainProd");
     simulator.start();

@@ -133,7 +133,7 @@ public class FeatureaActivity extends Activity implements SensorEventListener, f
     finish();
   }
 
-  public void onCreateFeatureaContext(MediaPlayer mediaPlayer) {
+  public void onCreateMediaPlayer(MediaPlayer mediaPlayer) {
     this.mediaPlayer = mediaPlayer;
     this.mediaPlayer.render.window = this;
   }

@@ -32,7 +32,7 @@ public class MyRender implements GLSurfaceView.Renderer {
       isCreated = true;
       Context.mediaPlayers.put(Thread.currentThread(), mediaPlayer); // IMPORTANT
       mediaPlayer.app.onCreate();
-      activity.onCreateFeatureaContext(mediaPlayer);
+      activity.onCreateMediaPlayer(mediaPlayer);
     }
   }
 

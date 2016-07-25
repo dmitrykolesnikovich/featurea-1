@@ -37,7 +37,7 @@ public class Simulator extends JFrame {
     /*setJMenuBar(new FeatureaMenuBar(this));*/
   }
 
-  public void setManifestFile(File manifestFile) {
+  public void setProject(File manifestFile) {
     this.manifestFile = manifestFile;
   }
 
@@ -149,7 +149,7 @@ public class Simulator extends JFrame {
 
   public void setXmlFile(File xmlFile) {
     this.xmlFile = xmlFile;
-    setManifestFile(new File(FileUtil.formatPath(FileUtil.retrieveProjectFileByXmlFile(xmlFile).getAbsolutePath())));
+    setProject(new File(FileUtil.formatPath(FileUtil.retrieveProjectFileByXmlFile(xmlFile).getAbsolutePath())));
   }
 
   public File getXmlFile() {

@@ -1,24 +1,28 @@
 package mario.desktop;
 
 import featurea.app.MediaPlayer;
+import featurea.desktop.LwjglNatives;
 import featurea.desktop.Simulator;
+import mario.Navigation;
+import mario.util.MarioPreferences;
 
 import java.io.File;
 
 public class Main {
 
   public static void main(String[] args) {
+    MarioPreferences.dir = new File(LwjglNatives.PREFERENCES_PATH);
     Simulator simulator = new Simulator() {
       @Override
       public void onCreate(MediaPlayer mediaPlayer) {
         super.onCreate(mediaPlayer);
-        /*Navigation.entryPoint(context);*/
+        Navigation.entryPoint(mediaPlayer);
       }
     };
     simulator.setProduction(false);
-    simulator.setXmlFile(new File("E:/featurea/samples/mario/res/levels/world1_2.xml"));
+    simulator.setProject(new File("D:/workspace/featurea/samples/mario/project.xml"));
     simulator.setSize(600, 600);
-    simulator.setTitle("@@@");
+    simulator.setTitle("Mario");
     simulator.start();
   }
 
