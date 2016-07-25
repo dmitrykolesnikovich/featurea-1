@@ -1,0 +1,18 @@
+<World id="marioUndergroundEnd" size="568, 224" theme="overworld">
+  <Hero id="hero"/>
+
+  <Background position="-512, 0" step="768, 0" value="cloud.png, 136, 64, 312, 48;
+		       cloudTriple.png, 440, 64;
+		       cloudDouble.png, 584, 48;
+		       hill.png, 0, 200;
+		       hillSmall.png, 254, 200;
+		       bushTriple.png, 184, 200;
+		       bush.png, 376, 200;
+		       bushDouble.png, 664, 200;"/>
+  <CastleBackground castle2="416.0, 118.0, 0.0"/>
+
+  <Stairs position="80, 200" steps="1, 2, 3, 4, 5, 6, 7, 8, 8"/>
+  <Tube out="marioUndergroundEndTube" corner="false" piranhaPlant="true" position="48.0, 168.0, 0.0"/>
+  <Flagpole position="360.0, 32.0"/>
+  <Platform position="0, 200.0" rectangle="0, 0, 568, 24"/>
+</World>

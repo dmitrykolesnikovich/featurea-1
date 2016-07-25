@@ -1,0 +1,1 @@
+package bonusLevels.res; public class J extends mario.objects.hero.World { public static mario.objects.hero.World value() {if (!featurea.app.Context.isProduction()) {return featurea.app.Context.getResources().getResource(J.class);} else {return new J();}}{ if (featurea.app.Context.isProduction()) { {}{}{this.build();}} } } 

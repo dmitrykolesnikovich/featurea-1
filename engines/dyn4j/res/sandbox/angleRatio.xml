@@ -1,0 +1,26 @@
+<WorldLayer gravity="0, 10" id="angleRatio">
+  <Camera id="camera" rectangle="-10, -10, 10, 10"/>
+  <Body angularDamping="0.01" gravityScale="1" id="floor"
+    linearDamping="0" transform="0, 4.0, 20">
+    <Mass center="0, 0" id="mass" inertia="140.78125" mass="7.5" type="INFINITE"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Rectangle center="0, 0" id="shape" size="15, 0.5"/>
+    </BodyFixture>
+  </Body>
+  <Body angularDamping="0.01" gravityScale="1" id="small"
+    linearDamping="0" torque="300" transform="-7, 0, 0">
+    <Mass center="0, 0" id="mass" inertia="1.57" mass="3.14" type="FIXED_LINEAR_VELOCITY"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Circle center="0, 0" id="shape" radius="1"/>
+    </BodyFixture>
+  </Body>
+  <Body angularDamping="0.01" gravityScale="1" id="large"
+    linearDamping="0" transform="3, 0, 45">
+    <Mass center="0, 0" id="mass" inertia="25.132" mass="12.566" type="FIXED_LINEAR_VELOCITY"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Circle center="0, 0" id="shape" radius="6"/>
+    </BodyFixture>
+  </Body>
+  <AngleJoint body1="@small" body2="@large" collisionAllowed="false"
+    limitEnabled="false" lowerLimit="0" ratio="-2.0" referenceAngle="0" upperLimit="0"/>
+</WorldLayer>

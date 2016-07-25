@@ -1,0 +1,1 @@
+package platform; public interface Assets {	String featurea = "featurea";interface Featurea {	String fonts = "featurea/fonts";interface Fonts {	String _default = "featurea/fonts/default.fnt";}}}

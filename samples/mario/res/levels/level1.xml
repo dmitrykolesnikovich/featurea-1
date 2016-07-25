@@ -1,0 +1,13 @@
+<World id="level1" size="1000, 224">
+  <Hero id="hero" position="489.0, 139.0, 102.0"/>
+  <Platform highness="2" length="12" position="-9.0, 200.0, 0.0"/>
+  <Block bonus="coinRotate, 2" position="129.0, 131.0"/>
+  <Block bonus="coinRotate, 1" position="145.0, 131.0"/>
+  <KoopaTroopa position="230.0, 176.0, 0.0"/>
+  <Lakitu position="285.0, 12.0"/>
+  <Flagpole position="828.0, 80.0"/>
+  <Platform highness="2" length="14" position="725.0, 200.0, 0.0"/>
+  <Platform highness="2" length="8" position="214.0, 200.0, 0.0"/>
+  <Stairs position="489.0, 216.0, 0.0" steps="1, 2, 3, 4, 4"/>
+  <Platform highness="2" length="14" position="416.0, 219.0, 0.0"/>
+</World>

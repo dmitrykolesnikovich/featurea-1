@@ -1,0 +1,8 @@
+<FeatureaManifest package="org.dyn4j">
+  <dependencies>
+    <file path="e:/featurea/platform"/>
+  </dependencies>
+  <classpath>
+    <file path="e:/featurea/out/production/dyn4j"/>
+  </classpath>
+</FeatureaManifest>

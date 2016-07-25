@@ -1,0 +1,18 @@
+<World id="test1" size="500, 224" theme="castle">
+  <Hero id="hero" position="40.0, 159.0, 0.0"/>
+  <Platform highness="2" length="6" position="137.0, 191.0, 0.0"/>
+  <Platform highness="2" length="6" position="288.0, 191.0, 0.0"/>
+  <Platform highness="2" length="6" position="9.0, 191.0, 0.0"/>
+  <Platform highness="2" length="6" position="404.0, 191.0, 0.0"/>
+  <Block position="320.0, 153.0, 0.0"/>
+  <Block position="328.0, 124.0, 0.0"/>
+  <Block position="302.0, 87.0, 0.0"/>
+  <Block position="335.0, 88.0, 0.0"/>
+  <Block position="360.0, 124.0, 0.0"/>
+  <Block position="312.0, 124.0, 0.0"/>
+  <Block position="296.0, 124.0, 0.0"/>
+  <Block position="344.0, 124.0"/>
+  <Platform highness="2" length="3" position="97.0, 128.0, 0.0"/>
+  <KoopaTroopa position="207.0, 167.0, 0.0"/>
+  <Tube position="105.0, 84.0, -1.0" trunkCount="2"/>
+</World>

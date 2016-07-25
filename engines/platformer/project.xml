@@ -1,0 +1,11 @@
+<project package="featurea.platformer">
+  <dependencies>
+    <file path="E:/featurea/platform"/>
+  </dependencies>
+  <classpath>
+    <file path="e:/featurea/out/production/platformer"/>
+  </classpath>
+  <config>
+    <file path="featurea/platformer/engine.properties"/>
+  </config>
+</project>

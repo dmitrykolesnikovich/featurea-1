@@ -1,0 +1,33 @@
+<WorldLayer gravity="0, 10" id="angle">
+  <Camera id="camera" rectangle="-10, -10, 10, 10"/>
+  <Body angularDamping="0.01" gravityScale="1" id="ground"
+    linearDamping="0" transform="0, 4, 0">
+    <Mass center="0, 0" id="mass" inertia="282.5" mass="15" type="INFINITE"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Rectangle center="0, 0" id="shape" size="15, 1"/>
+    </BodyFixture>
+  </Body>
+  <Body angularDamping="0.01" gravityScale="1" id="body2"
+    linearDamping="0" transform="0, -0.6, 0">
+    <Mass center="0, 0" id="mass" inertia="0.052083333333333336"
+      mass="0.5" type="NORMAL"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Rectangle center="0, 0" id="shape" size="0.5, 1"/>
+    </BodyFixture>
+  </Body>
+  <Body angularDamping="0.01" gravityScale="1" id="body3"
+    linearDamping="0" transform="0, 0.6, 0">
+    <Mass center="0, 0" id="mass" inertia="0.052083333333333336"
+      mass="0.5" type="NORMAL"/>
+    <BodyFixture density="1" friction="0.2" restitution="0">
+      <Rectangle center="0, 0" id="shape" size="0.5, 1"/>
+    </BodyFixture>
+  </Body>
+  <RevoluteJoint anchor="0, 0" body1="@body2" body2="@body3"
+    collisionAllowed="false" limitEnabled="false" lowerLimit="0"
+    maximumMotorTorque="0" motorEnabled="false" motorSpeed="0"
+    referenceAngle="0" upperLimit="0"/>
+  <AngleJoint body1="@body2" body2="@body3" collisionAllowed="false"
+    limitEnabled="true" lowerLimit="-0.523599" ratio="1"
+    referenceAngle="0" upperLimit="0.523599"/>
+</WorldLayer>

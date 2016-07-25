@@ -1,0 +1,1 @@
+<project package="mario"><dependencies><file path="featurea/platformer"/><file path="platform"/></dependencies><packs><pack name="pack" files=""/></packs></project>

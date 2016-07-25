@@ -1,0 +1,5 @@
+<GameplayScreen id="gameplayScreen">
+  <featurea.platformer.util.Joystick id="joystick" link="/featurea/platformer/joystick"/>
+  <featurea.platformer.util.PerformanceInfo/>
+  <Layer id="loadingLayer" link="/screens/loadingLayer"/>
+</GameplayScreen>

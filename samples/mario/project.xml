@@ -1,0 +1,19 @@
+<project package="mario">
+  <dependencies>
+    <file path="e:/featurea/engines/platformer"/>
+  </dependencies>
+  <classpath>
+    <file path="e:/featurea/out/production/mario"/>
+  </classpath>
+  <packs>
+    <pack name="pack" files=""/>
+  </packs>
+  <tools>
+    <tool jar="tools/genSprites.jar"
+          args="overworld, castle, underground, underwater, night"/>
+  </tools>
+  <config>
+    <file path="mario/gameplay.properties"/>
+    <file path="mario/firework.properties"/>
+  </config>
+</project>

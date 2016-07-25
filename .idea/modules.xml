@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/platform/tools/builder/builder.iml" filepath="$PROJECT_DIR$/platform/tools/builder/builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engines/dyn4j/dyn4j.iml" filepath="$PROJECT_DIR$/engines/dyn4j/dyn4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engines/dyn4j/examples/examples.iml" filepath="$PROJECT_DIR$/engines/dyn4j/examples/examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/featurea/featurea.iml" filepath="$PROJECT_DIR$/tools/featurea/featurea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/featurea4idea/featurea4idea.iml" filepath="$PROJECT_DIR$/tools/featurea4idea/featurea4idea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/mario/tools/genSprites/genSprites.iml" filepath="$PROJECT_DIR$/samples/mario/tools/genSprites/genSprites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/mario/mario.iml" filepath="$PROJECT_DIR$/samples/mario/mario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/mario/targets/mario.desktop/mario.desktop.iml" filepath="$PROJECT_DIR$/samples/mario/targets/mario.desktop/mario.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/targets/platform.android/platform.android.iml" filepath="$PROJECT_DIR$/platform/targets/platform.android/platform.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/targets/platform.desktop/platform.desktop.iml" filepath="$PROJECT_DIR$/platform/targets/platform.desktop/platform.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engines/platformer/platformer.iml" filepath="$PROJECT_DIR$/engines/platformer/platformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engines/dyn4j/sandbox/sandbox.iml" filepath="$PROJECT_DIR$/engines/dyn4j/sandbox/sandbox.iml" />
+    </modules>
+  </component>
+</project>

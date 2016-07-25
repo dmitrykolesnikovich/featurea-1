@@ -1,0 +1,12 @@
+<World id="e" theme="underground">
+  <Tube corner="true" position="208, 168"/>
+  <PlatformLayer xy="0, 256, 200, 224"/>
+  <BlockLayer blocks="0, 24, 16, 200,
+                      64, 24, 176, 40,
+                      160, 40, 176, 120,
+                      64, 104, 160, 120,
+                      64, 88, 80, 104,
+                      176, 88, 208, 104,
+                      "
+              coin="323, 112, 9"/>
+</World>

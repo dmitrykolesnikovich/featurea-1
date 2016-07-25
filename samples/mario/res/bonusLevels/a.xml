@@ -1,0 +1,8 @@
+<World id="a" theme="underground">
+  <Tube corner="true" in="asdf" position="208.0, 168.0, 0.0"/>
+  <PlatformLayer xy="0,256,200,224,"/>
+  <BlockLayer blocks="0,24,16,200,
+		        64,24,176,40,
+		        64,152,176,200,"/>
+  <Hero id="hero" position="23.0, 8.0, 0.0"/>
+</World>

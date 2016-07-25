@@ -1,0 +1,19 @@
+<idea-plugin version="22">
+  <id>featurea.idea</id>
+  <name>Featurea</name>
+  <vendor>Dmitry Kolesnikovich</vendor>
+  <version>0.0.3</version>
+  <description>
+    XML autocompletion for Featurea files.
+  </description>
+  <idea-version since-build="131"/>
+  <extensions defaultExtensionNs="com.intellij">
+    <completion.contributor language="XML" implementationClass="featurea.idea.FeatureaCompletionContributor"
+                            id="completeAttributeValues" order="first"/>
+  </extensions>
+  <actions>
+    <action id="featurea.runXmlFile" class="featurea.idea.RunXmlFileAction">
+      <keyboard-shortcut first-keystroke="shift F10" keymap="$default"/>
+    </action>
+  </actions>
+</idea-plugin>

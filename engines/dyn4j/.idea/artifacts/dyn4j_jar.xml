@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="dyn4j:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dyn4j_jar</output-path>
+    <root id="archive" name="dyn4j.jar">
+      <element id="module-output" name="dyn4j" />
+    </root>
+  </artifact>
+</component>

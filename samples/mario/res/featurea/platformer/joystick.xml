@@ -1,0 +1,67 @@
+<Joystick
+    id="joystick">
+  <Button
+      id="buttonUp"
+      position="84.0, 258.0, 0.0"
+      sprite="joystick/arrowKey.png"
+      size="60, 60"
+      rectangle="-30, -30, 30, 30"
+      down="buttonUpDown"
+      up="buttonUpUp"/>
+  <Button
+      id="buttonDown"
+      position="84.0, 361.0, 0.0"
+      sprite="joystick/arrowKey.png"
+      size="60, 60"
+      rectangle="-30, -30, 30, 30"
+      down="buttonDownDown"
+      up="buttonDownUp"/>
+  <Button
+      id="buttonLeft"
+      position="30.0, 310.0, 0.0"
+      sprite="joystick/arrowKey.png"
+      size="60, 60"
+      rectangle="-30, -30, 30, 30"
+      down="buttonLeftDown"
+      up="buttonLeftUp"/>
+  <Button
+      id="buttonRight"
+      position="138.0, 310.0, 0.0"
+      sprite="joystick/arrowKey.png"
+      size="60, 60"
+      rectangle="-30, -30, 30, 30"
+      down="buttonRightDown"
+      up="buttonRightUp"/>
+  <Button
+      id="buttonJump"
+      position="488, 356"
+      sprite="joystick/greenRoundButton.png"
+      size="80, 80"
+      rectangle="-40, -40, 40, 40"
+      down="buttonJumpDown"
+      up="buttonJumpUp"/>
+  <Button
+      id="buttonFire"
+      position="556, 300"
+      sprite="joystick/blueRoundButton.png"
+      size="80, 80"
+      rectangle="-40, -40, 40, 40"
+      down="buttonFireDown"
+      up="buttonFireUp"/>
+  <Button
+      id="buttonSettings"
+      position="40, 40"
+      visible="false"
+      sprite="joystick/settings.png"
+      size="80, 80"
+      rectangle="-40, -40, 40, 40"
+      click="buttonSettingsClick"/>
+  <Button
+      id="buttonConfig"
+      position="32, 32"
+      visible="false"
+      sprite="joystick/config.png"
+      size="64, 64"
+      rectangle="-32, -32, 32, 32"
+      click="buttonConfigClick"/>
+</Joystick>

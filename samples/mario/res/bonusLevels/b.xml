@@ -1,0 +1,10 @@
+<World id="b" theme="underground">
+  <Hero id="hero" position="23.0, 32.0, 0.0"/>
+  <Tube corner="true" position="208, 168"/>
+  <PlatformLayer xy="0,256,200,224,"/>
+  <BlockLayer
+    blocks="0,24,16,200,
+		        48,24,208,88,
+		        208,24,240,168,
+		        48,136,208,152," coin="200,144,13,"/>
+</World>

@@ -1,0 +1,18 @@
+<World id="world1_1" size="1000, 300">
+  <Hero id="hero" position="146.0, 144.0, 0.0"/>
+  <Flagpole position="1053.0, 144.0"/>
+  <Platform position="-9.0, 189.0, 0.0" rectangle="9, 12, 640, 40"/>
+  <Block bonus="becomeBig" position="56.0, 151.0, 0.0"/>
+  <Beetle position="65.0, 180.0, 0.0"/>
+  <Turtle position="84.0, 107.0, 0.0"/>
+  <Platform position="732.0, 196.0, 0.0" rectangle="-15, 3, 384, 34"/>
+  <Stairs position="789.0, 200.0" steps="1, 2, 3, 4, 5"/>
+  <Beetle position="45.0, 181.0, 0.0"/>
+  <Lakitu position="853.0, 10.0"/>
+  <Platform position="1142.0, 198.0" rectangle="4, 1, 225, 31"/>
+  <CastleBackground castle2="1250.0, 16.0, 0.0" position="1243.0, 157.0"/>
+  <Beetle position="13.0, 91.0, 0.0"/>
+  <Beetle position="49.0, 79.0, 0.0"/>
+  <Beetle position="91.0, 80.0, 0.0"/>
+  <FireStick length="6" position="275.0, 112.0, 0.0"/>
+</World>
