@@ -198,9 +198,15 @@ public class Render {
 
   public void resize(int width, int height) {
     size.setValue(width, height);
+    setupViewport(0, 0);
+  }
+
+  private void setupViewport(int x, int y) {
+    int width = (int) size.width;
+    int height = (int) size.height;
     gl.glViewport(0, 0, width, height);
     gl.glLoadIdentity();
-    gl.glOrthof(0, width, height, 0, -1, 1);
+    gl.glOrthof(x, x + width, y + height, y, -1, 1);
   }
 
   private boolean containsPessimistically(double x1, double y1, double x2, double y2) {
@@ -218,11 +224,11 @@ public class Render {
 
   public void cropWithCamera(double x, double y) {
     if (x != 0) {
-      fillRectangle(0, 0, (double) x, (double) size.height, Colors.black);
-      fillRectangle((double) (size.width - x), 0, (double) size.width, (double) size.height, Colors.black);
+      fillRectangle(0, 0, x, size.height, Colors.black);
+      fillRectangle(size.width - x, 0, size.width, size.height, Colors.black);
     } else if (y != 0) {
-      fillRectangle(0, 0, (double) size.width, (double) y, Colors.black);
-      fillRectangle(0, (double) (size.height - y), (double) size.width, (double) size.height, Colors.black);
+      fillRectangle(0, 0, size.width, y, Colors.black);
+      fillRectangle(0, size.height - y, size.width, size.height, Colors.black);
     }
   }
 

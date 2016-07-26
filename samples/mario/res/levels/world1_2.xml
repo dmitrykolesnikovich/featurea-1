@@ -1,5 +1,5 @@
 <World id="world1_2" size="3056, 224" theme="underground">
-  <Hero id="hero" position="2327.0, 157.0, 102.0" visible="true"/>
+  <Hero id="hero" position="47.0, 27.0, 102.0" visible="true"/>
   <BlockLayer brick="1112,128,"
     coin="472,128,18,
 		      1176,128,9,
@@ -98,4 +98,6 @@
   <Block position="2313.0, 161.0"/>
   <Block position="2294.0, 145.0"/>
   <Block position="2273.0, 129.0"/>
+  <Platform position="179.0, 86.0"/>
+  <Block position="198.0, 34.0"/>
 </World>
