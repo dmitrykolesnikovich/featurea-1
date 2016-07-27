@@ -21,13 +21,6 @@ public class ConfigToJavaTool {
     String[] filePaths = StringUtil.split(project.toolsProperties.getValue("config"), ",");
     String configPackage = project.pakage + ".config";
     for (String filePath : filePaths) {
-      try {
-        FileInputStream test = new FileInputStream(new File("E:/featurea/engines/platformer/config/featurea/platformer/engine.properties"));
-        test.available();
-      } catch (Throwable e) {
-        e.printStackTrace();
-      }
-
       InputStream inputStream = config.getStream(filePath);
       String javaFileName = StringUtil.upperCaseLastLetterAfterDelimiter(filePath.replaceAll("\\.properties", ".java"), '/');
       String dir = FileUtil.getDir(javaFileName);

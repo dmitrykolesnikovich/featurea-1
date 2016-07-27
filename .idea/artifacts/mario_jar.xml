@@ -5,12 +5,12 @@
       <element id="module-output" name="mario" />
       <element id="module-output" name="platformer" />
       <element id="module-output" name="platform" />
+      <element id="dir-copy" path="$PROJECT_DIR$/engines/platformer/config" />
+      <element id="dir-copy" path="$PROJECT_DIR$/engines/platformer/res" />
       <element id="dir-copy" path="$PROJECT_DIR$/platform/config" />
       <element id="dir-copy" path="$PROJECT_DIR$/platform/res" />
       <element id="dir-copy" path="$PROJECT_DIR$/samples/mario/config" />
       <element id="dir-copy" path="$PROJECT_DIR$/samples/mario/res" />
-      <element id="dir-copy" path="$PROJECT_DIR$/engines/platformer/config" />
-      <element id="dir-copy" path="$PROJECT_DIR$/engines/platformer/res" />
     </root>
   </artifact>
 </component>

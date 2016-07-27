@@ -1,0 +1,3863 @@
+
+pack.part1.png
+size: 2048,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background/castle/princess.png
+  rotate: false
+  xy: 1892, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+background/castle/princessFinal.png
+  rotate: false
+  xy: 1612, 680
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+background/castle/water/wave.png
+  rotate: false
+  xy: 1632, 664
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+background/castle/water/waveLine.png
+  rotate: false
+  xy: 1752, 679
+  size: 8, 1
+  orig: 8, 1
+  offset: 0, 0
+  index: -1
+background/night/castle2.png
+  rotate: false
+  xy: 1704, 936
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+background/night/castle4.png
+  rotate: false
+  xy: 4, 324
+  size: 152, 176
+  orig: 152, 176
+  offset: 0, 0
+  index: -1
+background/night/cloud.png
+  rotate: false
+  xy: 1856, 992
+  size: 32, 24
+  orig: 32, 24
+  offset: 0, 0
+  index: -1
+background/night/cloudDouble.png
+  rotate: false
+  xy: 1644, 812
+  size: 48, 24
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+background/night/cloudTriple.png
+  rotate: false
+  xy: 1704, 908
+  size: 64, 24
+  orig: 64, 24
+  offset: 0, 0
+  index: -1
+background/night/treeLarge.png
+  rotate: false
+  xy: 136, 272
+  size: 16, 48
+  orig: 16, 48
+  offset: 0, 0
+  index: -1
+background/night/treeSmall.png
+  rotate: false
+  xy: 1612, 708
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+background/overworld/bridge.png
+  rotate: false
+  xy: 72, 88
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+background/overworld/bush.png
+  rotate: false
+  xy: 256, 412
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+background/overworld/bushDouble.png
+  rotate: false
+  xy: 1548, 660
+  size: 48, 16
+  orig: 48, 16
+  offset: 0, 0
+  index: -1
+background/overworld/bushTriple.png
+  rotate: false
+  xy: 4, 88
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+background/overworld/castle2.png
+  rotate: false
+  xy: 4, 108
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+background/overworld/castle4.png
+  rotate: false
+  xy: 1548, 840
+  size: 152, 176
+  orig: 152, 176
+  offset: 0, 0
+  index: -1
+background/overworld/cloud.png
+  rotate: false
+  xy: 1548, 632
+  size: 32, 24
+  orig: 32, 24
+  offset: 0, 0
+  index: -1
+background/overworld/cloudDouble.png
+  rotate: false
+  xy: 256, 432
+  size: 48, 24
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+background/overworld/cloudTriple.png
+  rotate: false
+  xy: 1788, 992
+  size: 64, 24
+  orig: 64, 24
+  offset: 0, 0
+  index: -1
+background/overworld/flag.png
+  rotate: false
+  xy: 1600, 660
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+background/overworld/hill.png
+  rotate: false
+  xy: 256, 460
+  size: 80, 40
+  orig: 80, 40
+  offset: 0, 0
+  index: -1
+background/overworld/hillSmall.png
+  rotate: false
+  xy: 340, 480
+  size: 48, 20
+  orig: 48, 20
+  offset: 0, 0
+  index: -1
+background/overworld/treeLarge.png
+  rotate: false
+  xy: 228, 356
+  size: 16, 48
+  orig: 16, 48
+  offset: 0, 0
+  index: -1
+background/overworld/treeSmall.png
+  rotate: false
+  xy: 136, 236
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+background/underwater/water/wave.png
+  rotate: false
+  xy: 384, 448
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+enemies/castle/goomba/dead.png
+  rotate: false
+  xy: 1704, 840
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+enemies/castle/goomba/walk/0.png
+  rotate: false
+  xy: 1788, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/castle/goomba/walk/1.png
+  rotate: false
+  xy: 1808, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopa/dead.png
+  rotate: false
+  xy: 1828, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopa/dead1.png
+  rotate: false
+  xy: 1848, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopa/walk/0.png
+  rotate: false
+  xy: 1584, 632
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopa/walk/1.png
+  rotate: false
+  xy: 1912, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopaFly/walk/0.png
+  rotate: false
+  xy: 1932, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/castle/koopaTroopaFly/walk/1.png
+  rotate: false
+  xy: 1952, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/castle/piranhaPlant/0.png
+  rotate: false
+  xy: 1972, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/castle/piranhaPlant/1.png
+  rotate: false
+  xy: 1992, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/cannon/base.png
+  rotate: false
+  xy: 1868, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/cannon/bullet.png
+  rotate: false
+  xy: 1888, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/cannon/cannon.png
+  rotate: false
+  xy: 1740, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/night/fish/0.png
+  rotate: false
+  xy: 1908, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/fish/1.png
+  rotate: false
+  xy: 1928, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopa/dead.png
+  rotate: false
+  xy: 1948, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopa/dead1.png
+  rotate: false
+  xy: 1968, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopa/walk/0.png
+  rotate: false
+  xy: 2012, 992
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopa/walk/1.png
+  rotate: false
+  xy: 1772, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopaFly/walk/0.png
+  rotate: false
+  xy: 1604, 632
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/koopaTroopaFly/walk/1.png
+  rotate: false
+  xy: 1792, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/piranhaPlant/0.png
+  rotate: false
+  xy: 1812, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/night/piranhaPlant/1.png
+  rotate: false
+  xy: 1832, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/beetle/dead.png
+  rotate: false
+  xy: 1988, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/beetle/move/0.png
+  rotate: false
+  xy: 92, 88
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/beetle/move/1.png
+  rotate: false
+  xy: 2008, 936
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/cannon/base.png
+  rotate: false
+  xy: 344, 440
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/cannon/bullet.png
+  rotate: false
+  xy: 1548, 504
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/cannon/cannon.png
+  rotate: false
+  xy: 1824, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragon/mouthClose/0.png
+  rotate: false
+  xy: 1704, 872
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragon/mouthClose/1.png
+  rotate: false
+  xy: 1788, 956
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragon/mouthOpen/0.png
+  rotate: false
+  xy: 4, 52
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragon/mouthOpen/1.png
+  rotate: false
+  xy: 1644, 776
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragonFireBall/0.png
+  rotate: false
+  xy: 88, 108
+  size: 24, 8
+  orig: 24, 8
+  offset: 0, 0
+  index: -1
+enemies/overworld/dragonFireBall/1.png
+  rotate: false
+  xy: 4, 4
+  size: 24, 8
+  orig: 24, 8
+  offset: 0, 0
+  index: -1
+enemies/overworld/fish/0.png
+  rotate: false
+  xy: 428, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/fish/1.png
+  rotate: false
+  xy: 1740, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/goomba/dead.png
+  rotate: false
+  xy: 1724, 840
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+enemies/overworld/goomba/walk/0.png
+  rotate: false
+  xy: 1568, 504
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/goomba/walk/1.png
+  rotate: false
+  xy: 448, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/hammer.png
+  rotate: false
+  xy: 1620, 660
+  size: 8, 16
+  orig: 8, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopa/dead.png
+  rotate: false
+  xy: 1760, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopa/dead1.png
+  rotate: false
+  xy: 1588, 504
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopa/walk/1.png
+  rotate: false
+  xy: 1852, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopa/walk/2.png
+  rotate: false
+  xy: 1872, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaFly/walk/0.png
+  rotate: false
+  xy: 1892, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaFly/walk/1.png
+  rotate: false
+  xy: 1912, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaFlyRed/walk/0.png
+  rotate: false
+  xy: 1932, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaFlyRed/walk/1.png
+  rotate: false
+  xy: 1952, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaRed/dead.png
+  rotate: false
+  xy: 468, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaRed/dead1.png
+  rotate: false
+  xy: 1780, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaRed/walk/1.png
+  rotate: false
+  xy: 1972, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/koopaTroopaRed/walk/2.png
+  rotate: false
+  xy: 1992, 908
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/lakitu/0.png
+  rotate: false
+  xy: 1632, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/lakitu/1.png
+  rotate: false
+  xy: 1652, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/octopus/0.png
+  rotate: false
+  xy: 1672, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/octopus/1.png
+  rotate: false
+  xy: 1692, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/piranhaPlant/0.png
+  rotate: false
+  xy: 1696, 812
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/piranhaPlant/1.png
+  rotate: false
+  xy: 1712, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/overworld/podoboo.png
+  rotate: false
+  xy: 1608, 504
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/spiny/born/0.png
+  rotate: false
+  xy: 488, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/spiny/born/1.png
+  rotate: false
+  xy: 1800, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/spiny/walk/0.png
+  rotate: false
+  xy: 508, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/spiny/walk/1.png
+  rotate: false
+  xy: 1820, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/overworld/turtle/shot/1.png
+  rotate: false
+  xy: 4, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/turtle/stay.png
+  rotate: false
+  xy: 4, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/turtle/shot/2.png
+  rotate: false
+  xy: 40, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/overworld/turtle/shot/3.png
+  rotate: false
+  xy: 1548, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/underground/beetle/dead.png
+  rotate: false
+  xy: 528, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/beetle/move/0.png
+  rotate: false
+  xy: 1840, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/beetle/move/1.png
+  rotate: false
+  xy: 548, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/cannon/base.png
+  rotate: false
+  xy: 1860, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/cannon/bullet.png
+  rotate: false
+  xy: 568, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/cannon/cannon.png
+  rotate: false
+  xy: 136, 200
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+enemies/underground/goomba/dead.png
+  rotate: false
+  xy: 228, 344
+  size: 16, 8
+  orig: 16, 8
+  offset: 0, 0
+  index: -1
+enemies/underground/goomba/walk/1.png
+  rotate: false
+  xy: 1880, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/goomba/walk/2.png
+  rotate: false
+  xy: 588, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopa/dead.png
+  rotate: false
+  xy: 1900, 852
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopa/dead1.png
+  rotate: false
+  xy: 608, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopa/walk/1.png
+  rotate: false
+  xy: 1624, 632
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopa/walk/2.png
+  rotate: false
+  xy: 1716, 812
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopaFly/walk/0.png
+  rotate: false
+  xy: 1732, 676
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/underground/koopaTroopaFly/walk/1.png
+  rotate: false
+  xy: 1920, 844
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/underground/piranhaPlant/0.png
+  rotate: false
+  xy: 1940, 844
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+enemies/underground/piranhaPlant/1.png
+  rotate: false
+  xy: 1960, 844
+  size: 16, 24
+  orig: 16, 24
+  offset: 0, 0
+  index: -1
+featurea/fonts/default.png
+  rotate: false
+  xy: 1032, 504
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+fonts/pressstart2p.png
+  rotate: false
+  xy: 4, 504
+  size: 1024, 512
+  orig: 1024, 512
+  offset: 0, 0
+  index: -1
+items/castle/brick/dead.png
+  rotate: false
+  xy: 256, 340
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/castle/brick/show.png
+  rotate: false
+  xy: 628, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coin/blink/0.png
+  rotate: false
+  xy: 1628, 504
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coin/blink/1.png
+  rotate: false
+  xy: 648, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coin/blink/3.png
+  rotate: false
+  xy: 648, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coin/blink/2.png
+  rotate: false
+  xy: 668, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coinRotate/0.png
+  rotate: false
+  xy: 688, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coinRotate/0.png
+  rotate: false
+  xy: 688, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coinRotate/0.png
+  rotate: false
+  xy: 688, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coinRotate/1.png
+  rotate: false
+  xy: 708, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coinRotate/1.png
+  rotate: false
+  xy: 708, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coinRotate/1.png
+  rotate: false
+  xy: 708, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coinRotate/2.png
+  rotate: false
+  xy: 728, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coinRotate/2.png
+  rotate: false
+  xy: 728, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coinRotate/2.png
+  rotate: false
+  xy: 728, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/coinRotate/3.png
+  rotate: false
+  xy: 748, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coinRotate/3.png
+  rotate: false
+  xy: 748, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coinRotate/3.png
+  rotate: false
+  xy: 748, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/dragonBridgeKey/0.png
+  rotate: false
+  xy: 768, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/dragonBridgeKey/1.png
+  rotate: false
+  xy: 788, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/dragonBridgeKey/3.png
+  rotate: false
+  xy: 788, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/dragonBridgeKey/2.png
+  rotate: false
+  xy: 808, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/fireFlower/0.png
+  rotate: false
+  xy: 828, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/fireFlower/0.png
+  rotate: false
+  xy: 828, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/fireFlower/1.png
+  rotate: false
+  xy: 848, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/fireFlower/2.png
+  rotate: false
+  xy: 868, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/fireFlower/2.png
+  rotate: false
+  xy: 868, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/fireFlower/3.png
+  rotate: false
+  xy: 888, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/fireFlower/3.png
+  rotate: false
+  xy: 888, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/ground.png
+  rotate: false
+  xy: 908, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/lifeUp.png
+  rotate: false
+  xy: 928, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/lifeUp.png
+  rotate: false
+  xy: 928, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/mushroom.png
+  rotate: false
+  xy: 948, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/mushroom.png
+  rotate: false
+  xy: 948, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/mushroom.png
+  rotate: false
+  xy: 948, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/questionBlock/afterHit.png
+  rotate: false
+  xy: 968, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/questionBlock/show/1.png
+  rotate: false
+  xy: 988, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/questionBlock/show/1.png
+  rotate: false
+  xy: 988, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/questionBlock/show/2.png
+  rotate: false
+  xy: 1008, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/questionBlock/show/2.png
+  rotate: false
+  xy: 1008, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/questionBlock/show/3.png
+  rotate: false
+  xy: 1028, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/questionBlock/show/3.png
+  rotate: false
+  xy: 1028, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/star/0.png
+  rotate: false
+  xy: 1048, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/star/0.png
+  rotate: false
+  xy: 1048, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/star/0.png
+  rotate: false
+  xy: 1048, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/star/1.png
+  rotate: false
+  xy: 1068, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/star/2.png
+  rotate: false
+  xy: 1088, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/star/2.png
+  rotate: false
+  xy: 1088, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/star/2.png
+  rotate: false
+  xy: 1088, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/star/3.png
+  rotate: false
+  xy: 1108, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/star/3.png
+  rotate: false
+  xy: 1108, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/castle/trampoline/0.png
+  rotate: false
+  xy: 1844, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/castle/trampoline/1.png
+  rotate: false
+  xy: 24, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/castle/trampoline/2.png
+  rotate: false
+  xy: 1548, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/night/bridge.png
+  rotate: false
+  xy: 1128, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/giantMushroom1/head.png
+  rotate: false
+  xy: 1148, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/giantMushroom1/headLeft.png
+  rotate: false
+  xy: 1168, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/giantMushroom1/headRight.png
+  rotate: false
+  xy: 1188, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/giantMushroom1/trunk.png
+  rotate: false
+  xy: 1208, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/ground.png
+  rotate: false
+  xy: 1228, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/stone.png
+  rotate: false
+  xy: 1248, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/night/tube/head.png
+  rotate: false
+  xy: 340, 460
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+items/night/tube/trunk.png
+  rotate: false
+  xy: 308, 440
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+items/overworld/bearing.png
+  rotate: false
+  xy: 124, 17
+  size: 7, 7
+  orig: 7, 7
+  offset: 0, 0
+  index: -1
+items/overworld/brick/dead.png
+  rotate: false
+  xy: 1792, 692
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/overworld/brick/show.png
+  rotate: false
+  xy: 1268, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/bridge.png
+  rotate: false
+  xy: 1288, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/bubble.png
+  rotate: false
+  xy: 248, 344
+  size: 4, 4
+  orig: 4, 4
+  offset: 0, 0
+  index: -1
+items/overworld/coin/blink/0.png
+  rotate: false
+  xy: 1308, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coin/blink/1.png
+  rotate: false
+  xy: 1328, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coin/blink/3.png
+  rotate: false
+  xy: 1328, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/coin/blink/2.png
+  rotate: false
+  xy: 1348, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/dragonBridge.png
+  rotate: false
+  xy: 1368, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireFlower/0.png
+  rotate: false
+  xy: 1388, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireFlower/1.png
+  rotate: false
+  xy: 1408, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireFlower/2.png
+  rotate: false
+  xy: 1428, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireFlower/3.png
+  rotate: false
+  xy: 1448, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireball/dead/1.png
+  rotate: false
+  xy: 1468, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireball/dead/2.png
+  rotate: false
+  xy: 1488, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireball/dead/3.png
+  rotate: false
+  xy: 1508, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/fireball/fly.png
+  rotate: false
+  xy: 2032, 1008
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/overworld/flagpole/circle.png
+  rotate: false
+  xy: 32, 4
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/overworld/flagpole/flag.png
+  rotate: false
+  xy: 1528, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom1/head.png
+  rotate: false
+  xy: 1548, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom1/headLeft.png
+  rotate: false
+  xy: 1568, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom1/headRight.png
+  rotate: false
+  xy: 1588, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom1/trunk.png
+  rotate: false
+  xy: 1608, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom2/head.png
+  rotate: false
+  xy: 1628, 484
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom2/headLeft.png
+  rotate: false
+  xy: 292, 412
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom2/headRight.png
+  rotate: false
+  xy: 376, 460
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom2/trunk.png
+  rotate: false
+  xy: 364, 440
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/giantMushroom2/trunkTop.png
+  rotate: false
+  xy: 248, 352
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/ground.png
+  rotate: false
+  xy: 156, 196
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/levelUp.png
+  rotate: false
+  xy: 116, 100
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/lifeUp.png
+  rotate: false
+  xy: 116, 100
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/liana.png
+  rotate: false
+  xy: 136, 100
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/platto.png
+  rotate: false
+  xy: 160, 328
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/overworld/questionBlock/afterHit.png
+  rotate: false
+  xy: 1744, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/questionBlock/show/1.png
+  rotate: false
+  xy: 1764, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/questionBlock/show/2.png
+  rotate: false
+  xy: 1784, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/questionBlock/show/3.png
+  rotate: false
+  xy: 1804, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/star/1.png
+  rotate: false
+  xy: 1824, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/star/3.png
+  rotate: false
+  xy: 1844, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/stone.png
+  rotate: false
+  xy: 1864, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/overworld/trampoline/0.png
+  rotate: false
+  xy: 1864, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/overworld/trampoline/1.png
+  rotate: false
+  xy: 1548, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/overworld/trampoline/2.png
+  rotate: false
+  xy: 1644, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/overworld/tube/head.png
+  rotate: false
+  xy: 392, 484
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+items/overworld/tube/trunk.png
+  rotate: false
+  xy: 1704, 852
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+items/overworld/tubeCorner/tubeCornerPart1.png
+  rotate: false
+  xy: 88, 120
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+items/overworld/tubeCorner/tubeCornerPart2.png
+  rotate: false
+  xy: 88, 156
+  size: 40, 32
+  orig: 40, 32
+  offset: 0, 0
+  index: -1
+items/underground/brick/dead.png
+  rotate: false
+  xy: 2012, 924
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+items/underground/brick/show.png
+  rotate: false
+  xy: 1884, 832
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coin/blink/0.png
+  rotate: false
+  xy: 1736, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coin/blink/1.png
+  rotate: false
+  xy: 1756, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coin/blink/3.png
+  rotate: false
+  xy: 1756, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/coin/blink/2.png
+  rotate: false
+  xy: 1776, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/fireFlower/1.png
+  rotate: false
+  xy: 1796, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/ground.png
+  rotate: false
+  xy: 1816, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/questionBlock/afterHit.png
+  rotate: false
+  xy: 1836, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/star/1.png
+  rotate: false
+  xy: 1856, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/stone.png
+  rotate: false
+  xy: 1876, 812
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underground/trampoline/0.png
+  rotate: false
+  xy: 1680, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/underground/trampoline/1.png
+  rotate: false
+  xy: 1664, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/underground/trampoline/2.png
+  rotate: false
+  xy: 1568, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+items/underwater/ground.png
+  rotate: false
+  xy: 1752, 684
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+items/underwater/stone.png
+  rotate: false
+  xy: 1772, 684
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+joystick/arrowKey.png
+  rotate: false
+  xy: 1548, 680
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+joystick/blueRoundButton.png
+  rotate: false
+  xy: 160, 408
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+joystick/config.png
+  rotate: false
+  xy: 160, 340
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+joystick/greenRoundButton.png
+  rotate: false
+  xy: 1548, 744
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: -1
+joystick/settings.png
+  rotate: false
+  xy: 4, 192
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/climb/0.png
+  rotate: false
+  xy: 1568, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/climb/1.png
+  rotate: false
+  xy: 1568, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/fire/0.png
+  rotate: false
+  xy: 44, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/fire/1.png
+  rotate: false
+  xy: 1684, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/fire/2.png
+  rotate: false
+  xy: 1980, 837
+  size: 16, 31
+  orig: 16, 31
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/fireWhenJump.png
+  rotate: false
+  xy: 60, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/jump.png
+  rotate: false
+  xy: 64, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/middle.png
+  rotate: false
+  xy: 1884, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/sit.png
+  rotate: false
+  xy: 1588, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/stay.png
+  rotate: false
+  xy: 1588, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/0.png
+  rotate: false
+  xy: 1588, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/1.png
+  rotate: false
+  xy: 1904, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/2.png
+  rotate: false
+  xy: 1924, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/3.png
+  rotate: false
+  xy: 1944, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/4.png
+  rotate: false
+  xy: 1964, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/swim/5.png
+  rotate: false
+  xy: 1984, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/walk/0.png
+  rotate: false
+  xy: 2004, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/walk/1.png
+  rotate: false
+  xy: 1760, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/big/color2/walk/2.png
+  rotate: false
+  xy: 1780, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/climb/0.png
+  rotate: false
+  xy: 80, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/climb/1.png
+  rotate: false
+  xy: 84, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/dead.png
+  rotate: false
+  xy: 1608, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/jump.png
+  rotate: false
+  xy: 1608, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/stay.png
+  rotate: false
+  xy: 1608, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/swim/0.png
+  rotate: false
+  xy: 1800, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/swim/1.png
+  rotate: false
+  xy: 1820, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/swim/2.png
+  rotate: false
+  xy: 1840, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/swim/3.png
+  rotate: false
+  xy: 1860, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/swim/4.png
+  rotate: false
+  xy: 1880, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/walk/0.png
+  rotate: false
+  xy: 1900, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/walk/1.png
+  rotate: false
+  xy: 1920, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/castle/small/color2/walk/2.png
+  rotate: false
+  xy: 1940, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/climb/0.png
+  rotate: false
+  xy: 1960, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/climb/1.png
+  rotate: false
+  xy: 1980, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/fire/0.png
+  rotate: false
+  xy: 2000, 872
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/fire/1.png
+  rotate: false
+  xy: 100, 52
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/fire/2.png
+  rotate: false
+  xy: 104, 16
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/fireWhenJump.png
+  rotate: false
+  xy: 248, 372
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/jump.png
+  rotate: false
+  xy: 268, 376
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/middle.png
+  rotate: false
+  xy: 124, 120
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/sit.png
+  rotate: false
+  xy: 132, 156
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/stay.png
+  rotate: false
+  xy: 1632, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/0.png
+  rotate: false
+  xy: 1652, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/1.png
+  rotate: false
+  xy: 1672, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/2.png
+  rotate: false
+  xy: 1692, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/3.png
+  rotate: false
+  xy: 2024, 956
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/4.png
+  rotate: false
+  xy: 2028, 920
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/swim/5.png
+  rotate: false
+  xy: 144, 120
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/walk/0.png
+  rotate: false
+  xy: 1700, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/walk/1.png
+  rotate: false
+  xy: 1704, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color2/walk/2.png
+  rotate: false
+  xy: 1712, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/climb/0.png
+  rotate: false
+  xy: 1628, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/climb/1.png
+  rotate: false
+  xy: 1628, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/fire/0.png
+  rotate: false
+  xy: 1628, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/fire/1.png
+  rotate: false
+  xy: 1720, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/fire/2.png
+  rotate: false
+  xy: 1724, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/fireWhenJump.png
+  rotate: false
+  xy: 1732, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/jump.png
+  rotate: false
+  xy: 2000, 836
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/middle.png
+  rotate: false
+  xy: 288, 376
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/sit.png
+  rotate: false
+  xy: 156, 288
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/stay.png
+  rotate: false
+  xy: 156, 252
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/0.png
+  rotate: false
+  xy: 156, 216
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/1.png
+  rotate: false
+  xy: 1644, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/2.png
+  rotate: false
+  xy: 1664, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/3.png
+  rotate: false
+  xy: 1684, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/4.png
+  rotate: false
+  xy: 1704, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/swim/5.png
+  rotate: false
+  xy: 1724, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/walk/0.png
+  rotate: false
+  xy: 1648, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/walk/1.png
+  rotate: false
+  xy: 1648, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/big/color3/walk/2.png
+  rotate: false
+  xy: 1668, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/climb/0.png
+  rotate: false
+  xy: 1648, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/climb/1.png
+  rotate: false
+  xy: 1668, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/dead.png
+  rotate: false
+  xy: 1688, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/jump.png
+  rotate: false
+  xy: 1648, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/stay.png
+  rotate: false
+  xy: 1668, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/swim/0.png
+  rotate: false
+  xy: 1688, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/swim/1.png
+  rotate: false
+  xy: 1708, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/swim/2.png
+  rotate: false
+  xy: 1668, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/swim/3.png
+  rotate: false
+  xy: 1688, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/swim/4.png
+  rotate: false
+  xy: 1708, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/walk/0.png
+  rotate: false
+  xy: 1688, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/walk/1.png
+  rotate: false
+  xy: 1708, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color2/walk/2.png
+  rotate: false
+  xy: 1708, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/climb/0.png
+  rotate: false
+  xy: 1728, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/climb/1.png
+  rotate: false
+  xy: 1728, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/dead.png
+  rotate: false
+  xy: 1728, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/jump.png
+  rotate: false
+  xy: 1728, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/stay.png
+  rotate: false
+  xy: 1744, 640
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/swim/0.png
+  rotate: false
+  xy: 1748, 604
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/swim/1.png
+  rotate: false
+  xy: 1748, 568
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/swim/2.png
+  rotate: false
+  xy: 1748, 532
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/swim/3.png
+  rotate: false
+  xy: 1748, 496
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/swim/4.png
+  rotate: false
+  xy: 308, 376
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/walk/0.png
+  rotate: false
+  xy: 176, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/walk/1.png
+  rotate: false
+  xy: 176, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/night/small/color3/walk/2.png
+  rotate: false
+  xy: 196, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/climb/0.png
+  rotate: false
+  xy: 176, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/climb/1.png
+  rotate: false
+  xy: 196, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/jump.png
+  rotate: false
+  xy: 196, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/middle.png
+  rotate: false
+  xy: 216, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/sit.png
+  rotate: false
+  xy: 216, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/stay.png
+  rotate: false
+  xy: 216, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/turn.png
+  rotate: false
+  xy: 396, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/walk/0.png
+  rotate: false
+  xy: 416, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/walk/1.png
+  rotate: false
+  xy: 436, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color0/walk/2.png
+  rotate: false
+  xy: 456, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/climb/0.png
+  rotate: false
+  xy: 476, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/climb/1.png
+  rotate: false
+  xy: 496, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/fire/0.png
+  rotate: false
+  xy: 516, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/fire/1.png
+  rotate: false
+  xy: 536, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/fire/2.png
+  rotate: false
+  xy: 556, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/fireWhenJump.png
+  rotate: false
+  xy: 576, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/jump.png
+  rotate: false
+  xy: 596, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/middle.png
+  rotate: false
+  xy: 616, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/sit.png
+  rotate: false
+  xy: 636, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/stay.png
+  rotate: false
+  xy: 656, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/walk/0.png
+  rotate: false
+  xy: 676, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/walk/1.png
+  rotate: false
+  xy: 696, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color1/walk/2.png
+  rotate: false
+  xy: 716, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/climb/0.png
+  rotate: false
+  xy: 736, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/climb/1.png
+  rotate: false
+  xy: 756, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/fire/0.png
+  rotate: false
+  xy: 776, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/fire/1.png
+  rotate: false
+  xy: 796, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/fire/2.png
+  rotate: false
+  xy: 816, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/fireWhenJump.png
+  rotate: false
+  xy: 836, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/jump.png
+  rotate: false
+  xy: 856, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/middle.png
+  rotate: false
+  xy: 876, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/sit.png
+  rotate: false
+  xy: 896, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/stay.png
+  rotate: false
+  xy: 916, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/walk/0.png
+  rotate: false
+  xy: 936, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/walk/1.png
+  rotate: false
+  xy: 956, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color2/walk/2.png
+  rotate: false
+  xy: 976, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/climb/0.png
+  rotate: false
+  xy: 996, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/climb/1.png
+  rotate: false
+  xy: 1016, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/fire/0.png
+  rotate: false
+  xy: 1036, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/fire/1.png
+  rotate: false
+  xy: 1056, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/fire/2.png
+  rotate: false
+  xy: 1076, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/fireWhenJump.png
+  rotate: false
+  xy: 1096, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/jump.png
+  rotate: false
+  xy: 1116, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/middle.png
+  rotate: false
+  xy: 1136, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/sit.png
+  rotate: false
+  xy: 1156, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/stay.png
+  rotate: false
+  xy: 1176, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/walk/0.png
+  rotate: false
+  xy: 1196, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/walk/1.png
+  rotate: false
+  xy: 1216, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/big/color3/walk/2.png
+  rotate: false
+  xy: 1236, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/climb/0.png
+  rotate: false
+  xy: 1256, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/climb/1.png
+  rotate: false
+  xy: 1276, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/fire/0.png
+  rotate: false
+  xy: 1296, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/fire/1.png
+  rotate: false
+  xy: 1316, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/fire/2.png
+  rotate: false
+  xy: 1336, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/fireWhenJump.png
+  rotate: false
+  xy: 1356, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/jump.png
+  rotate: false
+  xy: 1376, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/sit.png
+  rotate: false
+  xy: 1396, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/stay.png
+  rotate: false
+  xy: 1416, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/turn.png
+  rotate: false
+  xy: 1436, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/walk/0.png
+  rotate: false
+  xy: 1456, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/walk/1.png
+  rotate: false
+  xy: 1476, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/fiery/color0/walk/2.png
+  rotate: false
+  xy: 1496, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/climb/0.png
+  rotate: false
+  xy: 1516, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/climb/1.png
+  rotate: false
+  xy: 1536, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/dead.png
+  rotate: false
+  xy: 1556, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/jump.png
+  rotate: false
+  xy: 1576, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/stay.png
+  rotate: false
+  xy: 1596, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/turn.png
+  rotate: false
+  xy: 1616, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/walk/0.png
+  rotate: false
+  xy: 1636, 448
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/walk/1.png
+  rotate: false
+  xy: 1656, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color0/walk/2.png
+  rotate: false
+  xy: 1676, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/climb/0.png
+  rotate: false
+  xy: 1696, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/climb/1.png
+  rotate: false
+  xy: 1716, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/dead.png
+  rotate: false
+  xy: 1736, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/jump.png
+  rotate: false
+  xy: 1756, 460
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/stay.png
+  rotate: false
+  xy: 268, 340
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/walk/0.png
+  rotate: false
+  xy: 288, 340
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/walk/1.png
+  rotate: false
+  xy: 308, 340
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color1/walk/2.png
+  rotate: false
+  xy: 236, 308
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/climb/0.png
+  rotate: false
+  xy: 236, 272
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/climb/1.png
+  rotate: false
+  xy: 236, 236
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/dead.png
+  rotate: false
+  xy: 256, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/jump.png
+  rotate: false
+  xy: 256, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/stay.png
+  rotate: false
+  xy: 276, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/walk/0.png
+  rotate: false
+  xy: 276, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/walk/1.png
+  rotate: false
+  xy: 296, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color2/walk/2.png
+  rotate: false
+  xy: 296, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/climb/0.png
+  rotate: false
+  xy: 256, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/climb/1.png
+  rotate: false
+  xy: 276, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/dead.png
+  rotate: false
+  xy: 296, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/jump.png
+  rotate: false
+  xy: 316, 304
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/stay.png
+  rotate: false
+  xy: 316, 268
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/walk/0.png
+  rotate: false
+  xy: 316, 232
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/walk/1.png
+  rotate: false
+  xy: 176, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/overworld/small/color3/walk/2.png
+  rotate: false
+  xy: 196, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/climb/0.png
+  rotate: false
+  xy: 216, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/climb/1.png
+  rotate: false
+  xy: 236, 200
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/fire/0.png
+  rotate: false
+  xy: 256, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/fire/1.png
+  rotate: false
+  xy: 276, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/fire/2.png
+  rotate: false
+  xy: 296, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/fireWhenJump.png
+  rotate: false
+  xy: 316, 196
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/jump.png
+  rotate: false
+  xy: 152, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/middle.png
+  rotate: false
+  xy: 172, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/sit.png
+  rotate: false
+  xy: 192, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/stay.png
+  rotate: false
+  xy: 212, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/0.png
+  rotate: false
+  xy: 164, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/1.png
+  rotate: false
+  xy: 184, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/2.png
+  rotate: false
+  xy: 204, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/3.png
+  rotate: false
+  xy: 224, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/4.png
+  rotate: false
+  xy: 232, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/swim/5.png
+  rotate: false
+  xy: 252, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/walk/0.png
+  rotate: false
+  xy: 244, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/walk/1.png
+  rotate: false
+  xy: 272, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color2/walk/2.png
+  rotate: false
+  xy: 264, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/climb/0.png
+  rotate: false
+  xy: 292, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/climb/1.png
+  rotate: false
+  xy: 284, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/fire/0.png
+  rotate: false
+  xy: 312, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/fire/1.png
+  rotate: false
+  xy: 304, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/fire/2.png
+  rotate: false
+  xy: 324, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/fireWhenJump.png
+  rotate: false
+  xy: 332, 160
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/jump.png
+  rotate: false
+  xy: 344, 124
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/middle.png
+  rotate: false
+  xy: 2020, 884
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/sit.png
+  rotate: false
+  xy: 2020, 848
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/stay.png
+  rotate: false
+  xy: 120, 64
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/0.png
+  rotate: false
+  xy: 140, 64
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/1.png
+  rotate: false
+  xy: 124, 28
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/2.png
+  rotate: false
+  xy: 144, 28
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/3.png
+  rotate: false
+  xy: 1740, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/4.png
+  rotate: false
+  xy: 1744, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/swim/5.png
+  rotate: false
+  xy: 1752, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/walk/0.png
+  rotate: false
+  xy: 1760, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/walk/1.png
+  rotate: false
+  xy: 1764, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/big/color3/walk/2.png
+  rotate: false
+  xy: 1772, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/climb/0.png
+  rotate: false
+  xy: 1780, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/climb/1.png
+  rotate: false
+  xy: 1784, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/dead.png
+  rotate: false
+  xy: 1792, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/jump.png
+  rotate: false
+  xy: 1800, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/stay.png
+  rotate: false
+  xy: 1804, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/swim/0.png
+  rotate: false
+  xy: 1812, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/swim/1.png
+  rotate: false
+  xy: 1820, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/swim/2.png
+  rotate: false
+  xy: 1824, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/swim/3.png
+  rotate: false
+  xy: 1832, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/swim/4.png
+  rotate: false
+  xy: 1840, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/walk/0.png
+  rotate: false
+  xy: 1844, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/walk/1.png
+  rotate: false
+  xy: 1852, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color2/walk/2.png
+  rotate: false
+  xy: 1860, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/climb/0.png
+  rotate: false
+  xy: 1864, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/climb/1.png
+  rotate: false
+  xy: 1872, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/dead.png
+  rotate: false
+  xy: 1880, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/jump.png
+  rotate: false
+  xy: 1884, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/stay.png
+  rotate: false
+  xy: 1892, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/swim/0.png
+  rotate: false
+  xy: 1764, 648
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/swim/1.png
+  rotate: false
+  xy: 1768, 612
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/swim/2.png
+  rotate: false
+  xy: 1768, 576
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/swim/3.png
+  rotate: false
+  xy: 1768, 540
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/swim/4.png
+  rotate: false
+  xy: 1768, 504
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/walk/0.png
+  rotate: false
+  xy: 1784, 648
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/walk/1.png
+  rotate: false
+  xy: 1788, 612
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underground/small/color3/walk/2.png
+  rotate: false
+  xy: 1788, 576
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/0.png
+  rotate: false
+  xy: 1788, 540
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/1.png
+  rotate: false
+  xy: 1788, 504
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/2.png
+  rotate: false
+  xy: 1776, 468
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/3.png
+  rotate: false
+  xy: 1796, 468
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/4.png
+  rotate: false
+  xy: 1804, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color0/jump/5.png
+  rotate: false
+  xy: 1824, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/1.png
+  rotate: false
+  xy: 1844, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/2.png
+  rotate: false
+  xy: 1864, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/3.png
+  rotate: false
+  xy: 1884, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/4.png
+  rotate: false
+  xy: 1904, 668
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/5.png
+  rotate: false
+  xy: 1808, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color1/jump/6.png
+  rotate: false
+  xy: 1808, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/0.png
+  rotate: false
+  xy: 1828, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/1.png
+  rotate: false
+  xy: 1808, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/2.png
+  rotate: false
+  xy: 1828, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/3.png
+  rotate: false
+  xy: 1848, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/4.png
+  rotate: false
+  xy: 1808, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color2/jump/5.png
+  rotate: false
+  xy: 1828, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/0.png
+  rotate: false
+  xy: 1848, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/1.png
+  rotate: false
+  xy: 1868, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/2.png
+  rotate: false
+  xy: 1828, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/3.png
+  rotate: false
+  xy: 1848, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/4.png
+  rotate: false
+  xy: 1868, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/big/color3/jump/5.png
+  rotate: false
+  xy: 1888, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/0.png
+  rotate: false
+  xy: 1848, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/1.png
+  rotate: false
+  xy: 1868, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/2.png
+  rotate: false
+  xy: 1888, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/3.png
+  rotate: false
+  xy: 1868, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/4.png
+  rotate: false
+  xy: 1888, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/fiery/color0/jump/5.png
+  rotate: false
+  xy: 1888, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color0/jump/0.png
+  rotate: false
+  xy: 1908, 632
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color0/jump/1.png
+  rotate: false
+  xy: 1908, 596
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color0/jump/2.png
+  rotate: false
+  xy: 1908, 560
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color0/jump/3.png
+  rotate: false
+  xy: 1908, 524
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color0/jump/4.png
+  rotate: false
+  xy: 1816, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color1/jump/0.png
+  rotate: false
+  xy: 1836, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color1/jump/1.png
+  rotate: false
+  xy: 1856, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color1/jump/2.png
+  rotate: false
+  xy: 1876, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color1/jump/3.png
+  rotate: false
+  xy: 1896, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color1/jump/4.png
+  rotate: false
+  xy: 1916, 488
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color2/jump/0.png
+  rotate: false
+  xy: 1816, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color2/jump/1.png
+  rotate: false
+  xy: 1836, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color2/jump/2.png
+  rotate: false
+  xy: 1856, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color2/jump/3.png
+  rotate: false
+  xy: 1876, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color2/jump/4.png
+  rotate: false
+  xy: 1896, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color3/jump/0.png
+  rotate: false
+  xy: 1916, 452
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color3/jump/1.png
+  rotate: false
+  xy: 2020, 812
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color3/jump/2.png
+  rotate: false
+  xy: 1900, 776
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color3/jump/3.png
+  rotate: false
+  xy: 1904, 740
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
+mario/underwater/small/color3/jump/4.png
+  rotate: false
+  xy: 1912, 704
+  size: 16, 32
+  orig: 16, 32
+  offset: 0, 0
+  index: -1
