@@ -10,10 +10,7 @@ import featurea.platformer.Animation;
 import featurea.platformer.config.Engine;
 import featurea.platformer.physics.WorldLayer;
 import featurea.platformer.physics.WorldZOrder;
-import featurea.util.Color;
-import featurea.util.Colors;
-import featurea.util.Preferences;
-import featurea.util.Targets;
+import featurea.util.*;
 import mario.*;
 import mario.config.Gameplay;
 import mario.features.Script;
@@ -31,8 +28,8 @@ public class World extends WorldLayer {
   public World() {
     setzOrder(new WorldZOrder());
     setCollisionFilter(new MyCollisionResolver());
-    /*getCamera().setResizeAnchorHorizontal(ResizeAnchorHorizontal.center);*/
-    /*getCamera().setResizeAnchorVertical(ResizeAnchorVertical.center);*/
+    getCamera().setResizeAnchorHorizontal(ResizeAnchorHorizontal.center);
+    getCamera().setResizeAnchorVertical(ResizeAnchorVertical.center);
 
     if (Targets.isDesktop) {
       inputListeners.add(new InputAdapter() {

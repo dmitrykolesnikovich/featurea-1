@@ -1,6 +1,6 @@
 <project package="platform">
   <classpath>
-    <file path="e:/featurea/out/production/platform"/>
+    <file path="../out/production/platform"/>
     <file path="${FEATUREA_HOME}/tools/builder.jar"/>
   </classpath>
 </project>
