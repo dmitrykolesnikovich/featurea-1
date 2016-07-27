@@ -4,42 +4,34 @@ import featurea.app.Camera;
 import featurea.app.Context;
 import featurea.app.MediaPlayer;
 import featurea.graphics.Glyph;
+import featurea.graphics.Window;
 import featurea.util.*;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
 import java.util.List;
 
 import static featurea.app.Context.gl;
-import static featurea.opengl.OpenGL.GL_FLOAT;
-import static featurea.opengl.OpenGL.GL_TRIANGLES;
-import static featurea.opengl.OpenGLManager.*;
 
 public class Render {
 
   public final MediaPlayer mediaPlayer;
-  public boolean isReleaseTexturesOnPause = true;
-  public featurea.graphics.Window window;
   public final Size size = new Size();
-  public Zoom zoom = new Zoom();
+  public final Zoom zoom = new Zoom();
   public final TexturePacker texturePacker = new TexturePacker();
   public final DefaultTextureManager defaultTextureManager = new DefaultTextureManager();
-  public boolean isScreenMode;
-  public boolean isOutline;
-
-  public Render(MediaPlayer mediaPlayer) {
-    this.mediaPlayer = mediaPlayer;
-    setBatchSize(1_000);
-  }
-
   private final Line2d line = new Line2d();
   private final Rectangle2d rectangle = new Rectangle2d();
   private final Polygon2d polygon = new Polygon2d();
-  public TexturePart part;
+  public final Batch mainBatch = new Batch();
 
-  public static FloatBuffer createFloatBuffer(int size) {
-    return ByteBuffer.allocateDirect(size << 2).order(ByteOrder.nativeOrder()).asFloatBuffer();
+  public TexturePart part;
+  public Window window;
+
+  public boolean isScreenMode;
+  public boolean isOutline;
+  public boolean isReleaseTexturesOnPause = true;
+
+  public Render(MediaPlayer mediaPlayer) {
+    this.mediaPlayer = mediaPlayer;
   }
 
   public void drawLine(double x1, double y1, double x2, double y2, Color color) {
@@ -114,7 +106,7 @@ public class Render {
 
   public void unbind() {
     if (part != null) {
-      flush();
+      mainBatch.flush();
       part = null;
       gl.unbind();
     }
@@ -123,58 +115,6 @@ public class Render {
   public void bind(TexturePart part) {
     this.part = part;
     gl.bind(part.id);
-  }
-
-  private int batchSize;
-  private int count;
-  private FloatBuffer vertexPointer;
-  private FloatBuffer colorPointer;
-  private FloatBuffer texCoordPointer;
-
-  public void setBatchSize(int batchSize) {
-    this.batchSize = batchSize;
-    vertexPointer = createFloatBuffer(2 * 3 * 2 * batchSize);
-    colorPointer = createFloatBuffer(4 * 3 * 2 * batchSize);
-    texCoordPointer = createFloatBuffer(2 * 3 * 2 * batchSize);
-  }
-
-  private void flip() {
-    texCoordPointer.flip();
-    vertexPointer.flip();
-    colorPointer.flip();
-  }
-
-  public void add(FloatBuffer texCoordPointer, FloatBuffer vertexPointer, FloatBuffer colorPointer) {
-    this.texCoordPointer.put(texCoordPointer);
-    this.vertexPointer.put(vertexPointer);
-    this.colorPointer.put(colorPointer);
-    count++;
-  }
-
-  public void flush() {
-    flip();
-    gl.glPushMatrix();
-    gl.glVertexPointer(VERTEX_POINTER_COUNT, GL_FLOAT, 0, vertexPointer);
-    gl.glColorPointer(COLOR_POINTER_COUNT, GL_FLOAT, 0, colorPointer);
-    gl.glTexCoordPointer(TEXTURE_COORD_POINTER_COUNT, GL_FLOAT, 0, texCoordPointer);
-    gl.glDrawArrays(GL_TRIANGLES, 0, COUNT_OF_VERTICES_FOR_DRAWING_TWO_TRIANGLES * count);
-    gl.glPopMatrix();
-    clear();
-  }
-
-  private void clear() {
-    this.texCoordPointer.clear();
-    this.vertexPointer.clear();
-    this.colorPointer.clear();
-    count = 0;
-  }
-
-  public boolean isFull() {
-    return count == batchSize;
-  }
-
-  public int getBatchSize() {
-    return batchSize;
   }
 
   public TextureManager getTextureManager() {

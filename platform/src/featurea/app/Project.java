@@ -87,7 +87,7 @@ public class Project {
   }
 
   public File getRoot() {
-    return file.getParentFile();
+    return file.getAbsoluteFile().getParentFile();
   }
 
   /**/

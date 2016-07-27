@@ -6,6 +6,7 @@ import featurea.util.Targets;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.jar.JarFile;
@@ -46,6 +47,15 @@ public final class LwjglNatives {
           try {
             ZipEntry entry = jarFile.getEntry(lib);
             FileUtil.copy(jarFile.getInputStream(entry), new File(NATIVES_PATH + "/" + lib));
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+        }
+      } else {
+        for (String lib : LIBS) {
+          try {
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(lib);
+            FileUtil.copy(inputStream, new File(NATIVES_PATH + "/" + lib));
           } catch (IOException e) {
             e.printStackTrace();
           }

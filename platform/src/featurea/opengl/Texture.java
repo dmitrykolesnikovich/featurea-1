@@ -1,7 +1,6 @@
 package featurea.opengl;
 
 import featurea.app.Context;
-import featurea.app.MediaPlayer;
 import featurea.graphics.Glyph;
 import featurea.util.*;
 
@@ -18,9 +17,9 @@ public class Texture {
   private double y2;
   boolean isLoad;
   public final Texture glyphRender;
-  public final FloatBuffer vertexPointer = Render.createFloatBuffer(2 * 3 * 2 * 2);
-  public final FloatBuffer colorPointer = Render.createFloatBuffer(4 * 3 * 2 * 2);
-  public final FloatBuffer texCoordPointer = Render.createFloatBuffer(2 * 3 * 2 * 2);
+  public final FloatBuffer vertexPointer = BufferUtil.createFloatBuffer(2 * 3 * 2 * 2);
+  public final FloatBuffer colorPointer = BufferUtil.createFloatBuffer(4 * 3 * 2 * 2);
+  public final FloatBuffer texCoordPointer = BufferUtil.createFloatBuffer(2 * 3 * 2 * 2);
   private double[] uv = new double[]{0, 0, 0, 1, 1, 1, 1, 0};
   private boolean isFlipX;
   private boolean isFlipY;
@@ -150,7 +149,7 @@ public class Texture {
 
     // todo make use of shaders
     Render render = Context.getRender();
-    if (render.part != part || render.isFull()) {
+    if (render.part != part || render.mainBatch.isFull()) {
       render.unbind();
       render.bind(part);
     }
@@ -176,7 +175,7 @@ public class Texture {
     setColor(color);
 
     // draw
-    render.add(texCoordPointer, vertexPointer, colorPointer);
+    render.mainBatch.add(texCoordPointer, vertexPointer, colorPointer);
   }
 
   /*private*/ void applyTexCoordPointer(double[] uv) {

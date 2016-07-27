@@ -324,15 +324,20 @@ public final class FileUtil {
   }
 
   public static File getFile(File root, String path) {
-    path = FileUtil.formatPath(path);
-    while (path.startsWith("../")) {
-      path = path.substring(3, path.length());
-      root = root.getParentFile();
-      if (root == null) {
-        return null;
+    try {
+      path = FileUtil.formatPath(path);
+      while (path.startsWith("../")) {
+        path = path.substring(3, path.length());
+        root = root.getParentFile();
+        if (root == null) {
+          return null;
+        }
       }
+      return new File(root, path);
+    } catch (NullPointerException e) {
+      e.printStackTrace();
+      return null;
     }
-    return new File(root, path);
   }
 
 }

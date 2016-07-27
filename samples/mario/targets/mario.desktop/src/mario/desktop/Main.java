@@ -20,7 +20,7 @@ public class Main {
       }
     };
     simulator.setProduction(false);
-    simulator.setProject(new File("D:/workspace/featurea/samples/mario/project.xml"));
+    simulator.setProject(new File("project.xml"));
     simulator.setSize(600, 600);
     simulator.setTitle("Mario");
     simulator.start();

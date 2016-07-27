@@ -1,5 +1,6 @@
 package featurea.opengl;
 
+import featurea.util.BufferUtil;
 import featurea.util.Color;
 
 import java.nio.FloatBuffer;
@@ -7,8 +8,8 @@ import static featurea.app.Context.gl;
 
 public final class Line2d {
 
-  private final FloatBuffer vertexPointer = Render.createFloatBuffer(2 * 2);
-  private final FloatBuffer colorPointer = Render.createFloatBuffer(2 * 4);
+  private final FloatBuffer vertexPointer = BufferUtil.createFloatBuffer(2 * 2);
+  private final FloatBuffer colorPointer = BufferUtil.createFloatBuffer(2 * 4);
 
   public void setValue(double x1, double y1, double x2, double y2) {
     vertexPointer.clear();

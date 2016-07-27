@@ -1,5 +1,6 @@
 package featurea.opengl;
 
+import featurea.util.BufferUtil;
 import featurea.util.Color;
 import static featurea.app.Context.gl;
 
@@ -7,8 +8,8 @@ import java.nio.FloatBuffer;
 
 public final class Rectangle2d {
 
-  private final FloatBuffer vertexPointer = Render.createFloatBuffer(2 * 3 * 2);
-  private final FloatBuffer colorPointer = Render.createFloatBuffer(4 * 3 * 2);
+  private final FloatBuffer vertexPointer = BufferUtil.createFloatBuffer(2 * 3 * 2);
+  private final FloatBuffer colorPointer = BufferUtil.createFloatBuffer(4 * 3 * 2);
 
   private void setVertices(double x1, double y1, double x2, double y2) {
     vertexPointer.clear();

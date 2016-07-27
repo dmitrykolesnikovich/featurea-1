@@ -1,5 +1,6 @@
 package featurea.opengl;
 
+import featurea.util.BufferUtil;
 import featurea.util.Color;
 
 import java.nio.FloatBuffer;
@@ -13,7 +14,7 @@ public class Polygon2d {
 
   public void setVertices(double[] points) {
     this.points = points;
-    vertexPointer = Render.createFloatBuffer(2 * 3 * count());
+    vertexPointer = BufferUtil.createFloatBuffer(2 * 3 * count());
     vertexPointer.clear();
     int first = 2, second = 3;
     for (int i = 0; i < count(); i++) {
@@ -27,7 +28,7 @@ public class Polygon2d {
   }
 
   private void setColor(Color color) {
-    colorPointer = Render.createFloatBuffer(4 * 3 * count());
+    colorPointer = BufferUtil.createFloatBuffer(4 * 3 * count());
     colorPointer.clear();
     for (int i = 0; i < count(); i++) {
       colorPointer.put((float)color.r).put((float)color.g).put((float)color.b).put((float)color.a);

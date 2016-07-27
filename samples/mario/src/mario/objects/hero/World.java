@@ -28,8 +28,8 @@ public class World extends WorldLayer {
   public World() {
     setzOrder(new WorldZOrder());
     setCollisionFilter(new MyCollisionResolver());
-    getCamera().setResizeAnchorHorizontal(ResizeAnchorHorizontal.center);
-    getCamera().setResizeAnchorVertical(ResizeAnchorVertical.center);
+    /*getCamera().setResizeAnchorHorizontal(ResizeAnchorHorizontal.center);
+    getCamera().setResizeAnchorVertical(ResizeAnchorVertical.center);*/
 
     if (Targets.isDesktop) {
       inputListeners.add(new InputAdapter() {
