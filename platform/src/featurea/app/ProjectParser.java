@@ -1,5 +1,6 @@
 package featurea.app;
 
+import featurea.util.FileUtil;
 import featurea.util.Properties;
 import featurea.xml.XmlParser;
 import org.w3c.dom.Document;
@@ -45,6 +46,7 @@ import java.io.InputStream;
         Project currentManifest;
         Element fileElement = (Element) fileNodeList.item(i);
         String path = fileElement.getAttribute("path");
+        path = FileUtil.formatPath(path);
         File file = manifest.findFile(path);
         if (file.exists()) {
           // jar dependency or directory dependency

@@ -1,9 +1,9 @@
 <project package="mario">
   <dependencies>
-    <file path="../engines/platformer"/>
+    <file path="../../engines/platformer"/>
   </dependencies>
   <classpath>
-    <file path="../out/production/mario"/>
+    <file path="../../out/production/mario"/>
   </classpath>
   <packs>
     <pack name="pack" files=""/>

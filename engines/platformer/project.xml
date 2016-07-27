@@ -1,9 +1,9 @@
 <project package="featurea.platformer">
   <dependencies>
-    <file path="../platform"/>
+    <file path="../../platform"/>
   </dependencies>
   <classpath>
-    <file path="../out/production/platformer"/>
+    <file path="../../out/production/platformer"/>
   </classpath>
   <config>
     <file path="featurea/platformer/engine.properties"/>

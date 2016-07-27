@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="featurea:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/featurea_jar</output-path>
+    <root id="archive" name="featurea.jar">
+      <element id="module-output" name="featurea" />
+      <element id="module-output" name="platform.desktop" />
+      <element id="module-output" name="platform" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/platform/targets/platform.desktop/libs/lwjgl.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

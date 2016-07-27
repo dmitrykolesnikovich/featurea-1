@@ -323,8 +323,16 @@ public final class FileUtil {
     return null;
   }
 
-  public static List<String> listFiles(File dir, String... extensions) {
-    return null;
+  public static File getFile(File root, String path) {
+    path = FileUtil.formatPath(path);
+    while (path.startsWith("../")) {
+      path = path.substring(3, path.length());
+      root = root.getParentFile();
+      if (root == null) {
+        return null;
+      }
+    }
+    return new File(root, path);
   }
 
 }

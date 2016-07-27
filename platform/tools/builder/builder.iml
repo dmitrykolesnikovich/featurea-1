@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/texturePacker" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ui" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/windowSrc" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

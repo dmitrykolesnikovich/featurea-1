@@ -83,12 +83,7 @@ public class Project {
   }
 
   public File findFile(String path) {
-    path = FileUtil.formatPath(path);
-    if (FileUtil.isAbsolutePath(path)) {
-      return new File(path);
-    } else {
-      return new File(getRoot(), path);
-    }
+    return FileUtil.getFile(getRoot(), path);
   }
 
   public File getRoot() {
