@@ -10,76 +10,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36ba8021-cfa8-4d83-92ca-2b3b19d02300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Castle Complete.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Castle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Castle.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Overworld.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Sky.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Star.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Underwater.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry Underworld.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Hurry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Level Complete.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Overworld.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Sky.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Star.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Underwater.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/music/Underworld.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Bowser Falls.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Bowser Fires.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Break Block.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Bump.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Coin.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Ending.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Fail.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Fireball.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Firework.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Flagpole.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Gain Life.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Game Over 2.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Game Over.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Hurry.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Jump Small.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Jump Super.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Kick.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Pause.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Pipe.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Player Dies.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Power Down.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Powerup Appears.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Powerup.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Stage Clear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/Vine Emerging.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/audio/sounds/World Clear.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/pack.part1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/featurea/fonts/default.fnt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/featurea/res/platformer/Joystick.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/fonts/pressstart2p.fnt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/Level1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/gen/pack" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/builder.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/featurea.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/engines/platformer/gen/featurea/res/platformer/Joystick.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mario_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mario_jar.xml" />
+    <list default="true" id="36ba8021-cfa8-4d83-92ca-2b3b19d02300" name="Default" comment="add gen for production">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/builder.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/featurea.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/gen/featurea/platformer/Assets.java" afterPath="$PROJECT_DIR$/engines/platformer/gen/featurea/platformer/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/ConfigToJavaTool.java" afterPath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/ConfigToJavaTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/A.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/A.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/B.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/B.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/C.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/C.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/D.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/D.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/E.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/E.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/F.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/F.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/G.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/G.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_2.java" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/mario/Assets.java" afterPath="$PROJECT_DIR$/samples/mario/gen/mario/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java" afterPath="$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/misc/res/MarioUndergroundEnd.java" afterPath="$PROJECT_DIR$/samples/mario/gen/misc/res/MarioUndergroundEnd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/screens/res/GameplayScreen.java" afterPath="$PROJECT_DIR$/samples/mario/gen/screens/res/GameplayScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/screens/res/LoadingLayer.java" afterPath="$PROJECT_DIR$/samples/mario/gen/screens/res/LoadingLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/worlds/res/World1_1.java" afterPath="$PROJECT_DIR$/samples/mario/gen/worlds/res/World1_1.java" />
     </list>
     <ignored path="featurea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,9 +55,12 @@
       <file leaf-file-name="BuilderImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5570248">
-              <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.4446281">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+              <folding>
+                <element signature="e#774#914#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -359,36 +296,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="featurea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="featurea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platformer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="featurea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="platform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="featurea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -963,7 +870,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469635882471</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add gen for production">
+      <created>1469637124815</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1469637124815</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1085,7 +998,8 @@
     <MESSAGE value="prepare for batch feature" />
     <MESSAGE value="fix project configs" />
     <MESSAGE value="add dist" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dist" />
+    <MESSAGE value="add gen for production" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gen for production" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1582,9 +1496,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5570248">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
+        <state vertical-scroll-proportion="0.4446281">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="e#774#914#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1599,7 +1516,7 @@
               <type id="artifact" />
             </show-content>
           </artifact-editor>
-          <last-edited>featurea:jar</last-edited>
+          <last-edited>mario:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1648,7 +1565,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>platform</last-edited>
+          <last-edited>mario</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
