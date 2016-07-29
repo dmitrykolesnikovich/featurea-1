@@ -16,6 +16,7 @@ public class Batch {
   }
 
   public final void drawBuffers(Graphics graphics) {
+    // translate to correct position for draw
     onDraw(graphics);
   }
 
