@@ -130,12 +130,12 @@ public class Text {
     }
 
     public void drawOnLayer(Graphics graphics, Angle angle, double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-      double x1 = graphics.layer.toScreenX(this.x1);
-      double y1 = graphics.layer.toScreenY(this.y1);
-      double x2 = graphics.layer.toScreenX(this.x2);
-      double y2 = graphics.layer.toScreenY(this.y2);
-      double oX = graphics.layer.toScreenX(ox);
-      double oY = graphics.layer.toScreenY(oy);
+      double x1 = graphics.getLayer().toScreenX(this.x1);
+      double y1 = graphics.getLayer().toScreenY(this.y1);
+      double x2 = graphics.getLayer().toScreenX(this.x2);
+      double y2 = graphics.getLayer().toScreenY(this.y2);
+      double oX = graphics.getLayer().toScreenX(ox);
+      double oY = graphics.getLayer().toScreenY(oy);
       drawOnScreen(x1, y1, x2, y2, angle, oX, oY, color, isFlipX, isFlipY);
     }
 

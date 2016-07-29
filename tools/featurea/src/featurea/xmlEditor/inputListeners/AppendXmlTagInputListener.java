@@ -54,7 +54,7 @@ public class AppendXmlTagInputListener extends InputAdapter {
           Area area = (Area) resource;
           Layer selectedLayer = xmlEditorView.getSelectedLayer();
           if (selectedLayer != null) {
-            Graphics graphics = selectedLayer.getGraphics();
+            Graphics graphics = xmlEditorView.graphics;
             drawRecursively(graphics, area);
             Selection selection = xmlEditorView.getSelection(xmlTag);
             SelectionRender.draw(graphics, selection.left(), selection.top(), selection.right(), selection.bottom());

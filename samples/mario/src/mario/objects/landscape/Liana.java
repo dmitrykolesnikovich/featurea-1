@@ -40,12 +40,14 @@ public class Liana extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    for (int i = 0; i < length; i++) {
-      double x1 = position.x;
-      double x2 = x1 + Sprites.Items.lianaWidth;
-      double y1 = position.y + i * Sprites.Items.lianaHeight;
-      double y2 = y1 + Sprites.Items.lianaHeight;
-      graphics.drawTexture(Sprites.Items.liana(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      for (int i = 0; i < length; i++) {
+        double x1 = position.x;
+        double x2 = x1 + Sprites.Items.lianaWidth;
+        double y1 = position.y + i * Sprites.Items.lianaHeight;
+        double y2 = y1 + Sprites.Items.lianaHeight;
+        graphics.drawTexture(Sprites.Items.liana(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+      }
     }
   }
 

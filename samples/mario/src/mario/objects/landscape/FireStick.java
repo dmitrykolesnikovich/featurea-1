@@ -30,6 +30,7 @@ public class FireStick extends Body {
   @Override
   public void rotate(Angle angle) {
     super.rotate(angle);
+    graphics.clearDrawTexture();
   }
 
   public void setEmpty(boolean isEmpty) {
@@ -38,9 +39,10 @@ public class FireStick extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    spriteAngle.setValue(angle.getValue() * 6);
-    getRectangle().drawTile(graphics, Sprites.Items.Fireball.fly(), position, spriteAngle);
-    /*getRectangle().draw(graphics, position, Colors.red);*/
+    if (!graphics.containsDrawTexture()) {
+      spriteAngle.setValue(angle.getValue() * 6);
+      getRectangle().drawTile(graphics, Sprites.Items.Fireball.fly(), position, spriteAngle);
+    }
   }
 
   @Override

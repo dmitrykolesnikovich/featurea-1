@@ -1,8 +1,6 @@
 package mario.objects.enemies;
 
 import featurea.app.Context;
-import featurea.graphics.Graphics;
-import featurea.graphics.Sprite;
 import featurea.platformer.overlap.Overlap;
 import featurea.platformer.util.Rectangle;
 import mario.Sprites;
@@ -71,11 +69,6 @@ public class Goomba extends Enemy {
   @Override
   public String toString() {
     return "Goomba";
-  }
-
-  @Override
-  protected void onDrawSpriteIfVisible(Graphics graphics) {
-    super.onDrawSpriteIfVisible(graphics);
   }
 
 }

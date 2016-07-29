@@ -63,7 +63,7 @@ public final class TexturePacker {
         }
         if (root != null) {
           root = FileUtil.formatPath(root);
-          List<String> children = resources.getChildren(inputDir, ".png");
+          List<String> children = resources.listFilesRecursively(inputDir, ".png");
           putToMap(list, root, children);
         }
       }
@@ -93,7 +93,7 @@ public final class TexturePacker {
   }
 
   private void copyPaste(List<String> packedPngFiles, Files resources) {
-    List<String> allFiles = resources.getChildren("");
+    List<String> allFiles = resources.listFilesRecursively("");
     for (String file : allFiles) {
       if (!packedPngFiles.contains(file) && !file.endsWith(".xml")) {
         try {

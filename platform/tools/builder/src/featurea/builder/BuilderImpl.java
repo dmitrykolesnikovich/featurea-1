@@ -25,6 +25,7 @@ public class BuilderImpl implements Builder {
     Thread thread = new Thread() {
       @Override
       public void run() {
+        System.out.println("Build starts");
         performBuild();
         System.out.println("Build complete");
       }

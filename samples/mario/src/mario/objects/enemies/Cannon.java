@@ -46,12 +46,14 @@ public class Cannon extends Body {
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-    if (hasBase) {
-      double x1 = position.x;
-      double x2 = position.x + width;
-      double y1 = position.y + height;
-      double y2 = y1 + baseHeight;
-      graphics.drawTexture(Sprites.Enemies.Cannon.base(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      if (hasBase) {
+        double x1 = position.x;
+        double x2 = position.x + width;
+        double y1 = position.y + height;
+        double y2 = y1 + baseHeight;
+        graphics.drawTexture(Sprites.Enemies.Cannon.base(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+      }
     }
   }
 

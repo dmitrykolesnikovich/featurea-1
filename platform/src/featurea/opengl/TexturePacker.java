@@ -16,7 +16,7 @@ public final class TexturePacker extends TextureManager {
   public Texture getTexture(String file) {
     for (TexturePack texturePack : packs.values()) {
       Texture texture = texturePack.getTexture(file);
-      if (texture != null && (texture.isLoad || texture.part.isLoad())) {
+      if (texture != null && (texture.isLoad() || texture.part.isLoad())) {
         return texture;
       }
     }
@@ -49,10 +49,10 @@ public final class TexturePacker extends TextureManager {
       packs.put(packFile, texturePack);
     }
     Texture texture = texturePack.getTexture(file);
-    try {
+    if (texture != null) {
       texture.load();
-    } catch (NullPointerException e) {
-      e.printStackTrace();
+    } else {
+      throw new TextureNotFoundException(file);
     }
   }
 

@@ -120,7 +120,12 @@ public class HeroSprite extends Sprite {
     }
 
     if (isSheet) {
+      int startIndex = sheetIndex;
       super.onTick(elapsedTime);
+      int finishIndex = sheetIndex;
+      if (startIndex != finishIndex) {
+        hero.graphics.clearDrawTexture();
+      }
     }
     if (isColor) {
       onColorTick(elapsedTime);

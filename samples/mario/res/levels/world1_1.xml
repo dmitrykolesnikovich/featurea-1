@@ -1,6 +1,5 @@
 <World id="world1_1" size="3384, 224" theme="overworld">
   <Hero id="hero" position="254.0, 85.0, 10.0" state="small"/>
-  <Camera id="camera" rectangle="0, 0, 256, 224"/>
   <Background step="768, 0" value="cloud.png, 136, 64, 312, 48;
 		       cloudTriple.png, 440, 64;
 		       cloudDouble.png, 584, 48;

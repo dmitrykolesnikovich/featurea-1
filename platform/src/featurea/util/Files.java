@@ -32,7 +32,7 @@ public class Files {
   /**
    * @return unpacked files list
    */
-  public List<String> getChildren(String dir, String... extensions) {
+  public List<String> listFilesRecursively(String dir, String... extensions) {
     dir = FileUtil.formatPath(dir);
     Set<String> result = new TreeSet<>();
     if (FileUtil.isAbsolutePath(dir)) {

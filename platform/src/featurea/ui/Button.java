@@ -64,9 +64,11 @@ public class Button extends TextView {
 
   @Override
   public void onDraw(Graphics graphics) {
-    if (isVisible()) {
-      sprite.draw(graphics, getPosition().x, getPosition().y, angle,
-          isFlipX(), isFlipY(), getScaleX(), getScaleY());
+    if (!graphics.containsDrawTexture()) {
+      if (isVisible()) {
+        sprite.draw(graphics, getPosition().x, getPosition().y, angle,
+            isFlipX(), isFlipY(), getScaleX(), getScaleY());
+      }
     }
     super.onDraw(graphics);
   }

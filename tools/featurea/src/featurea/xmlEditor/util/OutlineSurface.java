@@ -29,7 +29,7 @@ public class OutlineSurface {
         if (xmlNode == xmlEditorView.getSelectedXmlTag().getResource()) {
           color = Colors.focus;
         }
-        Graphics graphics = layer.getGraphics();
+        Graphics graphics = xmlEditorView.graphics;
 
         double x1 = selection.left();
         double y1 = selection.top();

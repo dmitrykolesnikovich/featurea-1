@@ -13,7 +13,12 @@ public class AnimationSprite extends Sprite {
   @Override
   public void onTick(double elapsedTime) {
     if (!animation.getLayer().isTimeStop()) {
+      int startIndex = sheetIndex;
       super.onTick(elapsedTime);
+      int finishIndex = sheetIndex;
+      if (startIndex != finishIndex) {
+        animation.graphics.clearDrawTexture();
+      }
     }
   }
 

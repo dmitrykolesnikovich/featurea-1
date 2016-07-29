@@ -29,22 +29,24 @@ public class CastleBackground extends Animation {
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-    // castle2
-    if (castle2 != null) {
-      double x1 = castle2.x;
-      double y2 = 200;
-      double y1 = y2 - Sprites.Background.castle2Height;
-      double x2 = x1 + Sprites.Background.castle2Width;
-      graphics.drawTexture(Sprites.Background.castle2(), x1, y1, x2, y2, null, 0, 0, null, false, false, null);
-    }
+    if (!graphics.containsDrawTexture()) {
+      // castle2
+      if (castle2 != null) {
+        double x1 = castle2.x;
+        double y2 = 200;
+        double y1 = y2 - Sprites.Background.castle2Height;
+        double x2 = x1 + Sprites.Background.castle2Width;
+        graphics.drawTexture(Sprites.Background.castle2(), x1, y1, x2, y2, null, 0, 0, null, false, false);
+      }
 
-    // castle4
-    if (castle4 != null) {
-      double x1 = castle4.x;
-      double y2 = 200;
-      double y1 = y2 - Sprites.Background.castle4Height;
-      double x2 = x1 + Sprites.Background.castle4Width;
-      graphics.drawTexture(Sprites.Background.castle4(), x1, y1, x2, y2, null, 0, 0, null, false, false, null);
+      // castle4
+      if (castle4 != null) {
+        double x1 = castle4.x;
+        double y2 = 200;
+        double y1 = y2 - Sprites.Background.castle4Height;
+        double x2 = x1 + Sprites.Background.castle4Width;
+        graphics.drawTexture(Sprites.Background.castle4(), x1, y1, x2, y2, null, 0, 0, null, false, false);
+      }
     }
   }
 

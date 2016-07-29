@@ -49,7 +49,7 @@ public class GenSpritesTool {
 
   private void performGen(List<String> enumConstants) {
 
-    List<String> files = project.getFiles().getChildren("", ".png");
+    List<String> files = project.getFiles().listFilesRecursively("", ".png");
 
     for (String themeName : enumConstants) {
       for (String file : files) {

@@ -51,7 +51,7 @@ import java.io.InputStream;
         if (file.exists()) {
           // jar dependency or directory dependency
           if (!path.endsWith(".jar")) {
-            file = new File(file, "project.xml");
+            file = new File(file, Project.PROJECT_FILE_NAME);
           }
           currentManifest = new Project(file, manifest);
         } else {

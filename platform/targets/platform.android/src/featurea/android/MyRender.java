@@ -51,7 +51,6 @@ public class MyRender implements GLSurfaceView.Renderer {
     mediaPlayer.app.onTick(elapsedTime);
     mediaPlayer.app.onDrawBackground();
     mediaPlayer.app.onDraw();
-    mediaPlayer.render.unbind();
     now = nanoTime;
   }
 

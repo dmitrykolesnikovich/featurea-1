@@ -120,7 +120,6 @@ public class Simulator extends JFrame {
 
   public void onDraw(OpenGLManager gl) {
     getMediaPlayer().app.onDraw();
-    getMediaPlayer().render.unbind();
   }
 
   public void onExit() {

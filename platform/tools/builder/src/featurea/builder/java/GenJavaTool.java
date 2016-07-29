@@ -29,7 +29,7 @@ public class GenJavaTool {
       for (File resPackage : resPackages) {
         if (resPackage.isDirectory()) {
           String resPackageName = resPackage.getName();
-          List<String> xmlFiles = resources.getChildren(resPackageName, ".xml");
+          List<String> xmlFiles = resources.listFilesRecursively(resPackageName, ".xml");
           if (!xmlFiles.isEmpty()) {
             for (String xmlFile : xmlFiles) {
               createJavaFile(xmlFile);

@@ -39,12 +39,14 @@ public class Platto extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    for (int i = 0; i < count; i++) {
-      double x1 = position.x + i * Sprites.Items.plattoWidth;
-      double x2 = x1 + Sprites.Items.plattoWidth;
-      double y1 = position.y;
-      double y2 = y1 + Sprites.Items.plattoHeight;
-      sprite.draw(graphics, x1, y1, x2, y2, 0, 0, null, false, false);
+    if (!graphics.containsDrawTexture()) {
+      for (int i = 0; i < count; i++) {
+        double x1 = position.x + i * Sprites.Items.plattoWidth;
+        double x2 = x1 + Sprites.Items.plattoWidth;
+        double y1 = position.y;
+        double y2 = y1 + Sprites.Items.plattoHeight;
+        sprite.draw(graphics, x1, y1, x2, y2, 0, 0, null, false, false);
+      }
     }
   }
 

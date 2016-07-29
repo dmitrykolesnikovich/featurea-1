@@ -16,7 +16,9 @@ public class Rope extends Animation {
 
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
-    graphics.fillRectangle(ox() - 1, Gameplay.hudHeight, ox() + 1, graphics.layer.getCamera().height(), ropeColor);
+    if (!graphics.containsFillRectangle()) {
+      graphics.fillRectangle(ox() - 1, Gameplay.hudHeight, ox() + 1, graphics.getLayer().getCamera().height(), ropeColor);
+    }
   }
 
   @Override

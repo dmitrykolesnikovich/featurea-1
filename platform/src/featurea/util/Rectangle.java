@@ -2,6 +2,8 @@ package featurea.util;
 
 import featurea.xml.XmlResource;
 
+// no rotation supported specially for camera
+// programmer is attended to his own Rectangle implementation for performance reasons
 public class Rectangle implements Transform, XmlResource {
 
   private Vector position = new Vector();

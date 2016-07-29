@@ -4,6 +4,7 @@ import com.sun.istack.internal.Nullable;
 import featurea.app.Area;
 import featurea.app.Camera;
 import featurea.app.Context;
+import featurea.app.Layer;
 import featurea.graphics.Graphics;
 import featurea.platformer.Animation;
 import featurea.platformer.CollisionResolver;
@@ -57,14 +58,13 @@ public class WorldLayer extends MyLayer implements XmlNode {
     return size;
   }
 
-  @Override
+  /*@Override
   public void onDraw(Graphics graphics) {
-
     super.onDraw(graphics);
     if (!Context.getRender().isScreenMode) {
       Context.getRender().cropWithCamera(getCamera());
     }
-  }
+  }*/
 
   public double getCameraOffset() {
     return featurea.platformer.config.Engine.cameraOffset;
@@ -95,6 +95,18 @@ public class WorldLayer extends MyLayer implements XmlNode {
       animation.setLayer(this);
       animation.onAdd();
       animation.updateIndex();
+    }
+    return this;
+  }
+
+
+  @Override
+  public Layer remove(Area area) {
+    super.remove(area);
+    if (area instanceof Animation) {
+      Animation animation = (Animation) area;
+      animation.onRemove();
+      animation.setLayer(null);
     }
     return this;
   }

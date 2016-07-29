@@ -77,14 +77,19 @@ public class Flagpole extends Body {
     double ox = position.x + width() / 2;
     double oy = position.y;
 
-    graphics.fillRectangle(ox - 1, oy, ox + 1, oy + height(), Colors.green);
+    if (!graphics.containsFillRectangle()) {
+      graphics.fillRectangle(ox - 1, oy, ox + 1, oy + height(), Colors.green);
+    }
 
     // circle
-    double circleWidth = Sprites.Items.Flagpole.circleWidth;
-    double circleHeight = Sprites.Items.Flagpole.circleHeight;
-    graphics.drawTexture(Sprites.Items.Flagpole.circle(),
-        ox - circleWidth / 2, oy - circleHeight / 2, ox + circleWidth / 2, oy + circleHeight / 2,
-        null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      double circleWidth = Sprites.Items.Flagpole.circleWidth;
+      double circleHeight = Sprites.Items.Flagpole.circleHeight;
+      graphics.drawTexture(Sprites.Items.Flagpole.circle(),
+          ox - circleWidth / 2, oy - circleHeight / 2, ox + circleWidth / 2, oy + circleHeight / 2,
+          null, 0, 0, Colors.white, false, false);
+    }
+
   }
 
   @Override

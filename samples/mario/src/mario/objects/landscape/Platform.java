@@ -38,11 +38,13 @@ public class Platform extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    double x1 = left();
-    double y1 = top();
-    double x2 = right();
-    double y2 = bottom();
-    graphics.drawTile(sprite.getCurrentFile(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      double x1 = left();
+      double y1 = top();
+      double x2 = right();
+      double y2 = bottom();
+      graphics.drawTile(sprite.getCurrentFile(), x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+    }
   }
 
   @Override

@@ -1,7 +1,6 @@
 package featurea.graphics;
 
 import featurea.app.Context;
-import featurea.opengl.Shader;
 import featurea.util.Angle;
 import featurea.util.Color;
 import featurea.util.Size;
@@ -22,7 +21,6 @@ public class Sprite {
   public int sheetIndex;
   private boolean isStop;
   private double currentTime;
-  private final List<Shader> shaders = new ArrayList<>();
   public Runnable stopListener;
 
   public void setProgress(double progress) {
@@ -81,7 +79,7 @@ public class Sprite {
       if (file.endsWith(".png")) {
         sheet.add(file);
       } else {
-        List<String> files = Context.getFiles().getChildren(file, ".png");
+        List<String> files = Context.getFiles().listFilesRecursively(file, ".png");
         sheet.addAll(files);
       }
       reset();
@@ -128,7 +126,7 @@ public class Sprite {
   public void draw(Graphics graphics, double x1, double y1, double x2, double y2, double ox, double oy, Angle angle, boolean isFlipX, boolean isFlipY) {
     String currentFile = getCurrentFile();
     if (currentFile != null) {
-      graphics.drawTexture(currentFile, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY, shaders);
+      graphics.drawTexture(currentFile, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
     }
   }
 
@@ -137,10 +135,6 @@ public class Sprite {
     sheetIndex = 0;
     isStop = false;
     currentTime = 0;
-  }
-
-  public void add(Shader shader) {
-    shaders.add(shader);
   }
 
   public double getCurrentTime() {

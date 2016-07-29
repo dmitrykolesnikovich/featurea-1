@@ -1,5 +1,7 @@
 package featurea.util;
 
+import featurea.app.Project;
+
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.Charset;
@@ -314,7 +316,7 @@ public final class FileUtil {
       File[] files = dir.listFiles();
       if (files != null) {
         for (File childFile : files) {
-          if (childFile.getName().endsWith("project.xml")) {
+          if (childFile.getName().endsWith(Project.PROJECT_FILE_NAME)) {
             return childFile;
           }
         }

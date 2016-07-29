@@ -52,7 +52,7 @@ public class BodyRender {
   }
 
   public static void drawCircle(Graphics graphics, Circle circle, Transform transform) {
-    graphics.drawCircle(transform.getTranslationX(), transform.getTranslationY(), circle.getRadius(), circle.getRadius(), Colors.red, new Angle(transform.getAngle()));
+    throw new RuntimeException("Not implemented yet");
   }
 
 }

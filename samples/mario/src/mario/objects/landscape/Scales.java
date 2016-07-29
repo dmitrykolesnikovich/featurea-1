@@ -118,21 +118,26 @@ public class Scales extends Animation {
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-    double bearingWidth = Sprites.Items.bearingWidth;
-    double bearingHeight = Sprites.Items.bearingHeight;
 
-    graphics.drawTexture(Sprites.Items.bearing(),
-        ropeLeftX, ropeTopY, ropeLeftX + bearingWidth, ropeTopY + bearingHeight, null, 0, 0,
-        Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      double bearingWidth = Sprites.Items.bearingWidth;
+      double bearingHeight = Sprites.Items.bearingHeight;
 
-    graphics.drawTexture(Sprites.Items.bearing(),
-        ropeRightX - bearingWidth, ropeTopY, ropeRightX, ropeTopY + bearingHeight, null, 0, 0,
-        Colors.white, false, false, null);
+      graphics.drawTexture(Sprites.Items.bearing(),
+          ropeLeftX, ropeTopY, ropeLeftX + bearingWidth, ropeTopY + bearingHeight, null, 0, 0,
+          Colors.white, false, false);
+
+      graphics.drawTexture(Sprites.Items.bearing(),
+          ropeRightX - bearingWidth, ropeTopY, ropeRightX, ropeTopY + bearingHeight, null, 0, 0,
+          Colors.white, false, false);
+    }
 
     // rope
-    graphics.fillRectangle(ropeLeftX - 1, height, ropeLeftX + 1, platto1.position.y, ropeColor);
-    graphics.fillRectangle(ropeRightX - 1, height, ropeRightX + 1, platto2.position.y, ropeColor);
-    graphics.fillRectangle(x1, ropeTopY - 1, x2, ropeTopY + 1, ropeColor);
+    if (!graphics.containsFillRectangle()) {
+      graphics.fillRectangle(ropeLeftX - 1, height, ropeLeftX + 1, platto1.position.y, ropeColor);
+      graphics.fillRectangle(ropeRightX - 1, height, ropeRightX + 1, platto2.position.y, ropeColor);
+      graphics.fillRectangle(x1, ropeTopY - 1, x2, ropeTopY + 1, ropeColor);
+    }
   }
 
   @Override

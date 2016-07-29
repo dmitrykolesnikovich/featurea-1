@@ -1,11 +1,9 @@
 package featurea.opengl;
 
-import featurea.app.Context;
-import featurea.graphics.Glyph;
-import featurea.util.*;
-
-import java.nio.FloatBuffer;
-import java.util.List;
+import featurea.opengl.batches.DrawTextureBatch;
+import featurea.util.Angle;
+import featurea.util.Color;
+import featurea.util.Size;
 
 public class Texture {
 
@@ -15,14 +13,13 @@ public class Texture {
   private double y1;
   private double x2;
   private double y2;
-  boolean isLoad;
-  public final Texture glyphRender;
-  public final FloatBuffer vertexPointer = BufferUtil.createFloatBuffer(2 * 3 * 2 * 2);
-  public final FloatBuffer colorPointer = BufferUtil.createFloatBuffer(4 * 3 * 2 * 2);
-  public final FloatBuffer texCoordPointer = BufferUtil.createFloatBuffer(2 * 3 * 2 * 2);
+  private boolean isLoad;
   private double[] uv = new double[]{0, 0, 0, 1, 1, 1, 1, 0};
   private boolean isFlipX;
   private boolean isFlipY;
+
+  // in common use: size, point1, point2, point3, point4
+  private final Size size = new Size();
 
   /*private*/ Texture(String file, TexturePart part, double x1, double y1, double x2, double y2) {
     this.file = file;
@@ -31,22 +28,7 @@ public class Texture {
     this.y1 = y1;
     this.x2 = x2;
     this.y2 = y2;
-    this.glyphRender = new Texture(this);
     setRectangle(x1, y1, x2, y2);
-    setColor(Colors.white);
-  }
-
-  /*private*/ Texture(Texture texture) {
-    this.file = texture.file;
-    this.part = texture.part;
-    this.x1 = texture.x1;
-    this.y1 = texture.y1;
-    this.x2 = texture.x2;
-    this.y2 = texture.y2;
-    this.isLoad = texture.isLoad;
-    this.glyphRender = texture.glyphRender;
-    setRectangle(x1, y1, x2, y2);
-    setColor(Colors.white);
   }
 
   /*private*/ void load() {
@@ -61,40 +43,6 @@ public class Texture {
     part.release();
   }
 
-  public void setVertices(Vector point1, Vector point2, Vector point3, Vector point4) {
-    double x1 = (double) point1.x;
-    double y1 = (double) point1.y;
-    double x2 = (double) point2.x;
-    double y2 = (double) point2.y;
-    double x3 = (double) point3.x;
-    double y3 = (double) point3.y;
-    double x4 = (double) point4.x;
-    double y4 = (double) point4.y;
-
-    vertexPointer.clear();
-    vertexPointer.put((float) x1).put((float) y1);
-    vertexPointer.put((float) x4).put((float) y4);
-    vertexPointer.put((float) x3).put((float) y3);
-    vertexPointer.put((float) x1).put((float) y1);
-    vertexPointer.put((float) x3).put((float) y3);
-    vertexPointer.put((float) x2).put((float) y2);
-    vertexPointer.flip();
-  }
-
-  /*private*/ void setColor(Color color) {
-    if (color == null) {
-      color = Colors.white;
-    }
-    colorPointer.clear();
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.put((float) color.r).put((float) color.g).put((float) color.b).put((float) color.a);
-    colorPointer.flip();
-  }
-
   public void setUV(double u, double v, double u2, double v2) {
     this.isFlipX = false;
     this.isFlipY = false;
@@ -106,14 +54,13 @@ public class Texture {
     uv[5] = v2;
     uv[6] = u2;
     uv[7] = v;
-    applyTexCoordPointer(uv);
   }
 
   private void setRectangle(double x1, double y1, double x2, double y2) {
-    double u = (double) ((x1) / part.size.width);
-    double u2 = (double) ((x2) / part.size.width);
-    double v = (double) ((y1) / part.size.height);
-    double v2 = (double) ((y2) / part.size.height);
+    double u = x1 / part.size.width;
+    double u2 = x2 / part.size.width;
+    double v = y1 / part.size.height;
+    double v2 = y2 / part.size.height;
     setUV(u, v, u2, v2);
   }
 
@@ -138,63 +85,23 @@ public class Texture {
     }
   }
 
-  // temp vars: point1, point2
-  private final Vector point1 = new Vector();
-  private final Vector point2 = new Vector();
-  private final Vector point3 = new Vector();
-  private final Vector point4 = new Vector();
-
-  public void draw(double x1, double y1, double x2, double y2, Angle angle, double ox, double oy,
-                   Color color, boolean isFlipX, boolean isFlipY, List<Shader> shaders) {
-
-    // todo make use of shaders
-    Render render = Context.getRender();
-    if (render.part != part || render.mainBatch.isFull()) {
-      render.unbind();
-      render.bind(part);
-    }
-
-    // tx coords
+  public void draw(DrawTextureBatch drawTextureBatch, double x1, double y1, double x2, double y2, Angle angle,
+                   double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
     flipUV(isFlipX, isFlipY);
-    applyTexCoordPointer(uv);
-
-    // vertex coords
-    point1.setValue(x1, y1);
-    point2.setValue(x2, y1);
-    point3.setValue(x2, y2);
-    point4.setValue(x1, y2);
-    if (angle != null && angle.getValue() != 0) {
-      Vector.rotate(point1, ox, oy, angle);
-      Vector.rotate(point2, ox, oy, angle);
-      Vector.rotate(point3, ox, oy, angle);
-      Vector.rotate(point4, ox, oy, angle);
-    }
-    setVertices(point1, point2, point3, point4);
-
-    // color coords
-    setColor(color);
-
-    // draw
-    render.mainBatch.add(texCoordPointer, vertexPointer, colorPointer);
+    OpenGLUtil.textureRectangle.setValue(x1, y1, x2, y2).rotate(ox, oy, angle);
+    drawTextureBatch.putTexCoordPointer(uv).
+        putVertexPointer(OpenGLUtil.textureRectangle).
+        putColorPointer(color).
+        finish();
   }
 
-  /*private*/ void applyTexCoordPointer(double[] uv) {
-    texCoordPointer.clear();
-    texCoordPointer.put((float) uv[0]).put((float) uv[1]);
-    texCoordPointer.put((float) uv[2]).put((float) uv[3]);
-    texCoordPointer.put((float) uv[4]).put((float) uv[5]);
-    texCoordPointer.put((float) uv[0]).put((float) uv[1]);
-    texCoordPointer.put((float) uv[4]).put((float) uv[5]);
-    texCoordPointer.put((float) uv[6]).put((float) uv[7]);
-    texCoordPointer.flip();
-  }
 
   public double getWidth() {
-    return (double) Math.abs((u2() - u1()) * part.size.width);
+    return Math.abs((u2() - u1()) * part.size.width);
   }
 
   public double getHeight() {
-    return (double) Math.abs((v2() - v1()) * part.size.height);
+    return Math.abs((v2() - v1()) * part.size.height);
   }
 
   public double u1() {
@@ -221,19 +128,12 @@ public class Texture {
     return part.id;
   }
 
-  public void setGlyphToRender(Glyph glyph) {
-    double glyph_u1 = u1() + (u2() - u1()) * glyph.u;
-    double glyph_u2 = u1() + (u2() - u1()) * glyph.u2;
-    double glyph_v1 = v1() + (v2() - v1()) * glyph.v;
-    double glyph_v2 = v1() + (v2() - v1()) * glyph.v2;
-    this.glyphRender.setUV(glyph_u1, glyph_v1, glyph_u2, glyph_v2);
-  }
-
-  private final Size size = new Size();
-
   public Size getSize() {
     size.setValue(getWidth(), getHeight());
     return size;
   }
 
+  public void setLoad(boolean isLoad) {
+    this.isLoad = isLoad;
+  }
 }

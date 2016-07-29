@@ -5,6 +5,7 @@ import com.sun.istack.internal.Nullable;
 import featurea.app.Layer;
 import featurea.app.MediaPlayer;
 import featurea.app.Project;
+import featurea.graphics.Graphics;
 import featurea.util.Selection;
 
 import java.io.File;

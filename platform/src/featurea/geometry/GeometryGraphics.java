@@ -27,7 +27,7 @@ public class GeometryGraphics {
   }
 
   public void drawShape(Circle circle, Color color, Graphics graphics) {
-    graphics.drawCircle(circle.ox(), circle.oy(), circle.width / 2, circle.height / 2, color, circle.angle);
+    throw new RuntimeException("Not implemented yet");
   }
 
   public void drawPolygon(Polygon polygon, Color color, Graphics graphics) {

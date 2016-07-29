@@ -2,6 +2,7 @@ package featurea.xml;
 
 import featurea.app.Layer;
 import featurea.app.MediaPlayer;
+import featurea.graphics.DefaultGraphics;
 import featurea.graphics.Graphics;
 import featurea.input.InputAdapter;
 import featurea.util.Selection;

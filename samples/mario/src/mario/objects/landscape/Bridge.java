@@ -32,12 +32,14 @@ public class Bridge extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    graphics.drawTile(Sprites.Items.bridge(), left(), bottom(), right(), top(), null, ox(), oy(), Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      graphics.drawTile(Sprites.Items.bridge(), left(), bottom(), right(), top(), null, ox(), oy(), Colors.white, false, false);
+    }
   }
 
   @Override
   public Animation setRectangle(double x1, double y1, double x2, double y2) {
-    return super.setRectangle(x1, y1 + (y2 - y1) / 2, x2, y2);
+    return super.setRectangle(x1, y1 + (y2 - y1) / 2, x2, y2); // IMPORTANT
   }
 
 

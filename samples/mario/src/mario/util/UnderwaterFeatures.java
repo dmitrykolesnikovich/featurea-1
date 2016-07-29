@@ -1,6 +1,7 @@
 package mario.util;
 
 import featurea.app.Context;
+import featurea.graphics.Graphics;
 import featurea.platformer.Animation;
 import featurea.platformer.physics.Body;
 import featurea.util.Color;
@@ -31,13 +32,8 @@ public class UnderwaterFeatures {
     }, Gameplay.bubblePeriod);
   }
 
-  public void onDraw(World world) {
-    world.getGraphics().fillRectangle(0, WATER_LINE, world.getSize().width, 224, underWaterColor);
-    for (Animation animation : world.getBodies()) {
-      if (animation instanceof Body) {
-
-      }
-    }
+  public void onDraw(Graphics graphics, World world) {
+    graphics.fillRectangle(0, WATER_LINE, world.getSize().width, 224, underWaterColor);
   }
 
   public void onMotionFinish(World world) {

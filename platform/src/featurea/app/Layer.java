@@ -1,5 +1,7 @@
 package featurea.app;
 
+import featurea.graphics.Canvas;
+import featurea.graphics.DefaultCanvas;
 import featurea.graphics.Graphics;
 import featurea.input.InputListener;
 import featurea.util.Size;
@@ -13,7 +15,7 @@ import java.util.List;
 // Lifecycle: onTraverse -> onTick -> onDraw
 public class Layer implements Area, XmlResource {
 
-  private final Graphics graphics = new Graphics(this);
+  private Canvas canvas = new DefaultCanvas().setLayer(this).build();
   public final List<InputListener> inputListeners = new ArrayList<>();
   private Screen screen;
   private Camera camera;
@@ -23,6 +25,14 @@ public class Layer implements Area, XmlResource {
   public final Traverse traverse = new Traverse(this);
   public Projection<? extends Area> projection = new Projection<>();
 
+  public Canvas getCanvas() {
+    return canvas;
+  }
+
+  public void setCanvas(Canvas canvas) {
+    this.canvas = canvas;
+  }
+
   public void removeSelf() {
     if (screen != null) {
       screen.remove(this);
@@ -31,14 +41,14 @@ public class Layer implements Area, XmlResource {
 
   @Override
   public void onDraw(Graphics graphics) {
-    if (zOrder != null) {
-      Collections.sort(projection, zOrder);
-    }
-    graphics.drawProjection(projection);
+    // no op
   }
 
   public void onTraverse() {
     traverse.onTraverse(projection);
+    if (zOrder != null) {
+      Collections.sort(projection, zOrder);
+    }
   }
 
   @Override
@@ -89,10 +99,6 @@ public class Layer implements Area, XmlResource {
   public Layer remove(Area area) {
     listAreas.remove(area);
     return this;
-  }
-
-  public Graphics getGraphics() {
-    return graphics;
   }
 
   public Screen getScreen() {
@@ -167,6 +173,5 @@ public class Layer implements Area, XmlResource {
       return screenLength / Context.getRender().zoom.scale;
     }
   }
-
 
 }

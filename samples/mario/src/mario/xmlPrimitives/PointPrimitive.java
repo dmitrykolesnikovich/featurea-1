@@ -7,7 +7,6 @@ import featurea.platformer.physics.Body;
 import featurea.util.ArrayUtil;
 import featurea.util.CastUtil;
 import featurea.util.Colors;
-import featurea.util.Selection;
 import featurea.xml.XmlPrimitive;
 import featurea.xml.XmlTag;
 import featurea.xml.XmlUtil;
@@ -48,15 +47,19 @@ public class PointPrimitive extends XmlPrimitive {
   @Override
   public void onDraw(Graphics graphics) {
     super.onDraw(graphics);
-    if (selectedBody != null) {
-      double x1 = selectedBody.left();
-      double y1 = selectedBody.top();
-      double x2 = selectedBody.right();
-      double y2 = selectedBody.bottom();
-      graphics.drawRectangle(x1, y1, x2, y2, Colors.red);
+    if (graphics.containsDrawLine()) {
+      if (selectedBody != null) {
+        double x1 = selectedBody.left();
+        double y1 = selectedBody.top();
+        double x2 = selectedBody.right();
+        double y2 = selectedBody.bottom();
+        graphics.drawRectangle(x1, y1, x2, y2, Colors.red);
+      }
     }
-    for (Block block : bonusBlocks.subList(getWorld().projection)) {
-      block.getBonus().debugDraw(graphics);
+    if (!graphics.containsDrawTexture()) {
+      for (Block block : bonusBlocks.subList(getWorld().projection)) {
+        block.getBonus().debugDraw(graphics);
+      }
     }
   }
 

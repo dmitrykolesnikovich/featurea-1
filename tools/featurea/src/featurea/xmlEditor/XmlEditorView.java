@@ -2,6 +2,8 @@ package featurea.xmlEditor;
 
 import featurea.app.*;
 import featurea.desktop.Simulator;
+import featurea.graphics.DefaultGraphics;
+import featurea.graphics.Graphics;
 import featurea.opengl.OpenGLManager;
 import featurea.swing.MyScrollPanel;
 import featurea.swing.TreeTransferHandler;
@@ -36,11 +38,13 @@ public class XmlEditorView extends JPanel implements XmlEditor {
   private final JSplitPane splitPanel = new JSplitPane();
   private final JSplitPane splitPane2 = new JSplitPane();
   private final File xmlFile;
-  private final AppendXmlTagInputListener appendXmlTagInputListener = new AppendXmlTagInputListener(XmlEditorView.this);
-  private final SelectXmlTagInputListener selectXmlTagInputListener = new SelectXmlTagInputListener(XmlEditorView.this);
-  private final OutlineSurface outlineSurface = new OutlineSurface(XmlEditorView.this);
-  private final TrackCoordinatesInputListener trackCoordinatesInputListener = new TrackCoordinatesInputListener(XmlEditorView.this);
-  private final ZoomInputListener zoomInputListener = new ZoomInputListener(XmlEditorView.this);
+  private final AppendXmlTagInputListener appendXmlTagInputListener = new AppendXmlTagInputListener(this);
+  private final SelectXmlTagInputListener selectXmlTagInputListener = new SelectXmlTagInputListener(this);
+  private final OutlineSurface outlineSurface = new OutlineSurface(this);
+  private final TrackCoordinatesInputListener trackCoordinatesInputListener = new TrackCoordinatesInputListener(this);
+  private final ZoomInputListener zoomInputListener = new ZoomInputListener(this);
+  public final Graphics graphics = new DefaultGraphics().build();
+
 
   /*configs*/
   private DefaultsConfig defaults;
@@ -138,7 +142,7 @@ public class XmlEditorView extends JPanel implements XmlEditor {
     Layer selectedLayer = getSelectedLayer();
     XmlPrimitive selectedPrimitive = getSelectedPrimitive();
     if (selectedLayer != null && selectedPrimitive != null) {
-      selectedPrimitive.onDraw(selectedLayer.getGraphics());
+      selectedPrimitive.onDraw(graphics);
     }
   }
 

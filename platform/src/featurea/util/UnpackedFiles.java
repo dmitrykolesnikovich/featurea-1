@@ -23,34 +23,32 @@ public class UnpackedFiles extends Files {
   }
 
   @Override
-  public List<String> getChildren(String dir, String... extensions) {
-    List<String> result = super.getChildren(dir, extensions);
+  public List<String> listFilesRecursively(String dir, String... extensions) {
+    List<String> result = super.listFilesRecursively(dir, extensions);
     unpack(result, dir, extensions);
     return result;
   }
 
   private void unpack(List<String> result, String dir, String... extensions) {
-    if (project.isProduction()) {
-      TexturePacker texturePacker = (TexturePacker) Context.getRender().getTextureManager();
-      Iterator<String> iterator = result.iterator();
-      while (iterator.hasNext()) {
-        String file = iterator.next();
-        if (file.contains(".part")) {
-          iterator.remove();
+    TexturePacker texturePacker = (TexturePacker) Context.getRender().getTextureManager();
+    Iterator<String> iterator = result.iterator();
+    while (iterator.hasNext()) {
+      String file = iterator.next();
+      if (file.contains(".part")) {
+        iterator.remove();
+      }
+    }
+    String packFile = getPackFile(dir);
+    if (packFile != null) {
+      TexturePack texturePack = newPackOrOldOne(texturePacker, packFile);
+      for (Texture texture : texturePack.getTextures()) {
+        String file = texture.file;
+        if (file.startsWith(dir) && FileUtil.filterByExtensions(file, extensions)) {
+          result.add(file);
         }
       }
-      String packFile = getPackFile(dir);
-      if (packFile != null) {
-        TexturePack texturePack = newPackOrOldOne(texturePacker, packFile);
-        for (Texture texture : texturePack.getTextures()) {
-          String file = texture.file;
-          if (file.startsWith(dir) && FileUtil.filterByExtensions(file, extensions)) {
-            result.add(file);
-          }
-        }
-      } else {
-        result.add(dir);
-      }
+    } else {
+      result.add(dir);
     }
   }
 

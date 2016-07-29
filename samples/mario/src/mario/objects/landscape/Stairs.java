@@ -1,7 +1,6 @@
 package mario.objects.landscape;
 
 import com.sun.istack.internal.Nullable;
-import featurea.graphics.Graphics;
 import featurea.platformer.Animation;
 import featurea.util.Colors;
 import featurea.util.Selection;
@@ -74,11 +73,6 @@ public class Stairs extends Animation {
   @Override
   public List<? extends Animation> listAreas() {
     return super.listAreas();
-  }
-
-  @Override
-  protected void onDrawSpriteIfVisible(Graphics graphics) {
-    super.onDrawSpriteIfVisible(graphics);
   }
 
 }

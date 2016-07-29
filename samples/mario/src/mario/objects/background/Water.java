@@ -34,20 +34,20 @@ public class Water extends Animation {
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-
-    Color backgroundColor;
-    if (Sprites.theme == Theme.castle) {
-      backgroundColor = castleBackgroundColor;
-    } else {
-      backgroundColor = overworldBackgroundColor;
+    if (!graphics.containsDrawTexture() || !graphics.containsFillRectangle()) {
+      Color backgroundColor;
+      if (Sprites.theme == Theme.castle) {
+        backgroundColor = castleBackgroundColor;
+      } else {
+        backgroundColor = overworldBackgroundColor;
+      }
+      double x1 = position.x;
+      double x2 = x1 + length * waveWidth;
+      double y1 = position.y;
+      double y2 = graphics.getLayer().getCamera().bottom();
+      graphics.fillRectangle(x1, y1 + waveHeight, x2, y2, backgroundColor);
+      graphics.drawTile(Sprites.Background.Water.wave(), x1, y1, x2, y1 + waveHeight, null, 0, 0, null, false, false);
     }
-    double x1 = position.x;
-    double x2 = x1 + length * waveWidth;
-    double y1 = position.y;
-    double y2 = graphics.layer.getCamera().bottom();
-    graphics.fillRectangle(x1, y1 + waveHeight, x2, y2, backgroundColor);
-    graphics.drawTile(Sprites.Background.Water.wave(), x1, y1, x2, y1 + waveHeight, null, 0, 0, null, false, false, null);
   }
-
 
 }

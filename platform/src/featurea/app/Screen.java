@@ -1,5 +1,6 @@
 package featurea.app;
 
+import featurea.graphics.Canvas;
 import featurea.input.InputListener;
 import featurea.opengl.Render;
 import featurea.util.Color;
@@ -42,26 +43,25 @@ public class Screen implements XmlResource {
   }
 
   public void onDrawBackground() {
-    if (background != null) {
-      Context.getRender().clearBackground(background);
-    } else {
-      Context.getRender().clearBackground(Colors.black);
-    }
+    // todo make use of background
   }
 
   public void onDraw(Render render) {
     if (isVisible) {
-      double maxX = Double.MAX_VALUE, maxY = Double.MAX_VALUE;
+      double maxX = 0, maxY = 0;
       for (Layer layer : layers) {
         if (layer.isVisible) {
-          layer.onDraw(layer.getGraphics());
+          Canvas canvas = layer.getCanvas();
+          canvas.onDrawBatches(layer);
+          canvas.onDrawBuffers(layer);
+          canvas.clearCaches();
           Camera camera = layer.getCamera();
           maxX = Math.max(maxX, camera.zoom.x);
           maxY = Math.max(maxY, camera.zoom.y);
         }
       }
-      if (!Context.getRender().isScreenMode) {
-        Context.getRender().cropWithCamera(maxX, maxY);
+      if (!render.isScreenMode) {
+        render.setViewport(maxX, maxY);
       }
     }
   }

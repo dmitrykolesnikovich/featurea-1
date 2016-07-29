@@ -148,13 +148,15 @@ public class HeroFireball extends Body {
     if (!isDead()) {
       super.onDrawSpriteIfVisible(graphics);
     } else {
-      double ox = isRightBeforeDestroy ? right() : left();
-      double oy = oy();
-      double x1 = ox - sprite.getWidth() / 2;
-      double x2 = ox + sprite.getWidth() / 2;
-      double y1 = oy - sprite.getHeight() / 2;
-      double y2 = oy + sprite.getHeight() / 2;
-      sprite.draw(graphics, x1, y1, x2, y2, ox, oy, angle, isFlipX(), isFlipY());
+      if (!graphics.containsDrawTexture()) {
+        double ox = isRightBeforeDestroy ? right() : left();
+        double oy = oy();
+        double x1 = ox - sprite.getWidth() / 2;
+        double x2 = ox + sprite.getWidth() / 2;
+        double y1 = oy - sprite.getHeight() / 2;
+        double y2 = oy + sprite.getHeight() / 2;
+        sprite.draw(graphics, x1, y1, x2, y2, ox, oy, angle, isFlipX(), isFlipY());
+      }
     }
   }
 

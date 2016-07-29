@@ -2,11 +2,9 @@ package featurea.ui;
 
 import com.sun.istack.internal.Nullable;
 import featurea.app.Area;
+import featurea.app.Layer;
 import featurea.geometry.Shape;
-import featurea.graphics.Font;
-import featurea.graphics.Graphics;
-import featurea.graphics.Text;
-import featurea.graphics.TextAlignment;
+import featurea.graphics.*;
 import featurea.util.Color;
 import featurea.util.Colors;
 import featurea.util.Selection;
@@ -19,6 +17,13 @@ public class TextView extends Shape implements Area, XmlNode {
 
   public final Text text = new Text();
   private boolean isVisible = true;
+  private UILayer layer;
+  public final GraphicsBuffer graphics = new GraphicsBuffer(this) {
+    @Override
+    public Layer getLayer() {
+      return layer;
+    }
+  };
 
   public void setColorHex(String hexString) {
     setColor(new Color().setValue(hexString));
@@ -87,6 +92,22 @@ public class TextView extends Shape implements Area, XmlNode {
       result.isSelected = contains(position.x, position.y);
     }
     result.setPosition(this.getPosition());
+  }
+
+  public void setLayer(UILayer layer) {
+    this.layer = layer;
+  }
+
+  public void onAdd() {
+    // no op
+  }
+
+  public void onRemove() {
+    // no op
+  }
+
+  public Layer getLayer() {
+    return layer;
   }
 
 }

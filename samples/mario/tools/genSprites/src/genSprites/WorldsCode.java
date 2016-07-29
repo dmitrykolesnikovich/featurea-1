@@ -27,7 +27,7 @@ public final class WorldsCode {
     builder.append("public class Worlds { ");
     builder.append("private static int index; public static World current() { return getWorld(index); } public static World next(int delta) { index+=delta; return getWorld(index); }");
     builder.append("public static World getWorld(int index) { switch (index) {");
-    List<String> levels = project.getFiles().getChildren("levels", ".xml");
+    List<String> levels = project.getFiles().listFilesRecursively("levels", ".xml");
     for (int i = 0; i < levels.size(); i++) {
       String file = levels.get(i);
       String fileName = FileUtil.getName(file);
@@ -50,10 +50,10 @@ public final class WorldsCode {
         "    } else {" +
         "      switch (marker) {";
 
-    for (String filePath : project.getFiles().getChildren("bonusLevels", ".xml")) {
+    for (String filePath : project.getFiles().listFilesRecursively("bonusLevels", ".xml")) {
       result += caseCode(filePath);
     }
-    for (String filePath : project.getFiles().getChildren("misc", ".xml")) {
+    for (String filePath : project.getFiles().listFilesRecursively("misc", ".xml")) {
       result += caseCode(filePath);
     }
 

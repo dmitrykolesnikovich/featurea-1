@@ -15,6 +15,7 @@ import mario.*;
 import mario.config.Gameplay;
 import mario.features.Script;
 import mario.objects.landscape.Tube;
+import mario.render.WorldCanvas;
 import mario.util.TubeProjection;
 import mario.util.UnderwaterFeatures;
 
@@ -28,9 +29,6 @@ public class World extends WorldLayer {
   public World() {
     setzOrder(new WorldZOrder());
     setCollisionFilter(new MyCollisionResolver());
-    /*getCamera().setResizeAnchorHorizontal(ResizeAnchorHorizontal.center);
-    getCamera().setResizeAnchorVertical(ResizeAnchorVertical.center);*/
-
     if (Targets.isDesktop) {
       inputListeners.add(new InputAdapter() {
         @Override
@@ -206,8 +204,10 @@ public class World extends WorldLayer {
 
   @Override
   public void onDraw(Graphics graphics) {
-    if (theme == Theme.underwater) {
-      UnderwaterFeatures.instance.onDraw(this);
+    if (!graphics.containsFillRectangle()) {
+      if (theme == Theme.underwater) {
+        UnderwaterFeatures.instance.onDraw(graphics, this);
+      }
     }
     super.onDraw(graphics);
   }
@@ -222,6 +222,12 @@ public class World extends WorldLayer {
 
   private boolean isCurrent() {
     return Context.getApplication().screen == getScreen();
+  }
+
+  @Override
+  public void setSize(Size size) {
+    super.setSize(size);
+    setCanvas(new WorldCanvas().setWorld(this).setPartsCount(2).build());
   }
 
 }

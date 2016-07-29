@@ -42,4 +42,28 @@ public class UILayer extends Layer {
     Collections.sort(buttons, BUTTONS_SORT_ORDER);
   }
 
+  @Override
+  public UILayer add(Area area) {
+    super.add(area);
+    if (area instanceof TextView) { // this will be improved during UI engine dev
+      TextView textView = (TextView) area;
+      textView.setLayer(this);
+      textView.onAdd();
+    }
+    return this;
+  }
+
+
+  @Override
+  public UILayer remove(Area area) {
+    super.remove(area);
+    if (area instanceof TextView) { // this will be improved during UI engine dev
+      TextView textView = (TextView) area;
+      textView.onRemove();
+      textView.setLayer(null);
+    }
+    return this;
+  }
+
+
 }

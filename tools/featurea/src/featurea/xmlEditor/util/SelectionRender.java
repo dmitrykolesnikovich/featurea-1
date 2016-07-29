@@ -5,7 +5,7 @@ import featurea.util.Colors;
 
 public final class SelectionRender {
 
-  private SelectionRender(){
+  private SelectionRender() {
     // no op
   }
 

@@ -15,7 +15,7 @@ public class ManifestGenTool {
   }
 
   public void performGen() {
-    File file = new File(project.generatedFilesDir, "project.xml");
+    File file = new File(project.generatedFilesDir, Project.PROJECT_FILE_NAME);
     String result = getCode();
     FileUtil.write(result, file);
   }

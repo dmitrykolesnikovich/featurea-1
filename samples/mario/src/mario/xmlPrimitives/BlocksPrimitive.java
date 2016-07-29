@@ -3,7 +3,6 @@ package mario.xmlPrimitives;
 import featurea.app.MediaPlayer;
 import featurea.graphics.Graphics;
 import featurea.util.Colors;
-import featurea.util.Selection;
 import featurea.xml.XmlPrimitive;
 import featurea.xml.XmlTag;
 
@@ -60,8 +59,10 @@ public class BlocksPrimitive extends XmlPrimitive {
 
   @Override
   public void onDraw(Graphics graphics) {
-    super.onDraw(graphics);
-    graphics.drawRectangle(x1, y1, x2, y2, Colors.orange);
+    if (!graphics.containsDrawLine()) {
+      super.onDraw(graphics);
+      graphics.drawRectangle(x1, y1, x2, y2, Colors.orange);
+    }
   }
 
   private void createNewBlocks() {

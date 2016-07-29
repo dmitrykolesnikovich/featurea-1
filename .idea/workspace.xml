@@ -10,27 +10,125 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36ba8021-cfa8-4d83-92ca-2b3b19d02300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/util/BufferUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/stuff/src/tests/CurrentPhysicalPath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/stuff/stuff.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/builder_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/featurea_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mario_jar.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="36ba8021-cfa8-4d83-92ca-2b3b19d02300" name="Default" comment="Add batch concept.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/DefaultCanvas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/DefaultGraphics.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/GraphicsBuffer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Batches.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/OpenGLUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/TextureRectangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawLineAndDrawRectangleBatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawTextureBatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillRectangleBatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/src/mario/render/Slice.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/src/mario/render/Slices.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/src/mario/render/WorldCanvas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/mario/src/mario/render/WorldGraphics.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Recangle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Line2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Rectangle2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Shader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platform/src/featurea/util/PackedFiles.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/samples/mario/res/levels/level1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/dyn4j/gen/featurea/fonts/default.fnt" afterPath="$PROJECT_DIR$/engines/dyn4j/gen/featurea/fonts/default.fnt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/dyn4j/src/org/dyn4j/dynamics/BodyRender.java" afterPath="$PROJECT_DIR$/engines/dyn4j/src/org/dyn4j/dynamics/BodyRender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/AnimationSprite.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/AnimationSprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/WorldLayer.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/WorldLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Background.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Background.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/BufferedAreasAndBodiesProjection.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/BufferedAreasAndBodiesProjection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Rectangle.java" afterPath="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Rectangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/project.xml" afterPath="$PROJECT_DIR$/platform/project.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/Application.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/Layer.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/Layer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/Loader.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/Loader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/Project.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Line2d.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Line2d.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Polygon2d.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Polygon2d.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Rectangle2d.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Rectangle2d.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/ProjectParser.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/ProjectParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/app/Screen.java" afterPath="$PROJECT_DIR$/platform/src/featurea/app/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/geometry/GeometryGraphics.java" afterPath="$PROJECT_DIR$/platform/src/featurea/geometry/GeometryGraphics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/graphics/Sprite.java" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/Sprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/graphics/Text.java" afterPath="$PROJECT_DIR$/platform/src/featurea/graphics/Text.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/OpenGLManager.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/OpenGLManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Render.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Render.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Texture.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/Texture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/TexturePacker.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/TexturePacker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/TexturePart.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/TexturePart.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/ui/Button.java" afterPath="$PROJECT_DIR$/platform/src/featurea/ui/Button.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/ui/TextView.java" afterPath="$PROJECT_DIR$/platform/src/featurea/ui/TextView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/ui/UILayer.java" afterPath="$PROJECT_DIR$/platform/src/featurea/ui/UILayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java" afterPath="$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/LwjglNatives.java" afterPath="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/LwjglNatives.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/util/Files.java" afterPath="$PROJECT_DIR$/platform/src/featurea/util/Files.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java" afterPath="$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/util/UnpackedFiles.java" afterPath="$PROJECT_DIR$/platform/src/featurea/util/UnpackedFiles.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/xml/XmlEditor.java" afterPath="$PROJECT_DIR$/platform/src/featurea/xml/XmlEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/src/featurea/xml/XmlPrimitive.java" afterPath="$PROJECT_DIR$/platform/src/featurea/xml/XmlPrimitive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/targets/platform.android/src/featurea/android/MyRender.java" afterPath="$PROJECT_DIR$/platform/targets/platform.android/src/featurea/android/MyRender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/Simulator.java" afterPath="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/Simulator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java" afterPath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/ManifestGenTool.java" afterPath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/ManifestGenTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/GenJavaTool.java" afterPath="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/GenJavaTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platform/tools/builder/texturePacker/com/badlogic/gdx/texturePacker/TexturePacker.java" afterPath="$PROJECT_DIR$/platform/tools/builder/texturePacker/com/badlogic/gdx/texturePacker/TexturePacker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/config/mario/xmlFormatter.properties" afterPath="$PROJECT_DIR$/samples/mario/config/mario/xmlFormatter.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/A.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/A.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/B.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/B.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/C.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/C.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/D.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/D.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/E.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/E.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/F.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/F.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/G.java" afterPath="$PROJECT_DIR$/samples/mario/gen/bonusLevels/res/G.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/featurea/fonts/default.fnt" afterPath="$PROJECT_DIR$/samples/mario/gen/featurea/fonts/default.fnt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/featurea/res/platformer/Joystick.java" afterPath="$PROJECT_DIR$/samples/mario/gen/featurea/res/platformer/Joystick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/fonts/pressstart2p.fnt" afterPath="$PROJECT_DIR$/samples/mario/gen/fonts/pressstart2p.fnt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/levels/res/Level1.java" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/Level1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_2.java" afterPath="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java" afterPath="$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/misc/res/MarioUndergroundEnd.java" afterPath="$PROJECT_DIR$/samples/mario/gen/misc/res/MarioUndergroundEnd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/pack" afterPath="$PROJECT_DIR$/samples/mario/gen/pack" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/screens/res/GameplayScreen.java" afterPath="$PROJECT_DIR$/samples/mario/gen/screens/res/GameplayScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/screens/res/LoadingLayer.java" afterPath="$PROJECT_DIR$/samples/mario/gen/screens/res/LoadingLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/gen/worlds/res/World1_1.java" afterPath="$PROJECT_DIR$/samples/mario/gen/worlds/res/World1_1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml" afterPath="$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/Navigation.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/Navigation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/layers/PlattoLiftLayer.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/layers/PlattoLiftLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/Bubble.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/Bubble.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/CastleBackground.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/CastleBackground.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/ThemeBackground.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/ThemeBackground.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/Water.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/background/Water.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/enemies/Cannon.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/enemies/Cannon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/enemies/Goomba.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/enemies/Goomba.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroFireball.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroFireball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroSprite.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroSprite.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BlockTile.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BlockTile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Bridge.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Bridge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BridgeInTheCastle.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BridgeInTheCastle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/FireStick.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/FireStick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Flagpole.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Flagpole.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/GiantMushroom.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/GiantMushroom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Liana.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Liana.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platform.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platform.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platto.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Rope.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Rope.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Scales.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Scales.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Stairs.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Stairs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Tube.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Tube.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/util/BlockBreakSprite.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/util/BlockBreakSprite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/util/UnderwaterFeatures.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/util/UnderwaterFeatures.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/xmlPrimitives/BlocksPrimitive.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/xmlPrimitives/BlocksPrimitive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/src/mario/xmlPrimitives/PointPrimitive.java" afterPath="$PROJECT_DIR$/samples/mario/src/mario/xmlPrimitives/PointPrimitive.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/targets/mario.desktop/src/mario/desktop/Main.java" afterPath="$PROJECT_DIR$/samples/mario/targets/mario.desktop/src/mario/desktop/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/tools/genSprites/src/genSprites/GenSpritesTool.java" afterPath="$PROJECT_DIR$/samples/mario/tools/genSprites/src/genSprites/GenSpritesTool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/mario/tools/genSprites/src/genSprites/WorldsCode.java" afterPath="$PROJECT_DIR$/samples/mario/tools/genSprites/src/genSprites/WorldsCode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/XmlEditorView.java" afterPath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/XmlEditorView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/inputListeners/AppendXmlTagInputListener.java" afterPath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/inputListeners/AppendXmlTagInputListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/util/OutlineSurface.java" afterPath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/util/OutlineSurface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/util/SelectionRender.java" afterPath="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/util/SelectionRender.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/platform/src/featurea/opengl/Polygon2d.java" afterPath="$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillShapeBatch.java" />
     </list>
     <ignored path="featurea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,16 +167,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Project.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Project.java">
+      <file leaf-file-name="Batch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1849711">
-              <caret line="86" column="3" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
-                <element signature="e#2405#2406#0" expanded="true" />
-                <element signature="e#2455#2456#0" expanded="true" />
-                <element signature="e#2482#2483#0" expanded="true" />
-                <element signature="e#2537#2538#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="xmlFormatter.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/samples/mario/config/mario/xmlFormatter.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55949366">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldCanvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/WorldCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Slices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/Slices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#357#558#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graphics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+              <folding>
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1289#1290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,57 +264,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/configs/DefaultsConfig.java" />
-        <option value="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/views/XmlTagAttributesView.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/xml/XmlSchema.java" />
-        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/HeroHolder.java" />
-        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/KeyboardController.java" />
-        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Joystick.java" />
-        <option value="$PROJECT_DIR$/samples/mario/src/mario/Joystick.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/xml/XmlBuilder.java" />
-        <option value="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/Simulator.java" />
-        <option value="$PROJECT_DIR$/samples/mario/src/mario/GameplayScreen.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/app/Config.java" />
-        <option value="$PROJECT_DIR$/samples/mario/res/levels/level1.xml" />
-        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Stairs.java" />
-        <option value="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/views/XmlTagChildrenTreeView.java" />
-        <option value="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/FeatureaMenuBar.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/app/MediaPlayer.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BlockTile.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Bridge.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/BridgeInTheCastle.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/background/Bubble.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/ui/Button.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/enemies/Cannon.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/background/CastleBackground.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/FireStick.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Flagpole.java" />
         <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/GiantMushroom.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/xml/XmlEditor.java" />
-        <option value="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/views/AreaSuggestionView.java" />
-        <option value="$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/XmlEditorView.java" />
-        <option value="$PROJECT_DIR$/samples/mario/config/mario/defaults.properties" />
-        <option value="$PROJECT_DIR$/samples/mario/config/mario/enums.properties" />
-        <option value="$PROJECT_DIR$/samples/mario/config/mario/xmlSchema.properties" />
-        <option value="$PROJECT_DIR$/samples/mario/targets/mario.android/src/com/featurea/mario/ConfigActivity.java" />
-        <option value="$PROJECT_DIR$/platform/targets/platform.android/src/featurea/android/FeatureaActivity.java" />
-        <option value="$PROJECT_DIR$/samples/mario/targets/mario.android/src/com/featurea/mario/MainActivity.java" />
-        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java" />
-        <option value="$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml" />
-        <option value="$PROJECT_DIR$/platform/config/platform/enums.properties" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Liana.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platform.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Platto.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/xmlPrimitives/PointPrimitive.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Scales.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Tube.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/graphics/GraphicsBuffer.java" />
         <option value="$PROJECT_DIR$/platform/project.xml" />
-        <option value="$PROJECT_DIR$/samples/mario/project.xml" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/app/ProjectParser.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/xml/XmlTag.java" />
-        <option value="$PROJECT_DIR$/engines/dyn4j/project.xml" />
-        <option value="$PROJECT_DIR$/engines/platformer/project.xml" />
-        <option value="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/ConfigToJavaTool.java" />
-        <option value="$PROJECT_DIR$/samples/mario/gen/project.xml" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/BufferUtils.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Line2d.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Polygon2d.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Rectangle2d.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Texture.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Render.java" />
-        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java" />
-        <option value="$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/LwjglNatives.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/TexturePacker.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/app/Loader.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/util/UnpackedFiles.java" />
+        <option value="$PROJECT_DIR$/samples/mario/gen/pack" />
+        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/AnimationSprite.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroSprite.java" />
         <option value="$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java" />
-        <option value="$PROJECT_DIR$/tests/stuff/src/tests/CurrentPhysicalPath.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/render/WorldGraphics.java" />
         <option value="$PROJECT_DIR$/samples/mario/targets/mario.desktop/src/mario/desktop/Main.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/platform/src/featurea/app/Project.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroFireball.java" />
+        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/WorldLayer.java" />
+        <option value="$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml" />
+        <option value="$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/app/Camera.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/app/Screen.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/app/Application.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java" />
+        <option value="$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Render.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/app/Layer.java" />
+        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/BufferedAreasAndBodiesProjection.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Block.java" />
+        <option value="$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawTextureBatch.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawLineAndDrawRectangleBatch.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillRectangleBatch.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillShapeBatch.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/graphics/DefaultCanvas.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/render/Slices.java" />
+        <option value="$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java" />
+        <option value="$PROJECT_DIR$/samples/mario/src/mario/render/WorldCanvas.java" />
       </list>
     </option>
   </component>
@@ -309,6 +461,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -330,7 +483,6 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,11 +546,11 @@
       <recent name="E:\featurea\samples\mario2\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="featurea.graphics" />
       <recent name="featurea.xmlEditor.inputListeners" />
       <recent name="test2" />
       <recent name="mario.desktop" />
       <recent name="test" />
-      <recent name="featurea.primitives" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="featurea.app" />
@@ -671,35 +823,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="mario" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="mario.android" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="Please select a project..." />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="Please select a project..." />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="Cloud configuration not specified" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="Cloud configuration not specified" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
-      <method />
-    </configuration>
     <configuration default="false" name="angle" type="Application" factoryName="Application" folderName="sandbox">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -758,6 +881,35 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="uiSandbox.desktop" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="mario" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="mario.android" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="Please select a project..." />
+      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="Please select a project..." />
+      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="Cloud configuration not specified" />
+      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
+      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="Cloud configuration not specified" />
+      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
       <method />
     </configuration>
     <configuration default="false" name="featurea" type="Application" factoryName="Application">
@@ -823,15 +975,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.mario" />
-      <item index="1" class="java.lang.String" itemvalue="Application.angle" />
-      <item index="2" class="java.lang.String" itemvalue="Application.angleRatio" />
-      <item index="3" class="java.lang.String" itemvalue="Application.test1" />
+      <item index="0" class="java.lang.String" itemvalue="Application.angle" />
+      <item index="1" class="java.lang.String" itemvalue="Application.angleRatio" />
+      <item index="2" class="java.lang.String" itemvalue="Application.test1" />
+      <item index="3" class="java.lang.String" itemvalue="Android Application.mario" />
       <item index="4" class="java.lang.String" itemvalue="Application.featurea" />
       <item index="5" class="java.lang.String" itemvalue="Application.mario" />
       <item index="6" class="java.lang.String" itemvalue="Application.builder" />
-      <item index="7" class="java.lang.String" itemvalue="Application.CurrentPhysicalPath" />
-      <item index="8" class="java.lang.String" itemvalue="Plugin.featurea4idea" />
+      <item index="7" class="java.lang.String" itemvalue="Plugin.featurea4idea" />
+      <item index="8" class="java.lang.String" itemvalue="Application.CurrentPhysicalPath" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -937,7 +1089,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469637478650</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix user dir">
+      <created>1469639425661</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1469639425661</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -953,28 +1111,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="748" extended-state="0" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3280507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32329637" sideWeight="0.48716012" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33280507" sideWeight="0.48716012" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936608" sideWeight="0.5405204" order="20" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.10196374" sideWeight="0.11146497" order="7" side_tool="true" content_ui="tabs" x="694" y="224" width="408" height="472" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38827258" sideWeight="0.49739778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliGuard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3290938" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27286246" sideWeight="0.52030456" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28401488" sideWeight="0.52030456" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.526149" sideWeight="0.4914498" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19702603" sideWeight="0.47969544" order="3" side_tool="false" content_ui="tabs" x="1109" y="31" width="247" height="690" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4199683" sideWeight="0.4914498" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36877322" sideWeight="0.47969544" order="3" side_tool="false" content_ui="tabs" x="1109" y="31" width="247" height="690" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24840765" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25990492" sideWeight="0.28934819" order="22" side_tool="true" content_ui="tabs" x="409" y="547" width="681" height="52" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41045958" sideWeight="0.45947954" order="23" side_tool="false" content_ui="tabs" x="34" y="451" width="1298" height="291" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33755943" sideWeight="0.45947954" order="23" side_tool="false" content_ui="tabs" x="34" y="451" width="1298" height="291" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -998,8 +1156,8 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3296355" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3296355" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936608" sideWeight="0.5405204" order="20" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.10196374" sideWeight="0.11146497" order="7" side_tool="true" content_ui="tabs" x="694" y="224" width="408" height="472" />
@@ -1007,28 +1165,28 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19702603" sideWeight="0.47969544" order="3" side_tool="false" content_ui="tabs" x="1109" y="31" width="247" height="690" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36877322" sideWeight="0.47969544" order="3" side_tool="false" content_ui="tabs" x="1109" y="31" width="247" height="690" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.24840765" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30903327" sideWeight="0.45947954" order="23" side_tool="false" content_ui="tabs" x="34" y="451" width="1298" height="291" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35816166" sideWeight="0.45947954" order="23" side_tool="false" content_ui="tabs" x="34" y="451" width="1298" height="291" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3280507" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32329637" sideWeight="0.48716012" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33280507" sideWeight="0.48716012" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990461" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21236134" sideWeight="0.49739778" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38827258" sideWeight="0.49739778" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43504533" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IntelliGuard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3290938" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3296355" sideWeight="0.5" order="18" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5911252" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Panda" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26435044" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31003717" sideWeight="0.52030456" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5911252" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13977695" sideWeight="0.52030456" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="21" side_tool="false" content_ui="tabs" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45396826" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.526149" sideWeight="0.4914498" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33438987" sideWeight="0.4914498" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Panda Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290938" sideWeight="0.4879154" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25990492" sideWeight="0.28934819" order="22" side_tool="true" content_ui="tabs" x="409" y="547" width="681" height="52" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1061,7 +1219,9 @@
     <MESSAGE value="add dist" />
     <MESSAGE value="add gen for production" />
     <MESSAGE value="update dist" />
-    <option name="LAST_COMMIT_MESSAGE" value="update dist" />
+    <MESSAGE value="fix user dir" />
+    <MESSAGE value="Add batch concept." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add batch concept." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1092,7 +1252,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java</url>
-          <line>129</line>
+          <line>254</line>
           <properties />
           <option name="timeStamp" value="2858" />
         </line-breakpoint>
@@ -1104,7 +1264,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java</url>
-          <line>146</line>
+          <line>148</line>
           <properties />
           <option name="timeStamp" value="2863" />
         </line-breakpoint>
@@ -1116,7 +1276,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java</url>
-          <line>38</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="3071" />
         </line-breakpoint>
@@ -1170,15 +1330,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java</url>
-          <line>337</line>
+          <line>339</line>
           <properties />
           <option name="timeStamp" value="3200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="3267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="3268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java</url>
+          <line>226</line>
+          <properties />
+          <option name="timeStamp" value="3290" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java</url>
+          <line>218</line>
+          <properties />
+          <option name="timeStamp" value="3291" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="3202" />
+      <option name="time" value="3309" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="mario">
@@ -1196,15 +1380,6 @@
       <configuration name="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
         <watch expression="files" language="JAVA" custom="" />
       </configuration>
-      <configuration name="Application">
-        <watch expression="project" language="JAVA" custom="" />
-        <watch expression="getClass().getClassLoader().getResource(&quot;windows/jinput-dx8.dll&quot;)" language="JAVA" custom="" />
-        <watch expression="FileUtil.getFile(Navigation.class)" language="JAVA" custom="featurea.util.FileUtil" />
-        <watch expression="Navigation.class.getResource(&quot;Navigation.class&quot;)" language="JAVA" custom="" />
-        <watch expression="System.getProperty(&quot;user.dir&quot;)" language="JAVA" custom="" />
-        <watch expression="new File(&quot;project.xml&quot;).getAbsolutePath()" language="JAVA" custom="" />
-        <watch expression="file.getAbsoluteFile().getParentFile()" language="JAVA" custom="" />
-      </configuration>
     </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1212,245 +1387,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/samples/mario/targets/mario.android/src/com/featurea/mario/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36528927">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/res/levels/world1_2.xml">
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/DefaultTextureManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/config/mario/xmlSchema.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/TexturePack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/Size.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27107438">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/OpenGL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30082646">
-          <caret line="301" column="18" selection-start-line="301" selection-start-column="6" selection-end-line="301" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/MyLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112396695">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/WorldLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Layer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28099173">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="217" column="5" selection-start-line="217" selection-start-column="5" selection-end-line="217" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ResizeAnchorHorizontal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ResizeAnchorVertical.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5558583">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ZoomAnchorHorizontal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ZoomAnchorVertical.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/config/platform/enums.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/swing/MyTableCellEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="82" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="82" />
+          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/xml/XmlTag.java">
+    <entry file="file://$PROJECT_DIR$/samples/mario/targets/mario.desktop/src/mario/desktop/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="215" column="26" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="26" />
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/dyn4j/README.md">
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Traverse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/dyn4j/project.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/project.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/engines/platformer/project.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21983472">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/ProjectParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/tools/genSprites/src/genSprites/GenSpritesTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/java/ConfigToJavaTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-          <folding>
-            <element signature="e#774#914#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/BufferUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Line2d.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Polygon2d.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Rectangle2d.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1458,19 +1414,158 @@
     <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Texture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="3" selection-start-line="178" selection-start-column="3" selection-end-line="178" selection-end-column="3" />
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java">
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/Background.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15632184">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/HeroBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="14" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="false" />
+            <element signature="e#2322#2323#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_79/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30172414">
+          <caret line="356" column="10" selection-start-line="356" selection-start-column="10" selection-end-line="356" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/bonuses/Bonus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="12" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/bonuses/StarBonus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/hero/Hero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="347" column="26" selection-start-line="347" selection-start-column="16" selection-end-line="347" selection-end-column="26" />
+          <folding>
+            <element signature="e#8764#8946#0" expanded="false" />
+            <element signature="e#8945#8946#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/hero/HeroFireball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#3195#3299#0" expanded="false" />
+            <element signature="e#3298#3299#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/Resize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ResizeAnchorVertical.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding>
+            <element signature="e#765#963#0" expanded="false" />
+            <element signature="e#962#963#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ResizeAnchor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/res/levels/world1_2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/gen/levels/res/World1_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8">
+          <caret line="314" column="17" selection-start-line="314" selection-start-column="17" selection-end-line="314" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="226" column="0" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/ResizeAnchorHorizontal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#777#977#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1478,18 +1573,178 @@
     <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/WorldLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Camera.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Stairs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Flagpole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/tools/builder/src/featurea/builder/BuilderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6085919">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
-            <element signature="e#2247#2248#0" expanded="false" />
-            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#774#958#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/targets/platform.android/src/featurea/android/FeatureaActivity.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Layer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/DefaultGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/featurea/src/featurea/xmlEditor/XmlEditorView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Batches.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/WorldGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/util/BufferedAreasAndBodiesProjection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/physics/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engines/platformer/src/featurea/platformer/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/landscape/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="224" column="29" selection-start-line="224" selection-start-column="29" selection-end-line="224" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/Slice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawLineAndDrawRectangleBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/batches/DrawTextureBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="10" selection-start-line="78" selection-start-column="10" selection-end-line="78" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillRectangleBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="10" selection-start-line="55" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/batches/FillShapeBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1497,133 +1752,73 @@
     <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Render.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/DefaultCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/opengl/Batch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/objects/hero/World.java">
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/Slices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/res/levels/level1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/res/levels/world1_1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/project.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32297063">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/OpenGLImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16190477">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/Simulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31570247">
-          <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/platform/targets/platform.desktop/src/featurea/desktop/LwjglNatives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31570247">
-          <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/Navigation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/stuff/src/tests/CurrentPhysicalPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056198347">
-          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/gen/mario/Worlds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14739884">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="30" selection-end-column="3" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#357#558#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/mario/targets/mario.desktop/src/mario/desktop/Main.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/Graphics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
           <folding>
-            <element signature="e#372#554#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/xml/XmlBuilder.java">
+    <entry file="file://$PROJECT_DIR$/samples/mario/src/mario/render/WorldCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/util/FileUtil.java">
+    <entry file="file://$PROJECT_DIR$/platform/src/featurea/graphics/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="337" column="0" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/platform/src/featurea/app/Project.java">
+    <entry file="file://$PROJECT_DIR$/samples/mario/config/mario/xmlFormatter.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1849711">
-          <caret line="86" column="3" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
-          <folding>
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2455#2456#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
-            <element signature="e#2537#2538#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.55949366">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

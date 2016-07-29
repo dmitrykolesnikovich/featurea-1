@@ -74,46 +74,48 @@ public class Tube extends Body {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    if (!isCorner) {
-      // head
-      double x = position.x;
-      double y = position.y;
-      graphics.drawTexture(Sprites.Items.Tube.head(), x, y, x + headWidth, y + headHeight, null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      if (!isCorner) {
+        // head
+        double x = position.x;
+        double y = position.y;
+        graphics.drawTexture(Sprites.Items.Tube.head(), x, y, x + headWidth, y + headHeight, null, 0, 0, Colors.white, false, false);
 
-      // trunk
-      y += headHeight;
-      double trunkWidth = Sprites.Items.Tube.trunkWidth;
-      double trunkHeight = Sprites.Items.Tube.trunkHeight;
-      for (int i = 0; i < trunkCount; i++) {
-        graphics.drawTexture(Sprites.Items.Tube.trunk(), x, y + i * trunkHeight, x + trunkWidth, y + (i + 1) * trunkHeight, null, 0, 0, Colors.white, false, false, null);
-      }
-    } else {
-      double ox = position.x;
-      double oy = position.y;
+        // trunk
+        y += headHeight;
+        double trunkWidth = Sprites.Items.Tube.trunkWidth;
+        double trunkHeight = Sprites.Items.Tube.trunkHeight;
+        for (int i = 0; i < trunkCount; i++) {
+          graphics.drawTexture(Sprites.Items.Tube.trunk(), x, y + i * trunkHeight, x + trunkWidth, y + (i + 1) * trunkHeight, null, 0, 0, Colors.white, false, false);
+        }
+      } else {
+        double ox = position.x;
+        double oy = position.y;
 
 
-      {
-        String tubeCornerPart1 = Sprites.Items.TubeCorner.tubeCornerPart1();
-        double x1 = ox + Sprites.Items.TubeCorner.tubeCornerPart2Width - cornerTrunkShift;
-        double x2 = x1 + Sprites.Items.TubeCorner.tubeCornerPart1Width;
-        for (double i = 0, y1 = Gameplay.hudHeight; true; i++) {
-          double y2 = oy + Sprites.Items.TubeCorner.tubeCornerPart2Height - Sprites.Items.TubeCorner.tubeCornerPart2Height * i;
-          y1 = y2 - Sprites.Items.TubeCorner.tubeCornerPart1Height;
-          if (y1 >= Gameplay.hudHeight) {
-            graphics.drawTexture(tubeCornerPart1, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
-          } else {
-            break;
+        {
+          String tubeCornerPart1 = Sprites.Items.TubeCorner.tubeCornerPart1();
+          double x1 = ox + Sprites.Items.TubeCorner.tubeCornerPart2Width - cornerTrunkShift;
+          double x2 = x1 + Sprites.Items.TubeCorner.tubeCornerPart1Width;
+          for (double i = 0, y1 = Gameplay.hudHeight; true; i++) {
+            double y2 = oy + Sprites.Items.TubeCorner.tubeCornerPart2Height - Sprites.Items.TubeCorner.tubeCornerPart2Height * i;
+            y1 = y2 - Sprites.Items.TubeCorner.tubeCornerPart1Height;
+            if (y1 >= Gameplay.hudHeight) {
+              graphics.drawTexture(tubeCornerPart1, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+            } else {
+              break;
+            }
           }
         }
-      }
 
-      {
-        String tubeCornerPart2 = Sprites.Items.TubeCorner.tubeCornerPart2();
-        double x1 = ox;
-        double y1 = oy;
-        double x2 = ox + Sprites.Items.TubeCorner.tubeCornerPart2Width;
-        double y2 = oy + Sprites.Items.TubeCorner.tubeCornerPart2Height;
-        graphics.drawTexture(tubeCornerPart2, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+        {
+          String tubeCornerPart2 = Sprites.Items.TubeCorner.tubeCornerPart2();
+          double x1 = ox;
+          double y1 = oy;
+          double x2 = ox + Sprites.Items.TubeCorner.tubeCornerPart2Width;
+          double y2 = oy + Sprites.Items.TubeCorner.tubeCornerPart2Height;
+          graphics.drawTexture(tubeCornerPart2, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+        }
       }
     }
   }

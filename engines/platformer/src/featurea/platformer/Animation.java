@@ -3,7 +3,9 @@ package featurea.platformer;
 import com.sun.istack.internal.Nullable;
 import featurea.app.Area;
 import featurea.app.Context;
+import featurea.app.Layer;
 import featurea.graphics.Graphics;
+import featurea.graphics.GraphicsBuffer;
 import featurea.graphics.Sprite;
 import featurea.motion.Motion;
 import featurea.motion.Timeline;
@@ -41,6 +43,12 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   private boolean isMotionableHorizontally = true;
   private boolean isMotionableVertically = true;
   public final Vector velocity = new Vector();
+  public final GraphicsBuffer graphics = new GraphicsBuffer(this) {
+    @Override
+    public Layer getLayer() {
+      return layer;
+    }
+  };
 
   public void setLifeDistance(double lifeDistance) {
     this.lifeDistance = lifeDistance;
@@ -55,6 +63,8 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   }
 
   public void updateIndex() {
+    graphics.clearDrawRectangle();
+    graphics.clearDrawTexture();
     final WorldLayer layer = getLayer();
     if (layer != null) {
       Animation.this.isDirty = true;
@@ -110,15 +120,19 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
     child.parent = null;
   }
 
-  public final void removeSelf() {
-    if (parent != null) {
-      parent.remove(this);
-    } else {
-      if (layer != null) {
-        layer.remove(this);
-        onRemove(); // IMPORTANT
+  public void removeSelf() {
+    Context.getTimer().delay(new Runnable() {
+      @Override
+      public void run() {
+        if (parent != null) {
+          parent.remove(Animation.this);
+        } else {
+          if (layer != null) {
+            layer.remove(Animation.this);
+          }
+        }
       }
-    }
+    });
   }
 
   public void removeAllChildren() {
@@ -128,6 +142,7 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   }
 
   public void onRemove() {
+    graphics.clearDrawTexture();
     WorldLayer layer = getLayer();
     if (layer != null) {
       layer.bodyIndex.clear(this);
@@ -135,7 +150,7 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   }
 
   public void onAdd() {
-    // no op
+    graphics.clearDrawTexture();
   }
 
   public Animation setPosition(double x, double y, double z) {
@@ -283,30 +298,38 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   @Override
   public void onTick(double elapsedTime) {
     sprite.onTick(elapsedTime);
-    if (!getLayer().isTimeStop()) {
+    WorldLayer layer = getLayer();
+    if (layer == null) {
+      System.out.println("breakpoint");
+    }
+    if (!layer.isTimeStop()) {
       timeline.onTick(elapsedTime);
     }
   }
 
   @Override
   public void onDraw(Graphics graphics) {
-    if (isVisible) {
-      String file = onUpdateSprite();
-      if (file != null) {
-        sprite.setFile(file);
+    if (!graphics.containsDrawTexture()) {
+      if (isVisible) {
+        String file = onUpdateSprite();
+        if (file != null) {
+          sprite.setFile(file);
+        }
+        onDrawSpriteIfVisible(graphics);
       }
-      onDrawSpriteIfVisible(graphics);
     }
   }
 
   protected void onDrawSpriteIfVisible(Graphics graphics) {
-    double x1 = position.x;
-    double y1 = position.y;
-    double x2 = position.x + sprite.getWidth();
-    double y2 = position.y + sprite.getHeight();
-    double ox = (x1 + x2) / 2;
-    double oy = (y1 + y2) / 2;
-    sprite.draw(graphics, x1, y1, x2, y2, ox, oy, angle, isFlipX(), isFlipY());
+    if (!graphics.containsDrawTexture()) {
+      double x1 = position.x;
+      double y1 = position.y;
+      double x2 = position.x + sprite.getWidth();
+      double y2 = position.y + sprite.getHeight();
+      double ox = (x1 + x2) / 2;
+      double oy = (y1 + y2) / 2;
+      sprite.draw(graphics, x1, y1, x2, y2, ox, oy, angle, isFlipX(), isFlipY());
+    }
   }
 
   public boolean isFlipY() {

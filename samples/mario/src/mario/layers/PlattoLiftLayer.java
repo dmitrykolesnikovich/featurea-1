@@ -1,16 +1,13 @@
 package mario.layers;
 
-import featurea.graphics.Graphics;
 import featurea.motion.Motion;
 import featurea.motion.Movement;
 import featurea.motion.Tweens;
-import featurea.util.Color;
 import mario.Sprites;
 import mario.config.Gameplay;
 import mario.objects.landscape.Platto;
 
 public class PlattoLiftLayer extends BodyLayer {
-
 
 
   public enum Direction {
@@ -113,12 +110,4 @@ public class PlattoLiftLayer extends BodyLayer {
     return new Movement().setGraph(amplitude, 0, 0).setBounce(true).setVelocity(velocity).setTween(Tweens.sin);
   }
 
-  @Override
-  protected void onDrawSpriteIfVisible(Graphics graphics) {
-    if (hasLine) {
-
-    }
-    super.onDrawSpriteIfVisible(graphics);
-
-  }
 }

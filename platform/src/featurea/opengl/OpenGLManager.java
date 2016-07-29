@@ -5,11 +5,6 @@ import static featurea.app.Context.gl;
 public abstract class OpenGLManager implements OpenGL {
 
   public static int MAX_TEXTURE_SIZE = 2048;
-  public static final int VERTEX_POINTER_COUNT = 2;
-  public static final int COLOR_POINTER_COUNT = 4;
-  public static final int TEXTURE_COORD_POINTER_COUNT = 2;
-  public static final int COUNT_OF_VERTICES_FOR_DRAWING_TWO_TRIANGLES = 6;
-  public boolean isTile;
 
   public void unbind() {
     glEnable(GL_TEXTURE_2D);
@@ -45,13 +40,8 @@ public abstract class OpenGLManager implements OpenGL {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-    if (isTile) {
-      gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-      gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    } else {
-      gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-      gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    }
+    gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    gl.glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     // blend
     glEnable(GL_BLEND);

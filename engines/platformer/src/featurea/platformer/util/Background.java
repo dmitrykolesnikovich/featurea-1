@@ -50,12 +50,16 @@ public class Background extends Animation {
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    onFillBackground(graphics);
-    for (Map.Entry<String, int[][]> entry : sprites.entrySet()) {
-      String sprite = entry.getKey();
-      int[][] coordinates = entry.getValue();
-      String file = getFile(graphics, sprite);
-      drawSprite(graphics, coordinates, file);
+    if (!graphics.containsFillRectangle()) {
+      onFillBackground(graphics);
+    }
+    if (!graphics.containsDrawTexture()) {
+      for (Map.Entry<String, int[][]> entry : sprites.entrySet()) {
+        String sprite = entry.getKey();
+        int[][] coordinates = entry.getValue();
+        String file = getFile(graphics, sprite);
+        drawSprite(graphics, coordinates, file);
+      }
     }
   }
 
@@ -68,7 +72,7 @@ public class Background extends Animation {
     if (texture != null) {
       double width = texture.getWidth();
       double height = texture.getHeight();
-      WorldLayer layer = (WorldLayer) graphics.layer;
+      WorldLayer layer = (WorldLayer) graphics.getLayer();
       Camera camera = layer.getCamera();
       double right = Context.isFeaturea() ? layer.getSize().width : camera.right();
       for (double counter = 0, x1 = 0, y2 = 0; x1 < right && y2 < camera.bottom(); counter++) {
@@ -90,7 +94,7 @@ public class Background extends Animation {
             y2 += position.y;
             // <<
             if (x1 < right && y2 < camera.bottom()) {
-              graphics.drawTexture(file, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+              graphics.drawTexture(file, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
             }
           }
         }

@@ -17,6 +17,8 @@ import java.util.jar.JarFile;
 
 public class Project {
 
+  public static final String PROJECT_FILE_NAME = "project.xml";
+
   /*components*/
   private boolean isProduction;
   public final ProjectClassLoader classLoader = new ProjectClassLoader();
@@ -63,11 +65,11 @@ public class Project {
       this.file = file;
       if (file.getName().endsWith(".jar")) {
         JarFile jarFile = new JarFile(file.getAbsolutePath());
-        JarEntry jarEntry = jarFile.getJarEntry("project.xml");
+        JarEntry jarEntry = jarFile.getJarEntry(PROJECT_FILE_NAME);
         InputStream inputStream = jarFile.getInputStream(jarEntry);
         parser.readInputStream(inputStream);
         classPath.add(file); // IMPORTANT
-      } else if ("project.xml".equals(file.getName())) {
+      } else if (PROJECT_FILE_NAME.equals(file.getName())) {
         parser.readInputStream(new FileInputStream(file));
         File dir = this.file.getParentFile();
         resourcesDir = new File(dir, "res");
@@ -166,7 +168,7 @@ public class Project {
     }
     files.addAll(this.getClassPath());
     classLoader.addAll(this.getClassPath());
-    if ("project.xml".equals(file.getName())) {
+    if (PROJECT_FILE_NAME.equals(file.getName())) {
       xmlSchema = new XmlSchema(this);
       xmlFormatter = new XmlFormatter(this);
       xmlPrimitives = new XmlPrimitives(this);

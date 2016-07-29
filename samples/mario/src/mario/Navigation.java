@@ -6,7 +6,6 @@ import featurea.app.Loader;
 import featurea.app.MediaPlayer;
 import featurea.motion.Motion;
 import featurea.platformer.View;
-import featurea.util.Colors;
 import mario.objects.hero.Hero;
 import mario.objects.hero.World;
 import mario.objects.landscape.Tube;
@@ -33,7 +32,7 @@ public class Navigation {
           if (progress == 1) {
             setWorld(Worlds.current());
           } else {
-            Context.getRender().fillRectangle(0, 0, (float) (progress * Context.getRender().size.width), 2, Colors.blue);
+            // Context.getRender().fillRectangle(0, 0, (float) (progress * Context.getRender().size.width), 2, Colors.blue);
           }
         }
       };

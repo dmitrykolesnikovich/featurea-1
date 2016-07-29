@@ -1,6 +1,7 @@
 package mario.desktop;
 
 import featurea.app.MediaPlayer;
+import featurea.app.Project;
 import featurea.desktop.LwjglNatives;
 import featurea.desktop.Simulator;
 import mario.Navigation;
@@ -19,8 +20,8 @@ public class Main {
         Navigation.entryPoint(mediaPlayer);
       }
     };
-    simulator.setProduction(false);
-    simulator.setProject(new File("project.xml"));
+    simulator.setProduction(true);
+    simulator.setProject(new File(Project.PROJECT_FILE_NAME));
     simulator.setSize(600, 600);
     simulator.setTitle("Mario");
     simulator.start();

@@ -101,24 +101,26 @@ public class GiantMushroom extends Body {
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-    drawTrunk(graphics);
-    drawTrunkTopLine(graphics);
-    drawHead(graphics);
+    if (!graphics.containsDrawTexture()) {
+      drawTrunk(graphics);
+      drawTrunkTopLine(graphics);
+      drawHead(graphics);
+    }
   }
 
   /*draw*/
 
   private void drawTrunk(Graphics graphics) {
     double y1 = getHeadBottom() - 2;
-    World layer = (World) graphics.layer;
+    World layer = (World) graphics.getLayer();
     double y2 = layer.getSize().height;
     if (mode == Mode.first) {
       double x1 = position.x + headWidth;
       double x2 = position.x + (count - 1) * headWidth;
-      graphics.drawTile(trunkTile, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+      graphics.drawTile(trunkTile, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
     } else if (mode == Mode.second) {
       double x = position.x + (count - 1) * headWidth / 2;
-      graphics.drawTile(trunkTile, x, y1, x + trunkWidth, y2, null, 0, 0, Colors.white, false, false, null);
+      graphics.drawTile(trunkTile, x, y1, x + trunkWidth, y2, null, 0, 0, Colors.white, false, false);
     }
   }
 
@@ -136,7 +138,7 @@ public class GiantMushroom extends Body {
       double x2 = x1 + headWidth;
       double y1 = getHeadBottom() - 2;
       double y2 = y1 + trunkTopHeight;
-      graphics.drawTexture(trunkTopSprite, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+      graphics.drawTexture(trunkTopSprite, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
     }
   }
 
@@ -149,7 +151,7 @@ public class GiantMushroom extends Body {
       double width = getSpriteWidth(index);
       double x1 = x + index * width;
       double x2 = x + (index + 1) * width;
-      graphics.drawTexture(sprite, x1, y, x2, headBottom, null, 0, 0, Colors.white, false, false, null);
+      graphics.drawTexture(sprite, x1, y, x2, headBottom, null, 0, 0, Colors.white, false, false);
     }
   }
 

@@ -76,6 +76,7 @@ public class Application {
   }
 
   public void onDrawBackground() {
+    Context.getRender().clearBackground();
     if (screen != null) {
       screen.onDrawBackground();
     }

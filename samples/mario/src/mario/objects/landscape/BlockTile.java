@@ -12,7 +12,9 @@ public class BlockTile extends Body {
 
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
-    graphics.drawTile(Sprites.Items.Brick.show(), left(), top(), right(), bottom(), null, 0, 0, null, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      graphics.drawTile(Sprites.Items.Brick.show(), left(), top(), right(), bottom(), null, 0, 0, null, false, false);
+    }
   }
 
 }

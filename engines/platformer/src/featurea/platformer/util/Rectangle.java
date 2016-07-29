@@ -210,7 +210,7 @@ public class Rectangle {
       for (int i = 0; i < count; i++) {
         double x = position.x + i * width * direction.cos();
         double y = position.y + i * height * direction.sin();
-        graphics.drawTexture(file, x - width / 2, y - height / 2, x + width / 2, y + height / 2, angle, x, y, null, false, false, null);
+        graphics.drawTexture(file, x - width / 2, y - height / 2, x + width / 2, y + height / 2, angle, x, y, null, false, false);
       }
     } else {
       if (!Context.isProduction()) {

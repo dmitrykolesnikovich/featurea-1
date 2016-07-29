@@ -2,9 +2,9 @@ package mario.objects.landscape;
 
 import featurea.app.Context;
 import featurea.graphics.Graphics;
+import featurea.platformer.Animation;
 import featurea.platformer.overlap.Overlap;
 import featurea.platformer.physics.Body;
-import featurea.platformer.Animation;
 import featurea.util.Colors;
 import mario.Sprites;
 import mario.config.Gameplay;
@@ -31,18 +31,21 @@ public class BridgeInTheCastle extends Body {
   public void setLength(int length) {
     this.length = length;
     setRectangle(0, 0, width * length, height);
+    graphics.clearDrawTexture();
   }
 
   @Override
   public void onDrawSpriteIfVisible(Graphics graphics) {
-    double x = position.x;
-    double y = position.y;
-    for (int i = 0; i < length; i++) {
-      double x1 = x + width * i;
-      double x2 = x1 + width;
-      double y1 = y;
-      double y2 = y1 + height;
-      graphics.drawTexture(texture, x1, y1, x2, y2, null, x, y, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      double x = position.x;
+      double y = position.y;
+      for (int i = 0; i < length; i++) {
+        double x1 = x + width * i;
+        double x2 = x1 + width;
+        double y1 = y;
+        double y2 = y1 + height;
+        graphics.drawTexture(texture, x1, y1, x2, y2, null, x, y, Colors.white, false, false);
+      }
     }
   }
 

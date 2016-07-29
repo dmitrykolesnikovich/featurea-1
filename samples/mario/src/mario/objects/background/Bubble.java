@@ -39,11 +39,13 @@ public class Bubble extends Animation {
   @Override
   protected void onDrawSpriteIfVisible(Graphics graphics) {
     super.onDrawSpriteIfVisible(graphics);
-    double x1 = position.x - width / 2;
-    double x2 = position.x + width / 2;
-    double y1 = position.y - height / 2;
-    double y2 = position.y + height / 2;
-    graphics.drawTexture(texture, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false, null);
+    if (!graphics.containsDrawTexture()) {
+      double x1 = position.x - width / 2;
+      double x2 = position.x + width / 2;
+      double y1 = position.y - height / 2;
+      double y2 = position.y + height / 2;
+      graphics.drawTexture(texture, x1, y1, x2, y2, null, 0, 0, Colors.white, false, false);
+    }
   }
 
   @Override

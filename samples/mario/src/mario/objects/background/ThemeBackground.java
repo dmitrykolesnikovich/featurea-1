@@ -8,7 +8,7 @@ public class ThemeBackground extends Background {
 
   @Override
   protected String getFile(Graphics graphics, String sprite) {
-    World world = (World) graphics.layer;
+    World world = (World) graphics.getLayer();
     // fixme featurea.util.TextureNotFoundException: background/night/bush.png
     return "background/" + world.getTheme().name() + "/" + sprite;
   }

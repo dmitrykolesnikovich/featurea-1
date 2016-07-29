@@ -51,7 +51,7 @@ public class TexturePart {
 
   private void markAllTexturesInPartAsLoadedForcely() {
     for (Texture texture : textures.values()) {
-      texture.isLoad = true;
+      texture.setLoad(true);
     }
   }
 
@@ -69,7 +69,7 @@ public class TexturePart {
 
   private boolean hasLoadedTextures() {
     for (Texture texture : textures.values()) {
-      if (texture.isLoad) {
+      if (texture.isLoad()) {
         return true;
       }
     }
