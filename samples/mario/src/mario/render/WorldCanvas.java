@@ -7,10 +7,12 @@ import featurea.graphics.DefaultGraphics;
 import featurea.graphics.Graphics;
 import featurea.platformer.Animation;
 import featurea.platformer.View;
+import featurea.platformer.config.Engine;
 import featurea.platformer.physics.Body;
 import featurea.util.Size;
 import featurea.util.Vector;
 import featurea.xml.XmlResource;
+import mario.objects.background.CastleBackground;
 import mario.objects.bonuses.Bonus;
 import mario.objects.bonuses.StarBonus;
 import mario.objects.enemies.PiranhaPlant;
@@ -26,7 +28,6 @@ import java.util.List;
 public class WorldCanvas extends Canvas implements XmlResource {
 
   private World world;
-  private int partsCount;
   private double partWidth;
   private final List<Graphics> allGraphics = new ArrayList<>();
   private final List<Graphics> staticBodiesGraphics = new ArrayList<>();
@@ -34,12 +35,9 @@ public class WorldCanvas extends Canvas implements XmlResource {
   private final List<Graphics> dynamicBodiesBackgroundGraphics = new ArrayList<>();
   private final List<Graphics> dynamicBodiesForegroundGraphics = new ArrayList<>();
   private final List<Graphics> animationGraphics = new ArrayList<>();
+  private Graphics castleGraphics;
   private Graphics worldGraphics;
-
-  public WorldCanvas setPartsCount(int partsCount) {
-    this.partsCount = partsCount;
-    return this;
-  }
+  private final Vector position = new Vector();
 
   public WorldCanvas setWorld(World world) {
     this.world = world;
@@ -51,19 +49,19 @@ public class WorldCanvas extends Canvas implements XmlResource {
     validateAttributes();
     Size size = world.getSize();
     double width = size.width;
-    partWidth = width / partsCount;
-    for (int i = 0; i < partsCount; i++) {
+    partWidth = Engine.cameraWidth + 32;
+    for (double i = 0; i < width / partWidth; i++) {
       addGraphicsPart(i * partWidth, (i + 1) * partWidth);
     }
 
-    worldGraphics = new DefaultGraphics() {
-      @Override
-      public String toString() {
-        return "worldGraphics";
-      }
-    }.setLayer(world).build();
+    worldGraphics = new DefaultGraphics().setLayer(world).build();
     allGraphics.add(worldGraphics);
+
     allGraphics.addAll(animationGraphics);
+
+    castleGraphics = new DefaultGraphics().setLayer(world).build();
+    allGraphics.add(castleGraphics);
+
     allGraphics.addAll(dynamicBodiesBackgroundGraphics);
     allGraphics.addAll(staticBodiesGraphics);
 
@@ -80,13 +78,22 @@ public class WorldCanvas extends Canvas implements XmlResource {
     return this;
   }
 
+
+  // todo implement idea to switch graphics by animation.position.z
   @Override
   public Graphics getGraphics(Area area) {
     if (area instanceof World) {
       return worldGraphics;
     }
     Animation animation = (Animation) area;
-    Vector position = animation.position;
+    position.setValue(animation.position);
+
+    // >> hotfix todo avoid this
+    if (isCastleBackground(animation)) {
+      return castleGraphics;
+    }
+    // <<
+
     if (isBig(animation)) {
       return staticBigAnimations;
     }
@@ -104,6 +111,12 @@ public class WorldCanvas extends Canvas implements XmlResource {
     } else {
       return getAnimationGraphics(position);
     }
+  }
+
+  private boolean isCastleBackground(Animation animation) {
+    return animation.toString().equals("CastleBackground flag") ||
+        animation instanceof CastleBackground ||
+        animation instanceof Flagpole;
   }
 
   private boolean isBig(Animation animation) {
@@ -128,16 +141,13 @@ public class WorldCanvas extends Canvas implements XmlResource {
       Hero hero = (Hero) animation;
       return hero.getView() == View.sit;
     }
-    if (animation instanceof Flagpole) {
-      return true;
-    }
     if (animation instanceof PiranhaPlant) {
       return true;
     }
     return false;
   }
 
-  public List<Graphics> getAllGraphics() {
+  public List<Graphics> listGraphics() {
     return allGraphics;
   }
 
@@ -145,31 +155,50 @@ public class WorldCanvas extends Canvas implements XmlResource {
   public void onDrawBuffers(Layer layer) {
     Slices.textures.draw(this);
     Slices.shapes.draw(this);
-    clearAllBuffers(); // todo this line of code should be removed to improve performance
   }
 
   /*private API*/
 
   private void validateAttributes() {
-    if (partsCount == 0) {
-      throw new IllegalStateException("partsCount == 0");
-    }
     if (world == null) {
       throw new IllegalStateException("world == null");
     }
   }
 
   private void addGraphicsPart(double x1, double x2) {
-    animationGraphics.add(new WorldGraphics(x1, x2).setLayer(world).build());
-    staticBodiesGraphics.add(new WorldGraphics(x1, x2).setLayer(world).build());
-    dynamicBodiesForegroundGraphics.add(new WorldGraphics(x1, x2).setLayer(world).build());
-    dynamicBodiesBackgroundGraphics.add(new WorldGraphics(x1, x2).setLayer(world).build());
+    animationGraphics.add(new WorldGraphics(x1, x2) {
+      @Override
+      public String toString() {
+        return "animationGraphics";
+      }
+    }.setLayer(world).build());
+    staticBodiesGraphics.add(new WorldGraphics(x1, x2) {
+      @Override
+      public String toString() {
+        return "staticBodiesGraphics";
+      }
+    }.setLayer(world).build());
+    dynamicBodiesForegroundGraphics.add(new WorldGraphics(x1, x2) {
+      @Override
+      public String toString() {
+        return "dynamicBodiesForegroundGraphics";
+      }
+    }.setLayer(world).build());
+    dynamicBodiesBackgroundGraphics.add(new WorldGraphics(x1, x2) {
+      @Override
+      public String toString() {
+        return "dynamicBodiesBackgroundGraphics";
+      }
+    }.setLayer(world).build());
   }
 
   private Graphics getAnimationGraphics(Vector position) {
     int index = (int) (position.x / partWidth);
     if (index < 0) {
       index = 0;
+    }
+    if (index >= animationGraphics.size()) {
+      index = animationGraphics.size() - 1;
     }
     if (index < animationGraphics.size()) {
       return animationGraphics.get(index);
@@ -183,6 +212,9 @@ public class WorldCanvas extends Canvas implements XmlResource {
     if (index < 0) {
       index = 0;
     }
+    if (index >= staticBodiesGraphics.size()) {
+      index = staticBodiesGraphics.size() - 1;
+    }
     if (index < staticBodiesGraphics.size()) {
       return staticBodiesGraphics.get(index);
     } else {
@@ -195,6 +227,9 @@ public class WorldCanvas extends Canvas implements XmlResource {
     if (index < 0) {
       index = 0;
     }
+    if (index >= dynamicBodiesForegroundGraphics.size()) {
+      index = dynamicBodiesForegroundGraphics.size() - 1;
+    }
     if (index < dynamicBodiesForegroundGraphics.size()) {
       return dynamicBodiesForegroundGraphics.get(index);
     } else {
@@ -206,6 +241,9 @@ public class WorldCanvas extends Canvas implements XmlResource {
     int index = (int) (position.x / partWidth);
     if (index < 0) {
       index = 0;
+    }
+    if (index >= dynamicBodiesBackgroundGraphics.size()) {
+      index = dynamicBodiesBackgroundGraphics.size() - 1;
     }
     if (index < dynamicBodiesBackgroundGraphics.size()) {
       return dynamicBodiesBackgroundGraphics.get(index);

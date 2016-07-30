@@ -9,15 +9,11 @@ import featurea.opengl.batches.FillShapeBatch;
 
 public class DefaultCanvas extends Canvas {
 
-  private Graphics graphics;
+  public Graphics graphics;
 
   public DefaultCanvas setLayer(Layer layer) {
-    graphics = new DefaultGraphics() {
-      @Override
-      public String toString() {
-        return "DefaultCanvas";
-      }
-    }.setLayer(layer).build();
+    super.setLayer(layer);
+    graphics = new DefaultGraphics().setLayer(layer).build();
     return this;
   }
 

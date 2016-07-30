@@ -3,7 +3,6 @@ package mario.render;
 import featurea.app.Camera;
 import featurea.graphics.Graphics;
 import featurea.opengl.Batches;
-import mario.objects.hero.World;
 
 public class WorldGraphics extends Graphics {
 
@@ -19,9 +18,7 @@ public class WorldGraphics extends Graphics {
   }
 
   @Override
-  public boolean isShown() {
-    World world = (World) getLayer();
-    Camera camera = world.getCamera();
+  public boolean isShown(Camera camera) {
     return camera.right() > leftX && camera.left() < rightX;
   }
 

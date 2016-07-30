@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/tests/6k_16x16_performanceTest/6k_16x16_performanceTest.iml" filepath="$PROJECT_DIR$/tests/6k_16x16_performanceTest/6k_16x16_performanceTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tests/6k_16x16_performanceTest/targets/6k_16x16_performanceTest.android/6k_16x16_performanceTest.android.iml" filepath="$PROJECT_DIR$/tests/6k_16x16_performanceTest/targets/6k_16x16_performanceTest.android/6k_16x16_performanceTest.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tests/6k_16x16_performanceTest/targets/6k_16x16_performanceTest.desktop/6k_16x16_performanceTest.desktop.iml" filepath="$PROJECT_DIR$/tests/6k_16x16_performanceTest/targets/6k_16x16_performanceTest.desktop/6k_16x16_performanceTest.desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/tools/builder/builder.iml" filepath="$PROJECT_DIR$/platform/tools/builder/builder.iml" />
       <module fileurl="file://$PROJECT_DIR$/engines/dyn4j/dyn4j.iml" filepath="$PROJECT_DIR$/engines/dyn4j/dyn4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/engines/dyn4j/examples/examples.iml" filepath="$PROJECT_DIR$/engines/dyn4j/examples/examples.iml" />

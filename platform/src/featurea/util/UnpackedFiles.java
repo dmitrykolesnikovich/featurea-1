@@ -6,6 +6,7 @@ import featurea.opengl.Texture;
 import featurea.opengl.TexturePack;
 import featurea.opengl.TexturePacker;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -15,17 +16,18 @@ public class UnpackedFiles extends Files {
 
   public UnpackedFiles(Project project) {
     this.project = project;
-    setProduction(false);
   }
 
-  public void setProduction(boolean isProduction) {
+  public UnpackedFiles setProduction(boolean isProduction) {
     this.classPath = new ClassPath(isProduction ? ClassPath.class.getClassLoader() : null);
+    return this;
   }
 
   @Override
   public List<String> listFilesRecursively(String dir, String... extensions) {
     List<String> result = super.listFilesRecursively(dir, extensions);
     unpack(result, dir, extensions);
+    Collections.sort(result);
     return result;
   }
 

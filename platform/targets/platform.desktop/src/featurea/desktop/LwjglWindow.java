@@ -4,6 +4,7 @@ import featurea.app.Context;
 import featurea.app.MediaPlayer;
 import featurea.swing.FeatureaSwingUtil;
 import featurea.util.ArrayList;
+import featurea.util.FileUtil;
 import org.lwjgl.InputListener;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.AWTGLCanvas;
@@ -15,6 +16,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.util.List;
+import java.util.jar.JarFile;
 
 public class LwjglWindow extends AWTGLCanvas implements InputWindow {
 
@@ -30,8 +32,16 @@ public class LwjglWindow extends AWTGLCanvas implements InputWindow {
     Simulator.instanceCount++;
     this.simulator = simulator;
     this.mediaPlayer = new MediaPlayer();
-    mediaPlayer.project.setFile(file);
     this.mediaPlayer.project.setProduction(isProduction);
+    JarFile jarFile = FileUtil.retrieveJarFile(Simulator.class);
+    if (jarFile != null) {
+      this.mediaPlayer.getFiles().add(jarFile);
+      this.mediaPlayer.getClassLoader().add(jarFile);
+      System.out.println("jar added: " + jarFile.getName());
+    } else {
+      System.err.println("jar == null");
+    }
+    this.mediaPlayer.project.setFile(file);
 
     addInputListener(new SimulatorInputListener(this.mediaPlayer));
     setIgnoreRepaint(false);

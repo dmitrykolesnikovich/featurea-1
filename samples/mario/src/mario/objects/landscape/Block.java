@@ -183,6 +183,7 @@ public class Block extends Body {
   @Override
   public void destroy() {
     super.destroy();
+    redraw();
     sprite = new BlockBreakSprite().setBlock(this);
     setMass(3.5);
     longJumpNow();
@@ -225,6 +226,11 @@ public class Block extends Body {
   private void resetState() {
     state = null;
     getState();
+  }
+
+  @Override
+  public String toString() {
+    return "Block";
   }
 
 }

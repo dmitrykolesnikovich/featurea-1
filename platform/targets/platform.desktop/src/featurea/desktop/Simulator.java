@@ -95,11 +95,6 @@ public class Simulator extends JFrame {
   /*lifecycle callbacks: onCreateFeatureaContext -> onTick, onDraw -> onExit*/
 
   public void onCreate(MediaPlayer mediaPlayer) {
-    JarFile jarFile = FileUtil.retrieveJarFile(Simulator.class);
-    if (jarFile != null) {
-      mediaPlayer.getFiles().add(jarFile);
-      mediaPlayer.getClassLoader().add(jarFile);
-    }
     mediaPlayer.app.onCreate();
     mediaPlayer.app.onResume();
     XmlEditor editor = mediaPlayer.getResources().editor;

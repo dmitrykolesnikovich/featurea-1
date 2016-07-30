@@ -1,0 +1,1 @@
+package test; public interface Assets {	String fourStars = "fourStars.png";}

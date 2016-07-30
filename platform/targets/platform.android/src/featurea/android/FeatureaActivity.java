@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import featurea.app.Context;
 import featurea.app.MediaPlayer;
 import featurea.input.Key;
@@ -27,12 +28,15 @@ public class FeatureaActivity extends Activity implements SensorEventListener, f
     mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
     mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
     mySurfaceView = new MySurfaceView(this);
-    setContentView(mySurfaceView);
     mySurfaceView.setRenderer(new MyRender(this));
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
       mySurfaceView.setPreserveEGLContextOnPause(true);
-      mediaPlayer.render.isReleaseTexturesOnPause = false;
     }
+    onCreateContentView(mySurfaceView);
+  }
+
+  protected void onCreateContentView(View contentView) {
+    setContentView(contentView);
   }
 
   @Override
@@ -133,13 +137,26 @@ public class FeatureaActivity extends Activity implements SensorEventListener, f
     finish();
   }
 
+  /**
+   * Called when the media player is first created.
+   */
   public void onCreateMediaPlayer(MediaPlayer mediaPlayer) {
     this.mediaPlayer = mediaPlayer;
     this.mediaPlayer.render.window = this;
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+      mediaPlayer.render.isReleaseTexturesOnPause = false;
+    }
   }
 
   public MediaPlayer getMediaPlayer() {
     return mediaPlayer;
   }
+
+  /*app lifecycle*/
+
+  protected void onTick(double elapsedTime) {
+    mediaPlayer.app.onTick(elapsedTime);
+  }
+
 
 }

@@ -24,12 +24,14 @@ public class BufferedAreasAndBodiesProjection extends Projection<Area> {
     if (!(area instanceof Animation)) {
       return true;
     }
+    // >>
+    // 1)
     final Animation animation = (Animation) area;
     animation.setLayer(worldLayer);
     boolean result = animation.shouldBeSwipedFromBuffer() || Context.isFeaturea();
     boolean isRemove = false;
     double lifeDistance = animation.getLifeDistance();
-    /*if (Context.isProduction()) {
+    if (Context.isProduction()) {
       if (lifeDistance != 0) {
         if (lifeDistance < worldLayer.getCamera().left()) {
           Context.getTimer().delay(new Runnable() {
@@ -41,7 +43,7 @@ public class BufferedAreasAndBodiesProjection extends Projection<Area> {
           isRemove = true;
         }
       }
-    }*/
+    }
     if (!isRemove) {
       worldLayer.bodyIndex.update(animation);
       if (worldLayer.getCamera().left() > animation.right() || !animation.timeline.isEmpty()) {

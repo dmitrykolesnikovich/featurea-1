@@ -32,11 +32,22 @@ public class CoinRotateBonus extends Bonus {
   }
 
   @Override
-  public boolean work(Layer layer) {
-    this.position.z = Gameplay.coinRotateBonusWorkdZ;
+  public boolean work(final Layer layer) {
+    Context.getTimer().delay(new Runnable() {
+      @Override
+      public void run() {
+        workSync(layer);
+      }
+    });
+    count--;
+    return count <= 0;
+  }
+
+  private void workSync(Layer layer) {
+    CoinRotateBonus.this.position.z = Gameplay.coinRotateBonusWorkdZ;
     Context.getAudio().play(Assets.Audio.Sounds.Coin);
     sprite.setProgress(0);
-    super.work(layer);
+    CoinRotateBonus.super.work(layer);
     Motion motion = new Movement().setGraph(0, -jumpHeight, 0, 0, jumpHeight, 0).setVelocity(0.14);
     motion.onStop = new Runnable() {
       @Override
@@ -45,8 +56,6 @@ public class CoinRotateBonus extends Bonus {
       }
     };
     add(motion);
-    count--;
-    return count <= 0;
   }
 
   public static CoinRotateBonus valueOf(String primitive) {

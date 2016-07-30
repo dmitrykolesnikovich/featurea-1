@@ -4,7 +4,6 @@ import featurea.app.Context;
 import featurea.graphics.Graphics;
 import featurea.motion.Movement;
 import featurea.platformer.Animation;
-import featurea.platformer.physics.Body;
 import featurea.util.Vector;
 import mario.Sprites;
 import mario.config.Gameplay;
@@ -69,12 +68,23 @@ public class CastleBackground extends Animation {
   }
 
   public void win() {
-    Body flag = new Body();
+    final Animation flag = new Animation() {
+      @Override
+      public String toString() {
+        return "CastleBackground flag";
+      }
+    };
     flag.setSprite(Sprites.Background.flag());
     flag.setSize(Sprites.Background.flagWidth, Sprites.Background.flagHeight);
     flag.setPosition(castle2.x + Sprites.Background.castle2Width / 2 - Sprites.Background.flagWidth / 2,
         200 - Sprites.Background.castle2Height + 8);
-    flag.add(new Movement().setGraph(0, -24, 0).setVelocity(0.02));
+    flag.add(new Movement() {
+      @Override
+      public void onTick(double elapsedTime) {
+        super.onTick(elapsedTime);
+        redraw();
+      }
+    }.setGraph(0, -24, 0).setVelocity(0.02));
     flag.position.z = z() - 1;
     add(flag);
     final Hero hero = getWorld().getHero();
@@ -85,7 +95,7 @@ public class CastleBackground extends Animation {
         Firework firework = new Firework() {
           @Override
           protected void onFinishFirework() {
-            remove(this);
+            removeSelf();
             getWorld().onFinish();
           }
         }.setPosition(new Vector(castle2.x, 0));
@@ -102,6 +112,11 @@ public class CastleBackground extends Animation {
   @Override
   public Animation setPosition(double x, double y, double z) {
     return super.setPosition(0, 0, 0);
+  }
+
+  @Override
+  public String toString() {
+    return "CastleBackground";
   }
 
 }

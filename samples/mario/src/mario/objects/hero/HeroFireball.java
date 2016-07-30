@@ -83,7 +83,6 @@ public class HeroFireball extends Body {
       if (liftHeight >= MAX_LIFT_HEIGHT) {
         dy = 0;
         currentHorizontalShit += dx;
-        System.out.println("currentHorizontalShit: " + currentHorizontalShit);
         if (currentHorizontalShit >= MAX_HORIZONTAL_SHIFT) {
           velocity.y = Math.abs(velocity.y);
         }

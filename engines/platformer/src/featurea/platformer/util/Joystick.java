@@ -2,6 +2,7 @@ package featurea.platformer.util;
 
 import featurea.app.Camera;
 import featurea.app.Context;
+import featurea.graphics.Canvas;
 import featurea.input.Keyboard;
 import featurea.platformer.config.Engine;
 import featurea.platformer.physics.HeroBody;
@@ -42,6 +43,7 @@ public class Joystick extends UILayer {
     camera.setZoomAnchorHorizontal(ZoomAnchorHorizontal.bottom);
     camera.setResizeAnchorVertical(ResizeAnchorVertical.bottom);
     setCamera(camera);
+    setCanvas(new Canvas());
     this.isVisible = !Targets.isDesktop;
   }
 
@@ -102,12 +104,13 @@ public class Joystick extends UILayer {
   }
 
   @Override
-  public void onLayout(Size size) {
-    super.onLayout(size);
+  public void onResize(Size size) {
     Camera camera = getCamera();
     /*buttonSettings.setPosition(camera.left() + 40, camera.top() + 40 - camera.zoom.y);
     buttonConfig.setPosition(camera.right() - 32, camera.top() + 32 - camera.zoom.y);*/
   }
+
+
 
   public void update() {
     if (isEnable) {

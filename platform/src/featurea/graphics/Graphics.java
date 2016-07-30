@@ -1,6 +1,8 @@
 package featurea.graphics;
 
 import com.sun.istack.internal.Nullable;
+import featurea.app.Area;
+import featurea.app.Camera;
 import featurea.app.Context;
 import featurea.app.Layer;
 import featurea.opengl.Batch;
@@ -21,6 +23,7 @@ public class Graphics implements XmlResource {
 
   private static final Vector EMPTY_VECTOR = new Vector();
 
+  private boolean isBuild;
   private boolean isDirty;
   private final List<Batch> batches = new ArrayList<>();
   private DrawLineAndDrawRectangleBatch drawLineAndDrawRectangleBach;
@@ -28,8 +31,9 @@ public class Graphics implements XmlResource {
   private FillShapeBatch fillShapeBatch;
   private DrawTextureBatch drawTextureBatch;
   private Layer layer;
+  public boolean isShown;
 
-  protected boolean isShown() {
+  protected boolean isShown(Camera camera) {
     return true;
   }
 
@@ -79,8 +83,11 @@ public class Graphics implements XmlResource {
 
   @Override
   public Graphics build() {
+    if (isBuild) {
+      throw new IllegalStateException("Graphics is build already");
+    }
+    isBuild = true;
     validateAttributes();
-    batches.clear();
     if (drawLineAndDrawRectangleBach != null) {
       batches.add(drawLineAndDrawRectangleBach);
     }
@@ -148,54 +155,70 @@ public class Graphics implements XmlResource {
     if (containsDrawLine()) {
       throw new RuntimeException("To use drawLine batch you should clear it first: GraphicsBuffer.clearDrawLine()");
     }
-    if (layer != null) {
-      x1 = layer.toScreenX(x1);
-      x2 = layer.toScreenX(x2);
-      y1 = layer.toScreenY(y1);
-      y2 = layer.toScreenY(y2);
+    if (layer == null) {
+      throw new NullPointerException("layer == null");
     }
-    drawLineAndDrawRectangleBach.drawLine(x1, y1, x2, y2, color);
+    if (!isBuild) {
+      throw new IllegalStateException("Graphics is not built yet");
+    }
+    x1 = layer.toScreenX(x1);
+    x2 = layer.toScreenX(x2);
+    y1 = layer.toScreenY(y1);
+    y2 = layer.toScreenY(y2);
+    drawLineAndDrawRectangleBach.drawLine(this, x1, y1, x2, y2, color);
   }
 
   public void drawRectangle(double x1, double y1, double x2, double y2, Color color) {
     if (containsDrawRectangle()) {
       throw new RuntimeException("To use drawRectangle batch you should clear it first: GraphicsBuffer.clearDrawRectangle()");
     }
-    if (layer != null) {
-      x1 = layer.toScreenX(x1);
-      x2 = layer.toScreenX(x2);
-      y1 = layer.toScreenY(y1);
-      y2 = layer.toScreenY(y2);
+    if (layer == null) {
+      throw new NullPointerException("layer == null");
     }
-    drawLineAndDrawRectangleBach.drawRectangle(x1, y1, x2, y2, color);
+    if (!isBuild) {
+      throw new IllegalStateException("Graphics is not built yet");
+    }
+    x1 = layer.toScreenX(x1);
+    x2 = layer.toScreenX(x2);
+    y1 = layer.toScreenY(y1);
+    y2 = layer.toScreenY(y2);
+    drawLineAndDrawRectangleBach.drawRectangle(this, x1, y1, x2, y2, color);
   }
 
   public void fillRectangle(double x1, double y1, double x2, double y2, Color color) {
     if (containsFillRectangle()) {
       throw new RuntimeException("To use fillRectangle batch you should clear it first: GraphicsBuffer.clearFillRectangle()");
     }
-    if (layer != null) {
-      x1 = layer.toScreenX(x1);
-      x2 = layer.toScreenX(x2);
-      y1 = layer.toScreenY(y1);
-      y2 = layer.toScreenY(y2);
+    if (layer == null) {
+      throw new NullPointerException("layer == null");
     }
-    fillRectangleBatch.fillRectangle(x1, y1, x2, y2, color);
+    if (!isBuild) {
+      throw new IllegalStateException("Graphics is not built yet");
+    }
+    x1 = layer.toScreenX(x1);
+    x2 = layer.toScreenX(x2);
+    y1 = layer.toScreenY(y1);
+    y2 = layer.toScreenY(y2);
+    fillRectangleBatch.fillRectangle(this, x1, y1, x2, y2, color);
   }
 
   public final void drawTexture(String file, double x1, double y1, double x2, double y2, Angle angle, double ox, double oy, Color color, boolean flipX, boolean flipY) {
     if (containsDrawTexture()) {
       throw new RuntimeException("To use drawTexture batch you should clear it first: GraphicsBuffer.clearDrawTexture()");
     }
-    if (layer != null) {
-      x1 = layer.toScreenX(x1);
-      y1 = layer.toScreenY(y1);
-      x2 = layer.toScreenX(x2);
-      y2 = layer.toScreenY(y2);
-      ox = layer.toScreenX(ox);
-      oy = layer.toScreenY(oy);
+    if (layer == null) {
+      throw new NullPointerException("layer == null");
     }
-    drawTextureBatch.drawTexture(file, x1, y1, x2, y2, angle, ox, oy, color, flipX, flipY);
+    if (!isBuild) {
+      throw new IllegalStateException("Graphics is not built yet");
+    }
+    x1 = layer.toScreenX(x1);
+    y1 = layer.toScreenY(y1);
+    x2 = layer.toScreenX(x2);
+    y2 = layer.toScreenY(y2);
+    ox = layer.toScreenX(ox);
+    oy = layer.toScreenY(oy);
+    drawTextureBatch.drawTexture(this, file, x1, y1, x2, y2, angle, ox, oy, color, flipX, flipY);
   }
 
   // devnote: http://stackoverflow.com/questions/662107/how-to-use-gl-repeat-to-repeat-only-a-selection-of-a-texture-atlas-opengl
@@ -279,5 +302,52 @@ public class Graphics implements XmlResource {
       throw new IllegalStateException("layer == null");
     }
   }
+
+  protected void onDraw(Area area) {
+
+  }
+
+  /**/
+
+  public void clearDrawLine() {
+    Canvas canvas = layer.getCanvas();
+    if (canvas != null) {
+      canvas.clearGraphicsDrawLineAndRectangle(this);
+    }
+  }
+
+  public void clearDrawRectangle() {
+    clearDrawLine(); // todo separate
+  }
+
+  public void clearFillRectangle() {
+    Canvas canvas = layer.getCanvas();
+    if (canvas != null) {
+      canvas.clearGraphicsFillRectangle(this);
+    }
+  }
+
+  public void clearFillShape() {
+    Canvas canvas = layer.getCanvas();
+    if (canvas != null) {
+      canvas.clearGraphicsFillShape(this);
+    }
+  }
+
+  public void clearDrawTexture() {
+    Canvas canvas = layer.getCanvas();
+    if (canvas != null) {
+      canvas.clearGraphicsDrawTexture(this);
+    }
+  }
+
+  public void clearAll() {
+    clearDrawLine();
+    clearDrawRectangle();
+    clearFillRectangle();
+    clearFillShape();
+    clearDrawTexture();
+  }
+
 
 }

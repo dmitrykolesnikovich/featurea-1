@@ -15,7 +15,11 @@ public class Files {
   protected ClassPath classPath;
 
   public Files() {
-    classPath = new ClassPath(null);
+    if (Targets.isMobile) {
+      classPath = new ClassPath();
+    } else {
+      classPath = new ClassPath(null);
+    }
   }
 
   public List<File> getRoots() {
@@ -51,7 +55,9 @@ public class Files {
         }
       }
     }
-    return new ArrayList<>(result);
+    ArrayList<String> list = new ArrayList<>(result);
+    Collections.sort(list);
+    return list;
   }
 
 

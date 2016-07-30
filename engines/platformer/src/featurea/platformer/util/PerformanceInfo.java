@@ -3,6 +3,7 @@ package featurea.platformer.util;
 import featurea.app.Camera;
 import featurea.app.Context;
 import featurea.app.Layer;
+import featurea.graphics.Canvas;
 import featurea.graphics.Font;
 import featurea.graphics.Graphics;
 import featurea.graphics.Text;
@@ -20,6 +21,7 @@ public class PerformanceInfo extends Layer {
     setCamera((Camera) new Camera().setRectangle(0, 0, 100, 100));
     text.font = new Font().setFntFile(Assets.Fonts.pressstart2p);
     this.isVisible = !Targets.isDesktop;
+    setCanvas(new Canvas());
   }
 
   @Override
@@ -29,7 +31,6 @@ public class PerformanceInfo extends Layer {
       totalTime %= DELTA;
       text.string = (int) Context.getPerformance().fps + "";
     }
-    text.drawOnScreen(10, 10, null, 0.4f, 0.4f, false, false);
   }
 
 }

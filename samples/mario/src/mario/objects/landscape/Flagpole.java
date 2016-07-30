@@ -107,7 +107,6 @@ public class Flagpole extends Body {
 
   // support preview
 
-
   @Override
   public Flagpole setPosition(double x, double y, double z) {
     stone.setBottom(200);
@@ -120,4 +119,11 @@ public class Flagpole extends Body {
     flag.setPosition(ox - flag.getSize().width, oy);
     return this;
   }
+
+  @Override
+  public void onAdd() {
+    super.onAdd();
+    redraw();
+  }
+
 }

@@ -19,11 +19,16 @@ public class CameraFeature {
       double prevX = camera.getPosition().x;
       double currentX = world.getHero().position.x - world.getCameraOffset();
       double newCameraX;
+      // >>
+      // 1)
       if (Context.isProduction()) {
         newCameraX = Math.max(prevX, currentX);
       } else {
         newCameraX = currentX;
       }
+      // 2)
+      /*newCameraX = currentX;*/
+      // <<
       camera.setPosition(newCameraX, 0);
       if (camera.left() < 0) {
         camera.setLeft(0);

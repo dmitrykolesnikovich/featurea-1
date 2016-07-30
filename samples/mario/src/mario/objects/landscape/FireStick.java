@@ -30,7 +30,7 @@ public class FireStick extends Body {
   @Override
   public void rotate(Angle angle) {
     super.rotate(angle);
-    graphics.clearDrawTexture();
+    redraw();
   }
 
   public void setEmpty(boolean isEmpty) {

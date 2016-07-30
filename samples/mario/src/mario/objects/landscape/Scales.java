@@ -71,10 +71,10 @@ public class Scales extends Animation {
     super.build();
 
     if (platto1 != null) {
-      remove(platto1);
+      platto1.removeSelf();
     }
     if (platto2 != null) {
-      remove(platto2);
+      platto2.removeSelf();
     }
 
     ropeLeftX = x1 - bearingWidth / 2;

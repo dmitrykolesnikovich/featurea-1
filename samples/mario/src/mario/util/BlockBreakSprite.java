@@ -36,8 +36,7 @@ public class BlockBreakSprite extends Sprite {
     distance += Gameplay.blockBreakSpreadVelocity * elapsedTime;
 
     // redraw cache
-    block.graphics.clearDrawTexture();
-    block.graphics.clearDrawRectangle();
+    block.redraw();
   }
 
   @Override

@@ -2,9 +2,11 @@ package featurea.opengl;
 
 import featurea.app.Context;
 import featurea.app.MediaPlayer;
-import featurea.graphics.Glyph;
 import featurea.graphics.Window;
-import featurea.util.*;
+import featurea.util.Color;
+import featurea.util.Colors;
+import featurea.util.Size;
+import featurea.util.Zoom;
 
 import static featurea.app.Context.gl;
 
@@ -43,28 +45,13 @@ public class Render {
 
   public void resize(int width, int height) {
     size.setValue(width, height);
-    gl.glViewport(0, 0, width, height);
+    gl.glViewport(0, 0, (int) size.width, (int) size.height);
+    shiftBatch(0, 0);
+  }
+
+  public void shiftBatch(double x, double y) {
     gl.glLoadIdentity();
-    gl.glOrthof(0, width, height, 0, -1, 1);
-  }
-
-  public void setViewport(double x, double y) {
-    // no op
-  }
-
-  public void drawGlyph(Glyph glyph, double x1, double y1, double x2, double y2, Angle angle, double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-    /*Texture texture = mediaPlayer.getResources().getTexture(glyph.font.pngFile);
-    if (texture != null) {
-      texture.setGlyphToRender(glyph);
-      texture.glyphRender.draw(x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
-    } else {
-      if (!mediaPlayer.isProduction()) {
-        mediaPlayer.loader.load(glyph.font.pngFile);
-      } else {
-        System.out.println("Font not load: " + glyph.font.pngFile);
-      }
-    }*/
-    throw new RuntimeException("Not implemented yet");
+    gl.glOrthof((float) -x, (float) (-x + size.width), (float) (-y + size.height), (float) (-y + 0), -1, 1);
   }
 
   public void clearBackground() {

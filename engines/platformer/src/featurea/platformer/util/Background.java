@@ -74,7 +74,7 @@ public class Background extends Animation {
       double height = texture.getHeight();
       WorldLayer layer = (WorldLayer) graphics.getLayer();
       Camera camera = layer.getCamera();
-      double right = Context.isFeaturea() ? layer.getSize().width : camera.right();
+      double right = /*Context.isFeaturea() ? layer.getSize().width : camera.right()*/layer.getSize().width;
       for (double counter = 0, x1 = 0, y2 = 0; x1 < right && y2 < camera.bottom(); counter++) {
         for (int i = 0; i < coordinates.length; i++) {
           int numberOfCopies = 1;

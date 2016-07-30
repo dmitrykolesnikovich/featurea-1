@@ -1,6 +1,7 @@
 package featurea.platformer;
 
 import featurea.graphics.Sprite;
+import featurea.platformer.physics.WorldLayer;
 
 public class AnimationSprite extends Sprite {
 
@@ -12,12 +13,15 @@ public class AnimationSprite extends Sprite {
 
   @Override
   public void onTick(double elapsedTime) {
-    if (!animation.getLayer().isTimeStop()) {
-      int startIndex = sheetIndex;
-      super.onTick(elapsedTime);
-      int finishIndex = sheetIndex;
-      if (startIndex != finishIndex) {
-        animation.graphics.clearDrawTexture();
+    WorldLayer layer = animation.getLayer();
+    if (layer != null) {
+      if (!layer.isTimeStop()) {
+        int startIndex = sheetIndex;
+        super.onTick(elapsedTime);
+        int finishIndex = sheetIndex;
+        if (startIndex != finishIndex) {
+          animation.redraw();
+        }
       }
     }
   }

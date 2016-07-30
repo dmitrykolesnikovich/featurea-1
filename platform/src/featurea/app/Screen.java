@@ -36,9 +36,15 @@ public class Screen implements XmlResource {
     }
   }
 
-  public void onTraverse() {
+  public void onTraverseTick() {
     for (Layer layer : layers) {
-      layer.onTraverse();
+      layer.onTraverseTick();
+    }
+  }
+
+  public void onTraverseDraw() {
+    for (Layer layer : layers) {
+      layer.onTraverseDraw();
     }
   }
 
@@ -61,7 +67,7 @@ public class Screen implements XmlResource {
         }
       }
       if (!render.isScreenMode) {
-        render.setViewport(maxX, maxY);
+        // todo
       }
     }
   }
@@ -91,9 +97,15 @@ public class Screen implements XmlResource {
     // no op
   }
 
-  public void onLayout(Size size) {
+  public void onResize(Size size) {
     for (Layer layer : layers) {
-      layer.onLayout(size);
+      layer.onResize(size);
+    }
+  }
+
+  public void onZoom() {
+    for (Layer layer : layers) {
+      layer.onZoom();
     }
   }
 

@@ -1,0 +1,11 @@
+<project package="test">
+  <dependencies>
+    <file path="../../platform"/>
+  </dependencies>
+  <classpath>
+    <file path="../../out/production/6k_16x16_performanceTest"/>
+  </classpath>
+  <packs>
+    <pack name="pack" files=""/>
+  </packs>
+</project>

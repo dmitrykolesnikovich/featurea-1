@@ -3,9 +3,7 @@ package featurea.platformer.physics;
 import com.sun.istack.internal.Nullable;
 import featurea.app.Area;
 import featurea.app.Camera;
-import featurea.app.Context;
 import featurea.app.Layer;
-import featurea.graphics.Graphics;
 import featurea.platformer.Animation;
 import featurea.platformer.CollisionResolver;
 import featurea.platformer.engine.Script;
@@ -36,7 +34,7 @@ public class WorldLayer extends MyLayer implements XmlNode {
 
   public WorldLayer() {
     setCollisionFilter(new CollisionResolver());
-    projection = bufferedAreas;
+    tickProjection = bufferedAreas;
     Camera camera = new Camera();
     camera.setRectangle(0, 0, cameraWidth, cameraHeight);
     setCamera(camera);
@@ -106,7 +104,6 @@ public class WorldLayer extends MyLayer implements XmlNode {
     if (area instanceof Animation) {
       Animation animation = (Animation) area;
       animation.onRemove();
-      animation.setLayer(null);
     }
     return this;
   }
@@ -138,6 +135,11 @@ public class WorldLayer extends MyLayer implements XmlNode {
   public void getSelection(Selection result, @Nullable Vector position) {
     result.setRectangle(0, 0, size.width, size.height);
     result.isSelected = false;
+  }
+
+  @Override
+  public String toString() {
+    return "WorldLayer";
   }
 
 }

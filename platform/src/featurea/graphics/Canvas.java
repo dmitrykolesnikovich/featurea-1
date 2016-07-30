@@ -1,6 +1,8 @@
 package featurea.graphics;
 
+import com.sun.istack.internal.Nullable;
 import featurea.app.Area;
+import featurea.app.Context;
 import featurea.app.Layer;
 import featurea.opengl.Batch;
 import featurea.opengl.batches.DrawLineAndDrawRectangleBatch;
@@ -15,34 +17,59 @@ import java.util.Map;
 import java.util.Set;
 
 // lifecycle: onDrawBatches() -> onDrawBuffers()
-public abstract class Canvas implements XmlResource {
+public class Canvas implements XmlResource {
 
-  private final Set<Batch> dirtyBatches = new HashSet<>();
+  private Layer layer;
+  private final Set<Batch> dirtyBatches = new HashSet<Batch>() {
+    @Override
+    public boolean add(Batch o) {
+      return super.add(o);
+    }
+  };
   private final Map<Area, Graphics> currentGraphics = new HashMap<>();
 
   /*cache*/
-  private final Map<Graphics, Boolean> graphicsVisibility = new HashMap<>();
   private final Set<Batch> visibleBatches = new HashSet<>();
   private final Set<Graphics> visibleGraphics = new HashSet<>();
+  private int lastRebuildBatchCount; // for performance debug info
+  private final Map<Graphics, Boolean> visibilityMap = new HashMap<>();
 
-  public abstract Graphics getGraphics(Area area);
+  public Canvas setLayer(Layer layer) {
+    this.layer = layer;
+    return this;
+  }
 
-  public abstract void onDrawBuffers(Layer layer);
+  public Layer getLayer() {
+    return layer;
+  }
 
-  public boolean isStatic(Batch batch) {
-    return !dirtyBatches.contains(batch);
+  @Nullable
+  public Graphics getGraphics(Area area) {
+    return null;
+  }
+
+  public void onDrawBuffers(Layer layer) {
+    // no op
   }
 
   public void onDrawBatches(Layer layer) {
     if (isDirty()) {
       rebuildBatch(layer);
-      for (Area area : layer.projection) {
+      for (Area area : layer.drawProjection) {
         rebuildBatch(area);
       }
     }
-    // validate
+
+    int rebuildBatchCount = visibleBatches.size();
+    if (rebuildBatchCount != lastRebuildBatchCount) {
+      lastRebuildBatchCount = rebuildBatchCount;
+      System.out.println("Canvas.rebuildBatches: " + rebuildBatchCount + " (" + dirtyBatches.size() + "), FPS = " + Context.getPerformance().fps); // todo render this on performance info panel
+    }
+    // <<
+
     for (Batch batch : visibleBatches) {
       batch.build();
+      batch.lastLayerPosition.setValue(layer.getCamera().getPosition());
     }
     for (Graphics graphics : visibleGraphics) {
       graphics.setDirty(false);
@@ -51,29 +78,34 @@ public abstract class Canvas implements XmlResource {
 
   public void rebuildBatch(Area area) {
     Graphics graphics = getGraphics(area);
-    if (graphics.isDirty()) {
-      if (isVisible(graphics)) {
-        area.onDraw(graphics);
-        currentGraphics.put(area, graphics);
-        visibleGraphics.add(graphics);
-        visibleBatches.addAll(graphics.getBatches());
+    if (graphics != null) {
+      if (graphics.isDirty()) {
+        graphics.isShown = isVisible(graphics);
+        if (graphics.isShown) {
+          area.onDraw(graphics);
+          graphics.onDraw(area);
+          currentGraphics.put(area, graphics);
+          visibleGraphics.add(graphics);
+          visibleBatches.addAll(graphics.getBatches());
+        }
       }
     }
+  }
+
+  private boolean isVisible(Graphics graphics) {
+    Boolean result = visibilityMap.get(graphics);
+    if (result == null) {
+      result = graphics.isShown(graphics.getLayer().getCamera());
+      visibilityMap.put(graphics, result);
+    }
+    return result;
   }
 
   public void clearCaches() {
     dirtyBatches.removeAll(visibleBatches);
     visibleBatches.clear();
     visibleGraphics.clear();
-    graphicsVisibility.clear();
-  }
-
-  public boolean isVisible(Graphics graphics) {
-    Boolean result = graphicsVisibility.get(graphics);
-    if (result == null) {
-      result = graphics.isShown();
-    }
-    return result;
+    visibilityMap.clear();
   }
 
   public boolean isDirty() {
@@ -157,5 +189,6 @@ public abstract class Canvas implements XmlResource {
   public Canvas build() {
     return this;
   }
+
 
 }

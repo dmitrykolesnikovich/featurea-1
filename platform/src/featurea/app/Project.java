@@ -62,23 +62,29 @@ public class Project {
 
   public void setFile(File file) {
     try {
-      this.file = file;
-      if (file.getName().endsWith(".jar")) {
-        JarFile jarFile = new JarFile(file.getAbsolutePath());
-        JarEntry jarEntry = jarFile.getJarEntry(PROJECT_FILE_NAME);
-        InputStream inputStream = jarFile.getInputStream(jarEntry);
-        parser.readInputStream(inputStream);
-        classPath.add(file); // IMPORTANT
-      } else if (PROJECT_FILE_NAME.equals(file.getName())) {
-        parser.readInputStream(new FileInputStream(file));
-        File dir = this.file.getParentFile();
-        resourcesDir = new File(dir, "res");
-        configurationDir = new File(dir, "config");
-        generatedFilesDir = new File(dir, "gen");
-      } else {
-        pakage = FileUtil.formatPath(file.getPath());
+      if (file != null) {
+        this.file = file;
+        if (file.getName().endsWith(".jar")) {
+          JarFile jarFile = new JarFile(file.getAbsolutePath());
+          JarEntry jarEntry = jarFile.getJarEntry(PROJECT_FILE_NAME);
+          InputStream inputStream = jarFile.getInputStream(jarEntry);
+          parser.readInputStream(inputStream);
+          classPath.add(file); // IMPORTANT
+        } else if (PROJECT_FILE_NAME.equals(file.getName())) {
+          try {
+            parser.readInputStream(files.getStream(file.getName()));
+          } catch (Throwable e) {
+            parser.readInputStream(new FileInputStream(file));
+          }
+          File dir = this.file.getParentFile();
+          resourcesDir = new File(dir, "res");
+          configurationDir = new File(dir, "config");
+          generatedFilesDir = new File(dir, "gen");
+        } else {
+          pakage = FileUtil.formatPath(file.getPath());
+        }
       }
-      setupComponents(false);
+      setupComponents(isProduction);
     } catch (Throwable e) {
       e.printStackTrace();
     }
@@ -159,7 +165,7 @@ public class Project {
   private void setupComponents(boolean isProduction) {
     this.isProduction = isProduction;
     if (isProduction) {
-      files = new UnpackedFiles(this);
+      files = new UnpackedFiles(this).setProduction(isProduction);
     } else {
       files = new Files();
       List<File> contentRoots = getContentRoots();
@@ -168,7 +174,7 @@ public class Project {
     }
     files.addAll(this.getClassPath());
     classLoader.addAll(this.getClassPath());
-    if (PROJECT_FILE_NAME.equals(file.getName())) {
+    if (file != null && PROJECT_FILE_NAME.equals(file.getName())) {
       xmlSchema = new XmlSchema(this);
       xmlFormatter = new XmlFormatter(this);
       xmlPrimitives = new XmlPrimitives(this);

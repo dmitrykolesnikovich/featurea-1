@@ -566,14 +566,16 @@ public class Hero extends HeroBody {
 
   @Override
   public void setView(View view) {
-    super.setView(view);
-    if (state == HeroState.small) {
-      setRectangle(smallRectangle);
-    } else {
-      if (view == View.sit) {
-        setRectangle(sitRectangle);
+    if (getView() != view) {
+      super.setView(view);
+      if (state == HeroState.small) {
+        setRectangle(smallRectangle);
       } else {
-        setRectangle(bigRectangle);
+        if (view == View.sit) {
+          setRectangle(sitRectangle);
+        } else {
+          setRectangle(bigRectangle);
+        }
       }
     }
   }

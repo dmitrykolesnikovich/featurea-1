@@ -23,14 +23,16 @@ public class Layer implements Area, XmlResource {
   private final List<Area> listAreas = new ArrayList<>();
   private ZOrder zOrder;
   public final Traverse traverse = new Traverse(this);
-  public Projection<? extends Area> projection = new Projection<>();
+  public Projection<? extends Area> tickProjection = new Projection<>();
+  public Projection<? extends Area> drawProjection = new Projection<>();
 
   public Canvas getCanvas() {
     return canvas;
   }
 
-  public void setCanvas(Canvas canvas) {
+  public Layer setCanvas(Canvas canvas) {
     this.canvas = canvas;
+    return this;
   }
 
   public void removeSelf() {
@@ -44,23 +46,23 @@ public class Layer implements Area, XmlResource {
     // no op
   }
 
-  public void onTraverse() {
-    traverse.onTraverse(projection);
+  public Projection onTraverseTick() {
+    traverse.onTraverse(tickProjection);
+    return tickProjection;
+  }
+
+  public Projection onTraverseDraw() {
+    traverse.onTraverse(drawProjection);
     if (zOrder != null) {
-      Collections.sort(projection, zOrder);
+      Collections.sort(drawProjection, zOrder);
     }
+    return tickProjection;
   }
 
   @Override
   public void onTick(double elapsedTime) {
-    for (Area area : projection) {
+    for (Area area : tickProjection) {
       area.onTick(elapsedTime);
-    }
-  }
-
-  public void onLayout(Size size) {
-    if (camera != null) {
-      camera.onLayout(size);
     }
   }
 
@@ -171,6 +173,18 @@ public class Layer implements Area, XmlResource {
       return screenLength / camera.zoom.scale;
     } else {
       return screenLength / Context.getRender().zoom.scale;
+    }
+  }
+
+  public void onZoom() {
+    if (camera != null) {
+      camera.onZoom();
+    }
+  }
+
+  public void onResize(Size size) {
+    if (camera != null) {
+      camera.onResize(size);
     }
   }
 

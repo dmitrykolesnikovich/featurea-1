@@ -3,7 +3,6 @@ package featurea.opengl.batches;
 import featurea.app.Context;
 import featurea.graphics.Graphics;
 import featurea.opengl.Batch;
-import featurea.opengl.OpenGL;
 import featurea.opengl.Texture;
 import featurea.opengl.TextureRectangle;
 import featurea.util.*;
@@ -11,8 +10,7 @@ import featurea.util.*;
 import java.nio.FloatBuffer;
 
 import static featurea.app.Context.gl;
-import static featurea.opengl.OpenGL.GL_FLOAT;
-import static featurea.opengl.OpenGL.GL_TRIANGLES;
+import static featurea.opengl.OpenGL.*;
 import static featurea.opengl.OpenGLUtil.COUNT_OF_VERTICES_FOR_DRAWING_TWO_TRIANGLES;
 
 public class DrawTextureBatch extends Batch {
@@ -21,7 +19,7 @@ public class DrawTextureBatch extends Batch {
   private static final int COLOR_POINTER_COUNT = 4;
   private static final int TEXTURE_COORD_POINTER_COUNT = 2;
 
-  private int currentTextureId = OpenGL.NULL_ID;
+  private int currentTextureId = NULL_ID;
   public FloatBuffer vertexPointer;
   public FloatBuffer colorPointer;
   public FloatBuffer texCoordPointer;
@@ -35,26 +33,29 @@ public class DrawTextureBatch extends Batch {
     return this;
   }
 
-  public void drawTexture(String file, double x1, double y1, double x2, double y2, Angle angle,
+  public void drawTexture(Graphics graphics, String file, double x1, double y1, double x2, double y2, Angle angle,
                           double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-    if (containsPessimistically(x1, y1, x2, y2)) {
-      if (file != null) {
-        Texture texture = Context.getResources().getTexture(file);
-        if (texture != null) {
-          texture.draw(this, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
-          currentTextureId = texture.getId();
+    if (file != null) {
+      Texture texture = Context.getResources().getTexture(file);
+      if (texture != null) {
+        currentTextureId = texture.getId();
+        texture.draw(this, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
+
+        if (!Context.isProduction()) {
+          throw new RuntimeException("Not implemented yet");
+          /*build();
+          drawBuffers(graphics);
+          clear();*/
+        }
+      } else {
+        if (!Context.isProduction()) {
+          Context.getLoader().load(file);
         } else {
-          if (!Context.isProduction()) {
-            Context.getLoader().load(file);
-          } else {
-            System.err.println("Texture not load: " + file);
-          }
+          System.err.println("Texture not load: " + file);
         }
       }
-      Context.getPerformance().drawTextureCount++;
-    } else {
-      // no op
     }
+    Context.getPerformance().drawTextureCount++;
   }
 
   @Override

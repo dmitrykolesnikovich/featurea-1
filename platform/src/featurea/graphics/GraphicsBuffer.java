@@ -45,6 +45,14 @@ public abstract class GraphicsBuffer {
     }
   }
 
+  public void clearAll() {
+    clearDrawLine();
+    clearDrawRectangle();
+    clearFillRectangle();
+    clearFillShape();
+    clearDrawTexture();
+  }
+
   /*private API*/
 
   private Canvas getCanvas() {
@@ -55,5 +63,6 @@ public abstract class GraphicsBuffer {
       return null;
     }
   }
+
 
 }

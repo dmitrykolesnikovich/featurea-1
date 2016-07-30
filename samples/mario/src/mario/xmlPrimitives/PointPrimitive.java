@@ -57,7 +57,7 @@ public class PointPrimitive extends XmlPrimitive {
       }
     }
     if (!graphics.containsDrawTexture()) {
-      for (Block block : bonusBlocks.subList(getWorld().projection)) {
+      for (Block block : bonusBlocks.subList(getWorld().tickProjection)) {
         block.getBonus().debugDraw(graphics);
       }
     }

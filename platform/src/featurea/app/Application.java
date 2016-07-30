@@ -54,9 +54,9 @@ public class Application {
     }
 
     if (screen != null) {
-      screen.onLayout(mediaPlayer.render.size);
+      screen.onTraverseTick();
+      screen.onResize(mediaPlayer.render.size);
       if (mediaPlayer.loader.isEmpty()) {
-        screen.onTraverse();
         double currentElapsedTime = mediaPlayer.timer.getElapsedTime();
         if (currentElapsedTime != 0) {
           screen.onTick(currentElapsedTime);
@@ -84,6 +84,8 @@ public class Application {
 
   public void onDraw() {
     if (screen != null) {
+      screen.onTraverseDraw();
+      screen.onZoom();
       screen.onDraw(mediaPlayer.render);
     }
   }

@@ -181,9 +181,6 @@ public final class XmlBuilder {
   }
 
   private XmlResource init(XmlTag xmlTag) {
-    if ("Joystick".equals(xmlTag.name)) {
-      System.out.println("breakpoint");
-    }
     Class devClass = xmlTag.devClassLoad();
     XmlResource result = null;
     if (!xmlTag.getXmlSchema().getAttributes(xmlTag.name).contains("value")) {

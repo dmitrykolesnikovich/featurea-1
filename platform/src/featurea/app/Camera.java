@@ -12,7 +12,7 @@ public class Camera extends Rectangle {
   public final Zoom zoom = new Zoom();
   public final Resize resize = new Resize();
 
-  public void onLayout(Size size) {
+  public void onResize(Size size) {
     if (resize.anchorHorizontal != null) {
       if (width() != size.width) {
         resize.anchorHorizontal.resize(this);
@@ -23,6 +23,9 @@ public class Camera extends Rectangle {
         resize.anchorVertical.resize(this);
       }
     }
+  }
+
+  public void onZoom() {
     zoom.onLayout(width(), height());
   }
 

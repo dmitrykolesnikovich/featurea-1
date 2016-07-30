@@ -111,11 +111,16 @@ public class HeroSprite extends Sprite {
         currentBlinkTime %= Gameplay.blinkPeriod;
         if (color.a == 1) {
           color.a = 0.2f;
+          redraw();
         } else {
           color.a = 1;
+          redraw();
         }
       }
     } else {
+      if (color.a != 1) {
+        redraw();
+      }
       color.a = 1;
     }
 
@@ -124,7 +129,7 @@ public class HeroSprite extends Sprite {
       super.onTick(elapsedTime);
       int finishIndex = sheetIndex;
       if (startIndex != finishIndex) {
-        hero.graphics.clearDrawTexture();
+        redraw();
       }
     }
     if (isColor) {
@@ -132,12 +137,21 @@ public class HeroSprite extends Sprite {
     }
   }
 
+  private void redraw() {
+    hero.redraw();
+  }
+
   private void onColorTick(double elapsedTime) {
     colorCurrentTime += elapsedTime;
     double oneFrameDuration = 1000f / Gameplay.colorFps;
     double allFramesDuration = oneFrameDuration * colorSize;
     colorCurrentTime %= allFramesDuration;
+    int startIndex = colorIndex;
     colorIndex = (int) (colorCurrentTime / oneFrameDuration);
+    int finishIndex = colorIndex;
+    if (startIndex != finishIndex) {
+      redraw();
+    }
   }
 
   public void becomeSmall(Runnable completeListener) {

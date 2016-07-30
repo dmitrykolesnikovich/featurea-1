@@ -1,6 +1,5 @@
 package featurea.graphics;
 
-import featurea.app.Context;
 import featurea.util.Angle;
 import featurea.util.Color;
 import featurea.util.Colors;
@@ -29,16 +28,6 @@ public class Text {
 
   public void drawOnLayer(Graphics graphics, double ox, double oy, Angle angle, double scaleX, double scaleY, boolean isFlipX, boolean isFlipY) {
     graphics.drawText(this, ox, oy, angle, scaleX, scaleY, isFlipX, isFlipY);
-  }
-
-  public void drawOnScreen(double ox, double oy, Angle angle, double scaleX, double scaleY, boolean isFlipX, boolean isFlipY) {
-    if (string != null && font != null) {
-      letters.clear();
-      layout(letters, ox, oy, scaleX, scaleY);
-      for (Letter letter : letters) {
-        letter.drawOnScreen(angle, ox, oy, letter.color, isFlipX, isFlipY);
-      }
-    }
   }
 
   public Size layout(List<Letter> letters, double ox, double oy, double scaleX, double scaleY) {
@@ -130,21 +119,7 @@ public class Text {
     }
 
     public void drawOnLayer(Graphics graphics, Angle angle, double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-      double x1 = graphics.getLayer().toScreenX(this.x1);
-      double y1 = graphics.getLayer().toScreenY(this.y1);
-      double x2 = graphics.getLayer().toScreenX(this.x2);
-      double y2 = graphics.getLayer().toScreenY(this.y2);
-      double oX = graphics.getLayer().toScreenX(ox);
-      double oY = graphics.getLayer().toScreenY(oy);
-      drawOnScreen(x1, y1, x2, y2, angle, oX, oY, color, isFlipX, isFlipY);
-    }
-
-    public void drawOnScreen(double x1, double y1, double x2, double y2, Angle angle, double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-      Context.getRender().drawGlyph(glyph, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
-    }
-
-    public void drawOnScreen(Angle angle, double ox, double oy, Color color, boolean isFlipX, boolean isFlipY) {
-      Context.getRender().drawGlyph(glyph, x1, y1, x2, y2, angle, ox, oy, color, isFlipX, isFlipY);
+      // no op
     }
 
   }

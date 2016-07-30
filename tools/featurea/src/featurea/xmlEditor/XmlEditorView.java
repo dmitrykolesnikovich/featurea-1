@@ -400,8 +400,8 @@ public class XmlEditorView extends JPanel implements XmlEditor {
       java.util.List<Layer> layers = screen.getLayers();
       for (Layer layer : layers) {
         if (layer.isVisible) {
-          layer.onTraverse();
-          for (Area area : layer.projection) {
+          layer.onTraverseTick();
+          for (Area area : layer.tickProjection) {
             if (area instanceof XmlNode) {
               XmlNode node = (XmlNode) area;
               result.put(node, layer);

@@ -22,7 +22,13 @@ public class PiranhaPlant extends Enemy {
   }
 
   private void bounceRecursively() {
-    Motion motion = new Movement().setGraph(0, -bounceHeight, 0, 0, bounceHeight, 0).setVelocity(0.02);
+    Motion motion = new Movement() {
+      @Override
+      public void onTick(double elapsedTime) {
+        super.onTick(elapsedTime);
+        redraw();
+      }
+    }.setGraph(0, -bounceHeight, 0, 0, bounceHeight, 0).setVelocity(0.02);
     motion.onStop = new Runnable() {
       @Override
       public void run() {
@@ -51,4 +57,8 @@ public class PiranhaPlant extends Enemy {
     return Sprites.Enemies.piranhaPlant();
   }
 
+  @Override
+  public void removeSelf() {
+    super.removeSelf();
+  }
 }

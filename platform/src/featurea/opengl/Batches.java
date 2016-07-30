@@ -16,7 +16,7 @@ public final class Batches {
   }
 
   public static DrawTextureBatch newDrawTextureBatch(int capacity) {
-    return new DrawTextureBatch().setCapacity(capacity).build();
+    return new DrawTextureBatch().setCapacity(capacity);
   }
 
   public static DrawLineAndDrawRectangleBatch newDrawLineAndDrawRectangleBatch() {
@@ -24,7 +24,7 @@ public final class Batches {
   }
 
   public static DrawLineAndDrawRectangleBatch newDrawLineAndDrawRectangleBatch(int capacity) {
-    return new DrawLineAndDrawRectangleBatch().setCapacity(capacity).build();
+    return new DrawLineAndDrawRectangleBatch().setCapacity(capacity);
   }
 
   public static FillRectangleBatch newFillRectangleBatch() {
@@ -32,7 +32,7 @@ public final class Batches {
   }
 
   public static FillRectangleBatch newFillRectangleBatch(int capacity) {
-    return new FillRectangleBatch().setCapacity(capacity).build();
+    return new FillRectangleBatch().setCapacity(capacity);
   }
 
   public static FillShapeBatch newFillShapeBatch() {
@@ -40,7 +40,7 @@ public final class Batches {
   }
 
   public static FillShapeBatch newFillShapeBatch(int capacity) {
-    return new FillShapeBatch().setCapacity(capacity).build();
+    return new FillShapeBatch().setCapacity(capacity);
   }
 
 }

@@ -27,16 +27,16 @@ public final class DrawLineAndDrawRectangleBatch extends Batch {
     return this;
   }
 
-  public void drawLine(double x1, double y1, double x2, double y2, Color color) {
+  public void drawLine(Graphics graphics, double x1, double y1, double x2, double y2, Color color) {
     putVertexPointer(x1, y1, x2, y2).putColorPointer(color).finish();
   }
 
   // todo improve drawRectangle method
-  public void drawRectangle(double x1, double y1, double x2, double y2, Color color) {
-    drawLine(x1, y1, x2, y1, color);
-    drawLine(x2, y1, x2, y2, color);
-    drawLine(x2, y2, x1, y2, color);
-    drawLine(x1, y2, x1, y1, color);
+  public void drawRectangle(Graphics graphics, double x1, double y1, double x2, double y2, Color color) {
+    drawLine(graphics, x1, y1, x2, y1, color);
+    drawLine(graphics, x2, y1, x2, y2, color);
+    drawLine(graphics, x2, y2, x1, y2, color);
+    drawLine(graphics, x1, y2, x1, y1, color);
   }
 
   @Override

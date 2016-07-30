@@ -227,7 +227,7 @@ public class World extends WorldLayer {
   @Override
   public void setSize(Size size) {
     super.setSize(size);
-    setCanvas(new WorldCanvas().setWorld(this).setPartsCount(2).build());
+    setCanvas(new WorldCanvas().setWorld(this).build());
   }
 
 }

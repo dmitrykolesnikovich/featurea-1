@@ -1,9 +1,11 @@
 package featurea.app;
 
 import featurea.opengl.TextureNotFoundException;
+import featurea.opengl.TexturePack;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
 public class Loader {
@@ -93,9 +95,9 @@ public class Loader {
 
   public Asset nextAsset() {
     Asset asset = poll();
-    /*while (asset != null && areAllPacksLoaded() && isPng(asset.file)) {
+    while (asset != null && areAllPacksLoaded() && isPng(asset.file)) {
       asset = poll();
-    }*/
+    }
     return asset;
   }
 
@@ -171,7 +173,7 @@ public class Loader {
   }
 
   private boolean areAllPacksLoaded() {
-    /*Map<String, TexturePack> packs = mediaPlayer.render.texturePacker.packs;
+    Map<String, TexturePack> packs = mediaPlayer.render.texturePacker.packs;
     if (mediaPlayer.isProduction() && mediaPlayer.project.packProperties.properties.size() == packs.size()) {
       for (TexturePack pack : packs.values()) {
         if (!pack.isLoad()) {
@@ -181,8 +183,7 @@ public class Loader {
       return true;
     } else {
       return false;
-    }*/
-    return false;
+    }
   }
 
 }

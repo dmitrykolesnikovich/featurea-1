@@ -5,9 +5,11 @@ import android.opengl.GLSurfaceView;
 import android.os.Build;
 import featurea.app.Context;
 import featurea.app.MediaPlayer;
+import featurea.app.Project;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+import java.io.File;
 import java.util.jar.JarFile;
 
 @TargetApi(Build.VERSION_CODES.CUPCAKE)
@@ -20,10 +22,16 @@ public class MyRender implements GLSurfaceView.Renderer {
 
   public MyRender(FeatureaActivity activity) {
     this.activity = activity;
-    JarFile apkFile = ApkFileUtil.getInstance().getFile();
     mediaPlayer = new MediaPlayer();
-    mediaPlayer.getFiles().add(apkFile);
-    mediaPlayer.getClassLoader().add(apkFile);
+    mediaPlayer.project.setProduction(true);
+    JarFile apkFile = ApkFileUtil.getInstance().getFile();
+    if (apkFile != null) {
+      mediaPlayer.getFiles().add(apkFile);
+      mediaPlayer.getClassLoader().add(apkFile);
+    } else {
+      throw new IllegalStateException("apkFile == null");
+    }
+    mediaPlayer.project.setFile(new File(Project.PROJECT_FILE_NAME));
   }
 
   @Override
@@ -48,7 +56,7 @@ public class MyRender implements GLSurfaceView.Renderer {
       now = nanoTime;
     }
     double elapsedTime = (nanoTime - now) / 1_000_000.0d;
-    mediaPlayer.app.onTick(elapsedTime);
+    activity.onTick(elapsedTime);
     mediaPlayer.app.onDrawBackground();
     mediaPlayer.app.onDraw();
     now = nanoTime;

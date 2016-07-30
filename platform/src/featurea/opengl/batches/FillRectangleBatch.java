@@ -27,11 +27,11 @@ public final class FillRectangleBatch extends Batch {
     return this;
   }
 
-  public void fillRectangle(double x1, double y1, double x2, double y2, Color color) {
-    fillRectangle(x1, y1, x2, y2, 0, color);
+  public void fillRectangle(Graphics graphics, double x1, double y1, double x2, double y2, Color color) {
+    fillRectangle(graphics, x1, y1, x2, y2, 0, color);
   }
 
-  public void fillRectangle(double x1, double y1, double x2, double y2, double angle, Color color) {
+  public void fillRectangle(Graphics graphics, double x1, double y1, double x2, double y2, double angle, Color color) {
     // todo make use of angle
     putVertexPointer(x1, y1, x2, y2).putColorPointer(color).finish();
   }

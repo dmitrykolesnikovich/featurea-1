@@ -43,12 +43,16 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   private boolean isMotionableHorizontally = true;
   private boolean isMotionableVertically = true;
   public final Vector velocity = new Vector();
-  public final GraphicsBuffer graphics = new GraphicsBuffer(this) {
+  private final GraphicsBuffer graphics = new GraphicsBuffer(this) {
     @Override
     public Layer getLayer() {
-      return layer;
+      return Animation.this.getLayer();
     }
   };
+
+  public void redraw() {
+    graphics.clearAll();
+  }
 
   public void setLifeDistance(double lifeDistance) {
     this.lifeDistance = lifeDistance;
@@ -121,6 +125,7 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   }
 
   public void removeSelf() {
+    graphics.clearDrawTexture();
     Context.getTimer().delay(new Runnable() {
       @Override
       public void run() {
@@ -299,11 +304,10 @@ public class Animation implements XmlNode, Area, XmlResource, TransformRotate, T
   public void onTick(double elapsedTime) {
     sprite.onTick(elapsedTime);
     WorldLayer layer = getLayer();
-    if (layer == null) {
-      System.out.println("breakpoint");
-    }
-    if (!layer.isTimeStop()) {
-      timeline.onTick(elapsedTime);
+    if (layer != null) {
+      if (!layer.isTimeStop()) {
+        timeline.onTick(elapsedTime);
+      }
     }
   }
 

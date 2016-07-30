@@ -1,5 +1,5 @@
 <World id="world1_1" size="3384, 224" theme="overworld">
-  <Hero id="hero" position="254.0, 85.0, 10.0" state="small"/>
+  <Hero id="hero" position="0, 85.0, 10.0" state="small"/>
   <Background step="768, 0" value="cloud.png, 136, 64, 312, 48;
 		       cloudTriple.png, 440, 64;
 		       cloudDouble.png, 584, 48;
@@ -18,7 +18,7 @@
   <KoopaTroopa position="1682.0, 176.0, 0.0" visible="true"/>
   <Goomba position="840.0, 186.0, 0.0" size="16, 16" visible="true"/>
   <Goomba angle="0" position="864.0, 184.0, 0.0"/>
-  <Goomba angle="0" position="321.0, 173.0, 0.0"/>
+  <!--<Goomba angle="0" position="321.0, 173.0, 0.0"/>-->
   <Goomba position="1263.0, 78.0, 0.0"/>
   <Goomba position="1322.0, 56.0, 0.0"/>
   <Flagpole position="3175.0, -186.0, 0.0"/>

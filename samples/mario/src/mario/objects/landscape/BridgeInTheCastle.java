@@ -31,7 +31,7 @@ public class BridgeInTheCastle extends Body {
   public void setLength(int length) {
     this.length = length;
     setRectangle(0, 0, width * length, height);
-    graphics.clearDrawTexture();
+    redraw();
   }
 
   @Override

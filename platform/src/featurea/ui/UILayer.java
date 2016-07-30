@@ -3,13 +3,11 @@ package featurea.ui;
 import featurea.app.Area;
 import featurea.app.Layer;
 import featurea.app.Projection;
-
-import java.util.Collections;
-import java.util.Comparator;
+import featurea.util.ZOrder;
 
 public class UILayer extends Layer {
 
-  private static final Comparator<Button> BUTTONS_SORT_ORDER = new Comparator<Button>() {
+  private static final ZOrder<Button> BUTTONS_SORT_ORDER = new ZOrder<Button>() {
     @Override
     public int compare(Button button1, Button button2) {
       if (button2.getPosition().z > button1.getPosition().z) {
@@ -33,13 +31,8 @@ public class UILayer extends Layer {
 
   public UILayer() {
     inputListeners.add(new UIInputListener(this));
-    projection = buttons;
-  }
-
-  @Override
-  public void onTraverse() {
-    super.onTraverse();
-    Collections.sort(buttons, BUTTONS_SORT_ORDER);
+    tickProjection = buttons;
+    setzOrder(BUTTONS_SORT_ORDER);
   }
 
   @Override

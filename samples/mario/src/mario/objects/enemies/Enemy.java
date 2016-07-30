@@ -40,7 +40,9 @@ public class Enemy extends Body {
       if (shouldBeSwipedFromBuffer()) {
         if (isFirstTimeShow) {
           isFirstTimeShow = false;
-          setVelocity(new Vector((walkDistance >= 0 ? 1 : -1) * -horizontalVelocity, 0)); // todo fix this shit
+          if (Math.abs(getLayer().getCamera().right() - position.x) < 16) {
+            setVelocity(new Vector((walkDistance >= 0 ? 1 : -1) * -horizontalVelocity, 0)); // todo fix this shit
+          }
         }
       }
     }
