@@ -232,7 +232,9 @@ public class Files {
               String archive = child.getName();
               String childPath = getPath(rootDir, archive);
               if (child.isFile() && FileUtil.filterByExtensions(archive, extensions) && !result.contains(childPath)) {
-                result.add(childPath);
+                if (!childPath.endsWith(".class")) {
+                  result.add(childPath);
+                }
               } else if (child.isDirectory()) {
                 inflateList(result, childPath, extensions);
               } else if (isArchive(filePath)) {
@@ -260,8 +262,10 @@ public class Files {
       while (enumeration.hasMoreElements()) {
         ZipEntry zipEntry = enumeration.nextElement();
         String name = zipEntry.getName();
-        if (FileUtil.filterByExtensions(name, extensions) && name.startsWith(rootDir)) {
-          result.add(zipEntry.getName());
+        if (!name.endsWith(".class")) {
+          if (FileUtil.filterByExtensions(name, extensions) && name.startsWith(rootDir)) {
+            result.add(name);
+          }
         }
       }
     } catch (Throwable skip) {

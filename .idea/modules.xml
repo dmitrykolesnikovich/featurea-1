@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/tools/featurea4idea/featurea4idea.iml" filepath="$PROJECT_DIR$/tools/featurea4idea/featurea4idea.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/mario/tools/genSprites/genSprites.iml" filepath="$PROJECT_DIR$/samples/mario/tools/genSprites/genSprites.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/mario/mario.iml" filepath="$PROJECT_DIR$/samples/mario/mario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/mario/targets/mario.android/mario.android.iml" filepath="$PROJECT_DIR$/samples/mario/targets/mario.android/mario.android.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/mario/targets/mario.desktop/mario.desktop.iml" filepath="$PROJECT_DIR$/samples/mario/targets/mario.desktop/mario.desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
       <module fileurl="file://$PROJECT_DIR$/platform/targets/platform.android/platform.android.iml" filepath="$PROJECT_DIR$/platform/targets/platform.android/platform.android.iml" />

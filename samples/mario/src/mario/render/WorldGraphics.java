@@ -13,8 +13,8 @@ public class WorldGraphics extends Graphics {
     this.leftX = x1;
     this.rightX = x2;
     setDrawTextureBatch(Batches.newDrawTextureBatch());
-    setDrawLineAndDrawRectangleBach(Batches.newDrawLineAndDrawRectangleBatch());
-    setFillRectangleBatch(Batches.newFillRectangleBatch());
+    setDrawLineAndDrawRectangleBach(Batches.newDrawLineAndDrawRectangleBatch(20));
+    setFillRectangleBatch(Batches.newFillRectangleBatch(20));
   }
 
   @Override

@@ -267,7 +267,10 @@ public final class FileUtil {
     if (listFiles != null) {
       for (File file : listFiles) {
         if (file.isFile() && filterByExtensions(file.getName(), extensions)) {
-          result.add(file.getAbsolutePath());
+          String filePath = file.getAbsolutePath();
+          if (!filePath.endsWith(".class")) {
+            result.add(filePath);
+          }
         } else {
           inflateFilesRecursively(result, file, extensions);
         }

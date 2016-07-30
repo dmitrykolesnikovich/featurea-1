@@ -28,7 +28,7 @@ public class Batch {
     double dx = currentScreenX - lastScreenX;
     double dy = currentScreenY - lastScreenY;
     Context.getRender().shiftBatch(-dx, -dy);
-    onDraw(graphics); // todo hotfix, translate to correct position before draw
+    onDraw(graphics);
     Context.getRender().shiftBatch(dx, dy);
   }
 
